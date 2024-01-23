@@ -1,5 +1,7 @@
 function InstantQuote() {
-    return
+    return (
+        <p>Quote</p>
+    )
 }
 
 export default InstantQuote;

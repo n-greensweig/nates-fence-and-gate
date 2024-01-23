@@ -1,5 +1,7 @@
 function Faq() {
-    return
+    return (
+        <p>FAQ</p>
+    )
 }
 
 export default Faq;

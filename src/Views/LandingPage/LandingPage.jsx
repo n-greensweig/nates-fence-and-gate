@@ -1,5 +1,7 @@
 function LandingPage() {
-    return
+    return (
+        <p>Home</p>
+    )
 }
 
 export default LandingPage;

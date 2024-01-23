@@ -1,5 +1,7 @@
 function FenceDetails() {
-    return
+    return (
+        <p>Details</p>
+    )
 }
 
 export default FenceDetails;

@@ -1,5 +1,7 @@
 function FenceTypes() {
-    return
+    return (
+        <p>Types</p>
+    )
 }
 
 export default FenceTypes;
