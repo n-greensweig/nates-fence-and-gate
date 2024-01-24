@@ -59,7 +59,10 @@ function Faq() {
             <p>FAQ</p>
             <div className="faq-container">
                 <FaqAccordion question={firstQuestion} answer={firstAnswer} />
+                
+                {/* Add link to instant quote form text */}
                 <FaqAccordion question={secondQuestion} answer={secondAnswer} />
+                
                 <FaqAccordion question={thirdQuestion} answer={thirdAnswer} />
                 <FaqAccordion question={fourthQuestion} answer={fourthAnswer} />
                 <FaqAccordion question={fifthQuestion} answer={fifthAnswer} />
