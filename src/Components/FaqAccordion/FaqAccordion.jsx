@@ -21,7 +21,7 @@ function FaqAccordion(props) {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
                 onClick={handleAccordionChange}>
-                <h3>{props.question}</h3>
+                <h3 style={{fontWeight: expanded ? 'bold': 'normal'}}>{props.question}</h3>
             </AccordionSummary>
             {expanded && (
                 <AccordionDetails>
