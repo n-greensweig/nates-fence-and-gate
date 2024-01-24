@@ -1,6 +1,6 @@
 function LandingPage() {
     return (
-        <p>Home</p>
+        <p class='text-red-600'>Home</p>
     )
 }
 
