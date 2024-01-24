@@ -1,0 +1,7 @@
+.details, .summary {
+    text-align: left;
+}
+
+.summary {
+    font-weight: bold;
+}
