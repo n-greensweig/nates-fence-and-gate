@@ -1,6 +1,7 @@
 // Responsive imports
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import Faq from "../FAQ/FAQ";
 
 function About() {
 
@@ -55,6 +56,10 @@ function About() {
                 </div>
 
             </div>
+
+            {/* Could include FAQ on About view */}
+            {/* <Faq /> */}
+
         </div>
     )
 }
