@@ -5,7 +5,7 @@ import FaqAccordion from "../../Components/FaqAccordion/FaqAccordion";
 import './FAQ.css';
 
 function Faq() {
-
+    // Define FAQ questions and answers
     const firstQuestion = "How high can I build a fence?";
     const firstAnswer = `The allowable height of a fence is largely influenced by its 
     location in the yard and the local regulations. Front yard fences often have a maximum height of 4 feet, 
@@ -58,11 +58,10 @@ function Faq() {
         <>
             <p>FAQ</p>
             <div className="faq-container">
+                {/* Render FAQ accordions */}
                 <FaqAccordion question={firstQuestion} answer={firstAnswer} />
-                
-                {/* Add link to instant quote form text */}
+                {/* Add link to instant quote form in second answer */}
                 <FaqAccordion question={secondQuestion} answer={secondAnswer} />
-                
                 <FaqAccordion question={thirdQuestion} answer={thirdAnswer} />
                 <FaqAccordion question={fourthQuestion} answer={fourthAnswer} />
                 <FaqAccordion question={fifthQuestion} answer={fifthAnswer} />
