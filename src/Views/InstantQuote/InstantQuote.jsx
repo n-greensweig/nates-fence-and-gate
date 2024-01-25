@@ -34,7 +34,6 @@ function InstantQuote() {
                             backgroundSize: 'cover',
                             opacity: 0.3,
                             zIndex: -1,
-                            border: '2px solid purple'
                         }}
                     />
                     <div
