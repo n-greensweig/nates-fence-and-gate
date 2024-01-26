@@ -69,7 +69,9 @@ function FenceTypes() {
                 >
                     {fenceTypes.map((fenceType, index) => {
                         return (
-                            <TypeCard key={index} fenceType={fenceType} />
+                            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                                <TypeCard key={index} fenceType={fenceType} />
+                            </Grid>
                         )
                     }
                     )}
