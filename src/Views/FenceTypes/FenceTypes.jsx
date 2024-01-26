@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { Grid } from "@mui/material";
 import TypeCard from "../../Components/TypeCard/TypeCard";
-// import { Paper, Card, CardActionArea, CardMedia, CardContent, Typography } from "@mui/material";
+
+// Responsive imports
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 
 function FenceTypes() {
@@ -43,6 +46,11 @@ function FenceTypes() {
         document.title = "Fence Types";
     }, []);
 
+    // Check the screen size for responsive design
+    const theme = useTheme();
+    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
+    const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <div>
             <header style={{ fontSize: '2.5rem' }}>Fence Types</header>
@@ -64,17 +72,20 @@ function FenceTypes() {
                         maxWidth: '1400px',
                         margin: '0 auto',
                         padding: '20px 10px',
-                        border: '2px solid red',
                     }}
                 >
                     {fenceTypes.map((fenceType, index) => {
                         return (
-                            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                            <Grid item xs={12} sm={6} md={4} lg={3} key={index}
+                                style={{
+                                    height: '500px', // Needs to be made responsive
+                                    padding: '0px',
+                                }}
+                            >
                                 <TypeCard key={index} fenceType={fenceType} />
                             </Grid>
                         )
-                    }
-                    )}
+                    })}
                 </Grid>
 
             </div>

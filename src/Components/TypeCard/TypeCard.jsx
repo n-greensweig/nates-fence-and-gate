@@ -17,7 +17,10 @@ function TypeCard(props) {
     return (
         <div>
             <Paper elevation={3} style={cardStyle}>
-                <Card>
+                <Card style={{
+                    height: '500px',
+                    margin: '0px'
+                }}>
                     <CardActionArea>
                         <CardContent
                             style={{

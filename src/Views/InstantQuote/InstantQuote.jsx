@@ -3,6 +3,7 @@ import './InstantQuote.css'; // CSS import
 // Responsive imports
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+
 import { useEffect } from 'react';
 
 function InstantQuote() {
