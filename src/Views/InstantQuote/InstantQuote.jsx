@@ -4,6 +4,8 @@ import './InstantQuote.css'; // CSS import
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
+import { useEffect } from 'react';
+
 function InstantQuote() {
 
     // Check the screen size for responsive design
@@ -11,8 +13,12 @@ function InstantQuote() {
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
+    useEffect(() => {
+        document.title = "Instant Quote";
+    }, []);
 
-    return (
+
+        return (
         <>
             {isXsScreen || isSmScreen ? null :
                 <div
@@ -30,7 +36,7 @@ function InstantQuote() {
                             left: 0,
                             right: 0,
                             bottom: 0,
-                            backgroundImage: "url('images/chain-link/chain-link-1-main.jpeg')",
+                            // backgroundImage: "url('images/chain-link/chain-link-1-main.jpeg')",
                             backgroundSize: 'cover',
                             opacity: 0.3,
                             zIndex: -1,

@@ -3,12 +3,18 @@ import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import Faq from "../FAQ/FAQ";
 
+import { useEffect } from 'react';
+
 function About() {
 
     // Check the screen size for responsive design
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
+    useEffect(() => {
+        document.title = "About";
+    }, []);
 
     return (
         <div style={{
