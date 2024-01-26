@@ -1,4 +1,6 @@
-import { Grid, Paper, Card, CardActionArea, CardMedia, CardContent, Typography } from "@mui/material";
+import { Paper, Card, CardActionArea, CardMedia, CardContent, Typography } from "@mui/material";
+
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function TypeCard(props) {
 
@@ -10,13 +12,16 @@ function TypeCard(props) {
         justifyContent: 'space-between', // This spreads out the content evenly
     };
 
-    console.log(props.fenceType.image);
+    const history = useHistory();
 
     // Needs handleClick function to route to the correct page
+    const handleClick = route => history.push(`/fence-details/${route}`);
 
     return (
         <div>
-            <Paper elevation={3} style={cardStyle}>
+            <Paper elevation={3} style={cardStyle} 
+            onClick={() => handleClick(props.fenceType.route)}
+            >
                 <Card style={{
                     height: '500px',
                     margin: '0px'
@@ -45,7 +50,8 @@ function TypeCard(props) {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'center',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                textAlign: 'left'
                             }}
                         >
                             <Typography variant="body2" color="text.secondary">
