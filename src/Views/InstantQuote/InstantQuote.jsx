@@ -3,6 +3,7 @@ import './InstantQuote.css'; // CSS import
 // Responsive imports
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { useEffect } from 'react';
 
 function InstantQuote() {
 
@@ -11,8 +12,12 @@ function InstantQuote() {
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
+    useEffect(() => {
+        document.title = "Instant Quote";
+    }, []);
 
-    return (
+
+        return (
         <>
             {isXsScreen || isSmScreen ? null :
                 <div
