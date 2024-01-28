@@ -11,12 +11,13 @@ import FenceDetails from '../Views/FenceDetails/FenceDetails';
 import FenceTypes from '../Views/FenceTypes/FenceTypes';
 import InstantQuote from '../Views/InstantQuote/InstantQuote';
 import LandingPage from '../Views/LandingPage/LandingPage';
+import Navbar from '../Components/Navbar/Navbar'
 
 function App() {
   return (
-
-    <Router>
-      <div className="App">
+    <div className="App">
+      <Navbar />
+      <Router>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -61,8 +62,9 @@ function App() {
           <h1>404</h1>
         </Route> */}
 
-      </div>
-    </Router >
+
+      </Router >
+    </div>
   );
 }
 
