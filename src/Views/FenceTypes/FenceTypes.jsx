@@ -45,7 +45,7 @@ function FenceTypes() {
             image: 'images/custom/custom-2.jpeg',
             route: 'custom'
         },
-    ]
+    ];
 
     useEffect(() => {
         document.title = "Fence Types";

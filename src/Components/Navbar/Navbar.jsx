@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <nav className='bg-nates-dark-blue text-white flex flex-row justify-between'>
             <div>
-                <img src='../images/nates-logo.jpg' className='h-28 ml-2'></img>
+                <img src='../images/logos/nates-logo.jpg' className='h-28 ml-2'></img>
             </div>
             <ul className='h-28 flex flex-row justify-between items-center gap-x-48'>
                 <li className=''>

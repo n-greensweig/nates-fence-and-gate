@@ -49,7 +49,7 @@ function App() {
           <FenceTypes />
         </Route>
 
-        <Route exact path="/fence-details">
+        <Route exact path="/fence-details/:type">
           <FenceDetails />
         </Route>
 
