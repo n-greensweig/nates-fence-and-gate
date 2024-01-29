@@ -42,7 +42,7 @@ function TypeCard(props) {
                         <CardMedia
                             component="img"
                             height="140"
-                            image={`${props.fenceType.image}`}
+                            image={`${props.fenceType.mainImage}`}
                             alt={`${props.fenceType.name} fence`}
                         />
                         <CardContent
