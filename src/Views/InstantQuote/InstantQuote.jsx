@@ -36,11 +36,10 @@ function InstantQuote() {
                             left: 0,
                             right: 0,
                             bottom: 0,
-                            // backgroundImage: "url('images/chain-link/chain-link-1-main.jpeg')",
+                            backgroundImage: "url('images/chain-link/chain-link-1-main.jpeg')",
                             backgroundSize: 'cover',
                             opacity: 0.3,
                             zIndex: -1,
-                            border: '2px solid purple'
                         }}
                     />
                     <div

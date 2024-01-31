@@ -22,10 +22,11 @@ function TypeCard(props) {
             <Paper elevation={3} style={cardStyle} 
             onClick={() => handleClick(props.fenceType.route)}
             >
+                {/* Need to make cards stretch horizontally on XS and SM screens */}
                 <Card style={{
                     height: '500px',
                     margin: '0px'
-                }}>
+            }}>
                     <CardActionArea>
                         <CardContent
                             style={{
