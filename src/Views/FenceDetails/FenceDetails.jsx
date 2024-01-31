@@ -22,31 +22,47 @@ function FenceDetails() {
     }, [fenceType]);
 
     return (
-        <div>
-            <h1>{name} Fence Details</h1>
+        <div style={{ /*border: '2px solid green'*/ }}>
+            <h1 style={{ fontSize: '2rem' }}>{name}</h1>
             {/* Conditionally render based on whether fenceType.name === 'Cedar' */}
 
             <div id="carousel-description"
                 style={{
                     display: 'flex',
-                    flexDirection: 'row'
+                    flexDirection: 'row',
+                    justifyContent: 'flex-start',
+                    width: '100%',
                 }}>
 
                 {/* Image carousel component */}
                 {/* Adjust props as needed */}
-                <Carousel showArrows={true} showThumbs={true}>
+                <Carousel showArrows={true}
+                    showThumbs={true}
+                    showStatus={false}
+                    infiniteLoop={true}
+                    interval={3000}
+                    autoPlay={true}
+                    width={'100%'}
+                >
+
+                    {/* Make so users can click into images? */}
                     {images.map((image, index) => (
-                        <div key={index} style={{ textAlign: 'center' }}> {/* Centering images */}
+                        <div key={index} style={{ /*border: '2px solid red',*/ }}> {/* Align images to the left */}
                             <img src={image}
                                 style={{
-                                    border: '2px solid red',
                                     maxWidth: '100%',     // Maximum width is 100% of the container
                                     maxHeight: '500px',   // Maximum height
-                                    width: 'auto',        // Width auto for maintaining aspect ratio
+                                    // width: 'auto',        // Width auto for maintaining aspect ratio
                                     height: 'auto',       // Height auto for maintaining aspect ratio
                                     objectFit: 'contain', // Ensures the image is scaled properly
                                     margin: 'auto',       // Center the image in the div
-                                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)' // Optional box shadow
+                                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Optional box shadow
+                                    // marginLeft: '0px',
+                                    // border: '2px solid blue',
+                                    width: 300,
+                                    marginLeft: "auto",
+                                    marginRight: "auto"
+
                                 }}
                                 alt={`${name} fence`} />
                         </div>
@@ -55,7 +71,16 @@ function FenceDetails() {
 
                 {/* Fence type description */}
                 <p
-                    style={{ border: '2px solid blue', }}
+                    style={{
+                        // border: '2px solid blue',
+                        marginRight: '20%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        textAlign: 'justify',
+                        paddingBottom: '5%',
+                        fontSize: '1.2em'
+                    }}
                 >{fenceType.description}</p>
 
             </div>

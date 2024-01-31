@@ -61,8 +61,8 @@ export const fenceTypes = [
     },
     {
         name: 'Ornamental',
-        description: `Our steel ornamental option is a wonderful option for those looking for an open concept, 
-        and maintenance free with its sleek powder coated black finish it goes with any property.`,
+        description: `Our steel ornamental option is a wonderful option for those looking for an open concept.  
+        Ornamental is also maintenance free with its sleek powder coated black finish it goes with any property.`,
         mainImage: 'images/ornamental/ornamental-1.jpeg',
         images: ['images/ornamental/ornamental-1.jpeg',
             'images/ornamental/ornamental-2.jpeg',
