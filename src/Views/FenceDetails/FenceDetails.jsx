@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { fenceTypes } from "../../Constants/Constants";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import ButtonComponent from "../../Components/Button/Button";
 
 function FenceDetails() {
 
@@ -69,19 +70,29 @@ function FenceDetails() {
                     ))}
                 </Carousel>
 
-                {/* Fence type description */}
-                <p
-                    style={{
-                        // border: '2px solid blue',
-                        marginRight: '20%',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        textAlign: 'justify',
-                        paddingBottom: '5%',
-                        fontSize: '1.2em'
-                    }}
-                >{fenceType.description}</p>
+                <div style={{
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    border: '2px solid blue',
+                }}>
+                    {/* Fence type description */}
+                    <p
+                        style={{
+                            // border: '2px solid blue',
+                            // marginRight: '20%',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            textAlign: 'justify',
+                            paddingBottom: '5%',
+                            fontSize: '1.2em'
+                        }}
+                    >{fenceType.description}</p>
+                    <ButtonComponent type={'Quote'} />
+                </div>
 
             </div>
         </div>

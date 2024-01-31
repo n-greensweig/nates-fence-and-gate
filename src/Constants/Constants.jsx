@@ -86,7 +86,7 @@ export const fenceTypes = [
     },
     {
         name: 'Custom',
-        description: `Do you have personal design you’d like to try? 
+        description: `Do you have a personal design you’d like to try? 
         Send us some photos and we will be more than willing to brainstorm solutions for you.`,
         mainImage: 'images/custom/custom-2.jpeg',
         images: ['images/custom/custom-1.jpeg',
