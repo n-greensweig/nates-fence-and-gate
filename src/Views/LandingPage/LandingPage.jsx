@@ -29,7 +29,29 @@ function LandingPage() {
                     position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
                 }}
             >
-                <ButtonComponent type="Quote" />
+                <header style={{
+                    fontSize: '2.5rem',
+                    color: '#102942',
+                }}>Welcome to Nate's Fence and Gate
+                </header>
+
+                {/* Change text below */}
+                <h1 style={{
+                    fontSize: '2rem',
+                    color: '#102942',
+                }}>THE BEST FENCE & DECK CONTRACTOR IN THE TWIN CITIES METRO AREA</h1>
+
+                <div className="button-group" style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    marginTop: '20px',
+                    gap: '20px',
+                }}>
+
+                    <ButtonComponent type="Types" />
+                    <ButtonComponent type="Quote" />
+                </div>
             </div>
 
         </div >
