@@ -5,6 +5,10 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ButtonComponent from "../../Components/Button/Button";
 
+// Responsive imports
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+
 function FenceDetails() {
 
     const { type } = useParams();
@@ -14,7 +18,10 @@ function FenceDetails() {
     const route = fenceType.route; // Get the route of the fence type
     const images = fenceType.images; // Get the images of the fence type
 
-
+    // Check the screen size for responsive design
+    const theme = useTheme();
+    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
+    const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     useEffect(() => {
         if (fenceType) {
@@ -23,9 +30,9 @@ function FenceDetails() {
     }, [fenceType]);
 
     return (
-        <div style={{ /*border: '2px solid green'*/ }}>
+        <div>
             <h1 style={{ fontSize: '2rem' }}>{name}</h1>
-            {/* Conditionally render based on whether fenceType.name === 'Cedar' */}
+            {/* Conditionally render based on whether name === 'Cedar' */}
 
             <div id="carousel-description"
                 style={{
@@ -41,7 +48,7 @@ function FenceDetails() {
                     showThumbs={true}
                     showStatus={false}
                     infiniteLoop={true}
-                    interval={3000}
+                    interval={5000}
                     autoPlay={true}
                     width={'100%'}
                 >
