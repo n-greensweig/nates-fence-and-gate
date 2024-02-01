@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ButtonComponent from "../../Components/Button/Button";
 
+import ImageCarousel from "../../Components/ImageCarousel/ImageCarousel";
 import MobileFenceDetails from "../MobileFenceDetails/MobileFenceDetails";
 
 // Responsive imports
@@ -17,7 +18,6 @@ function FenceDetails() {
 
     const fenceType = fenceTypes.find(f => f.route === type); // Find the fence type that matches the route
     const name = fenceType.name; // Get the name of the fence type
-    const route = fenceType.route; // Get the route of the fence type
     const images = fenceType.images; // Get the images of the fence type
 
     // Check the screen size for responsive design
@@ -46,37 +46,8 @@ function FenceDetails() {
                             width: '100%',
                         }}>
 
-                        {/* Image carousel component */}
-                        {/* Adjust props as needed */}
-                        <Carousel showArrows={true}
-                            showThumbs={true}
-                            showStatus={false}
-                            infiniteLoop={true}
-                            interval={5000}
-                            autoPlay={true}
-                            width={'100%'}
-                        >
 
-                            {/* Make so users can click into images? */}
-                            {images.map((image, index) => (
-                                <div key={index} style={{ /*border: '2px solid red',*/ }}> {/* Align images to the left */}
-                                    <img src={image}
-                                        style={{
-                                            maxWidth: '100%',     // Maximum width is 100% of the container
-                                            maxHeight: '500px',   // Maximum height
-                                            height: 'auto',       // Height auto for maintaining aspect ratio
-                                            objectFit: 'contain', // Ensures the image is scaled properly
-                                            margin: 'auto',       // Center the image in the div
-                                            boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Optional box shadow
-                                            width: 300,
-                                            marginLeft: "auto",
-                                            marginRight: "auto"
-
-                                        }}
-                                        alt={`${name} fence`} />
-                                </div>
-                            ))}
-                        </Carousel>
+                        <ImageCarousel images={images} name={name} />
 
                         <div style={{
                             width: '100%',
