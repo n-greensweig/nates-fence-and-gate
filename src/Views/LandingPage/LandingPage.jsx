@@ -59,7 +59,7 @@ function LandingPage() {
 
             <div className="bottom-section">
 
-                <div className="container"
+                <div className="top-container"
                     style={{
                         display: 'flex',
                         flexDirection: 'row',
@@ -90,6 +90,31 @@ function LandingPage() {
                                 alignSelf: 'center',
                             }}
                         />
+                    </div>
+                </div>
+
+                <div className="bottom-container getting-started">
+                    <h2>Getting Started:</h2>
+                    <div className="button-divs"
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'row',
+                            justifyContent: 'space-around',
+                            width: '100%',
+                            gap: '20px',
+                        
+                        }}
+                    >
+
+                        <div className="fence-types-group">
+                            <p>View our fencing types</p>
+                            {/* Change button text to just 'Fence Types' */}
+                            <ButtonComponent type="Types" />
+                        </div>
+                        <div className="quote-groups">
+                            <p>Get an instant quote</p>
+                            <ButtonComponent type="Quote" />
+                        </div>
                     </div>
                 </div>
 
