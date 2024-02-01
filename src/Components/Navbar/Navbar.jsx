@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-    HashRouter as Router,
-    Route,
-} from 'react-router-dom'; // import for routing
+import { HashRouter as Router } from 'react-router-dom'; // import for routing
+import './Navbar.css';
 
 const Navbar = () => {
     return (
