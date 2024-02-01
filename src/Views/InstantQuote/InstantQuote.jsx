@@ -50,12 +50,12 @@ function InstantQuote() {
                     >
                         <div className='black-background' style={{ width: '65%', paddingTop: '20px' }}>
                             <header style={{
-                                border: '2px solid gray', alignSelf: 'center', backgroundColor: 'black', color: 'white', padding: '10px 20px',
+                                border: '2px solid #0283AB', alignSelf: 'center', backgroundColor: 'black', color: 'white', padding: '10px 20px',
                                 opacity: '.65', fontSize: '2.5rem', textAlign: 'center'
                             }}>Virtual Fence Designer<br></br>Instant Fence Quote</header>
                         </div>
-                        <div className='instructions' style={{ borderTop: '3px solid red', width: '65%', marginTop: '20px' }}>
-                            <h1 style={{ fontSize: '2rem' }}>How to use our <span className="red">virtual fence builder</span></h1>
+                        <div className='instructions' style={{ borderTop: '3px solid #102942', width: '65%', marginTop: '20px' }}>
+                            <h1 style={{ fontSize: '2rem' }}>How to use our <span style={{ color: '#0283AB' }}>virtual fence builder</span></h1>
                             <ol style={{ textAlign: 'left', margin: '0 auto' }}>
                                 <li>1. Enter your Name, Email & Phone Number – Click Next.</li>
                                 <li>2. Enter your Address City, State Zip Code – Click Find Your Home.</li>
