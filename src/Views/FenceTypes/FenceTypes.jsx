@@ -5,8 +5,7 @@ import TypeCard from "../../Components/TypeCard/TypeCard";
 import { fenceTypes } from "../../Constants/Constants"; // global fenceTypes variable
 
 // Responsive imports
-import { useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { useMediaQuery, useTheme } from "@mui/material";
 
 
 function FenceTypes() {
