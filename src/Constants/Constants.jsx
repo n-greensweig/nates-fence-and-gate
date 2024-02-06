@@ -7,6 +7,11 @@ export const fenceTypes = [
         cedarTypes: [
             {
                 name: 'Cap and Trim',
+                description: `Our cap and trim look is a great way to add a bit of elegance to traditional vertical fencing. 
+                Features a deck board cap across the top and the dog ears are covered with 1x4 trim. 
+                This can be built with a side by side picket pattern or an overlapping picket pattern for added depth and privacy. 
+                Heights available 4’, 5’, 6’.`,
+                mainImage: 'images/cedar/cap-and-trim/cap-and-trim-1.jpeg',
                 images: [
                     'images/cedar/cap-and-trim/cap-and-trim-1.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-2.jpeg',
@@ -16,6 +21,11 @@ export const fenceTypes = [
             },
             {
                 name: 'Craftsman',
+                description: `Our craftsman style fencing is  a customizable design that can feature an 
+                open picket, side by side, and overlapping pattern. These are great “good neighbor” fences because 
+                they are built to look the same from either side, often dressed out with 3 decorative trim boards and 
+                have the option of adding cap boards on top as well.`,
+                mainImage: 'images/cedar/craftsman/craftsman-1.jpeg',
                 images: [
                     'images/cedar/craftsman/craftsman-1.jpeg',
                     'images/cedar/craftsman/craftsman-2.jpeg',
@@ -26,15 +36,25 @@ export const fenceTypes = [
             },
             {
                 name: 'Horizontal',
+                description: `Horizontal fences are great for those who want a modern look. 
+                They are easily customizable with picket pattern and height variations. 
+                They come in shorter spans than traditional vertical fencing which help with strength. 
+                Built level for those who like clean straight lines.`,
+                mainImage: 'images/cedar/horizontal/horizontal-1.jpeg',
                 images: [
                     'images/cedar/horizontal/horizontal-1.jpeg',
                     'images/cedar/horizontal/horizontal-2.jpeg',
                     'images/cedar/horizontal/horizontal-3.jpeg',
                     'images/cedar/horizontal/horizontal-4.jpeg',
                 ],
+
             },
             {
                 name: 'Standard',
+                description: `Our standard privacy option tends to be the most cost effective option for privacy fencing. 
+                Features the choice between side by side picket pattern or overlapping picket for total privacy. Features 
+                the classic dog ear picket at the top. Height available 4’-6’.`,
+                mainImage: 'images/cedar/standard/standard-1.jpeg',
                 images: [
                     'images/cedar/standard/standard-1.jpeg',
                     'images/cedar/standard/standard-2.jpeg',
@@ -96,10 +116,10 @@ export const fenceTypes = [
         ],
         route: 'custom'
     },
- ];
- 
- 
- export const faq = [
+];
+
+
+export const faq = [
     {
         question: "How high can I build a fence?",
         answer: `The allowable height of a fence is largely influenced by its
@@ -115,8 +135,8 @@ export const fenceTypes = [
     free instant quote tool or reach out for an estimate.
     `,
     },
- 
- 
+
+
     {
         question: "Why steel post?",
         answer: `We are believers in higher quality products.
@@ -156,4 +176,4 @@ export const fenceTypes = [
     minimal soil disruptions—critical factors in ensuring a solid fencing solution.
     `,
     }
- ];
+];
