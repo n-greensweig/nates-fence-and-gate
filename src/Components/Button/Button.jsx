@@ -21,14 +21,14 @@ function ButtonComponent(props) {
                 textTransform: 'none', // Prevent all caps
             }}
             onMouseEnter={(e) => {
-                e.target.style.backgroundColor = props.type === 'Quote' ? '#102942' : '#F2F2F2';
                 e.target.style.color = props.type === 'Quote' ? '#F2F2F2' : '#102942';
                 e.target.style.border = props.type === 'Quote' ? null : '2px solid #102942';
+                e.target.style.opacity = props.type === 'Quote' ? 0.7 : null; // Set opacity to 70%
             }}
             onMouseLeave={(e) => {
-                e.target.style.backgroundColor = props.type === 'Quote' ? '#0283AB' : '#F2F2F2';
                 e.target.style.color = props.type === 'Quote' ? '#F2F2F2' : '#102942';
                 e.target.style.border = null;
+                e.target.style.opacity = 1; // Reset opacity to 100%
             }}
             onClick={props.type ? () => history.push(path) : null}
         >
