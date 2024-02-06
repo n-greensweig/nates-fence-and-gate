@@ -12,6 +12,7 @@ import FenceTypes from '../Views/FenceTypes/FenceTypes';
 import InstantQuote from '../Views/InstantQuote/InstantQuote';
 import LandingPage from '../Views/LandingPage/LandingPage';
 import Navbar from '../Components/Navbar/Navbar'
+import CedarDetails from '../Views/CedarDetails/CedarDetails';
 
 function App() {
   return (
@@ -51,6 +52,10 @@ function App() {
 
         <Route exact path="/fence-details/:type">
           <FenceDetails />
+        </Route>
+
+        <Route exact path="/fence-details/cedar">
+          <CedarDetails />
         </Route>
 
         <Route exact path="/quote">
