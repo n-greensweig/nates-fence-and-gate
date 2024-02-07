@@ -1,6 +1,14 @@
 import ButtonComponent from "../../Components/Button/Button";
+import ReviewCarousel from "../../Components/ReviewCarousel/ReviewCarousel";
+
+import { useEffect } from "react";
 
 function LandingPage() {
+
+    useEffect(() => {
+        document.title = "Nate's Fence and Gate";
+    }, []);
+
     return (
         <div>
             <div
@@ -82,14 +90,7 @@ function LandingPage() {
                             flexDirection: 'column'
                         }}
                     >
-                        <p>{'[Image and review carousel here]'}</p>
-                        <img src="images/cedar/craftsman/craftsman-1.jpeg" alt="Cedar fence"
-                            style={{
-                                height: '100px',
-                                width: '100px',
-                                alignSelf: 'center',
-                            }}
-                        />
+                        <ReviewCarousel />
                     </div>
                 </div>
 
@@ -102,7 +103,7 @@ function LandingPage() {
                             justifyContent: 'space-around',
                             width: '100%',
                             gap: '20px',
-                        
+
                         }}
                     >
 
