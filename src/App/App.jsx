@@ -13,11 +13,13 @@ import InstantQuote from '../Views/InstantQuote/InstantQuote';
 import LandingPage from '../Views/LandingPage/LandingPage';
 import Navbar from '../Components/Navbar/Navbar'
 import CedarDetails from '../Views/CedarDetails/CedarDetails';
+import Footer from '../Components/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
+      
       <Router>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -69,6 +71,7 @@ function App() {
 
 
       </Router >
+      <Footer />
     </div>
   );
 }
