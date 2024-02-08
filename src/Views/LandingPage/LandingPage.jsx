@@ -11,58 +11,33 @@ function LandingPage() {
 
     return (
         <div>
+            <div className='bg-hero h-screen'>
+                <h1 className='text-white text-7xl'>Nate's Fence and Gate</h1>
+                <p className='text-white text-3xl font-thin'>Top rated fence & deck contractor in Minnesota</p>
+                <div className='flex flex-row justify-center'>
+                    <ButtonComponent type="Types" />
+                    <ButtonComponent type="Quote" />
+                </div>
+                <p className='text-white text-2xl font-normal'>Learn More (will be at bottom of hero)</p>
+            </div>
+
+
             <div
-                className='instant-quote-hero'
+                className='content'
                 style={{
-                    position: 'relative',
-                    height: '100vh',
-                    backgroundSize: 'cover'
+                    position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
                 }}
             >
-                <div
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        backgroundImage: "url('images/cedar/craftsman/craftsman-1.jpeg')",
-                        backgroundSize: 'cover',
-                        opacity: .3,
-                        zIndex: -1,
-                    }}
-                />
-                <div
-                    className='content'
-                    style={{
-                        position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
-                    }}
-                >
-                    <header style={{
-                        fontSize: '2.5rem',
-                        color: '#102942',
-                    }}>Welcome to Nate's Fence and Gate
-                    </header>
+                <div className="button-group" style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'center',
+                    marginTop: '20px',
+                    gap: '20px',
+                }}>
 
-                    {/* Change text below */}
-                    <h1 style={{
-                        fontSize: '2rem',
-                        color: '#102942',
-                    }}>THE BEST FENCE & DECK CONTRACTOR IN THE TWIN CITIES METRO AREA</h1>
 
-                    <div className="button-group" style={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        justifyContent: 'center',
-                        marginTop: '20px',
-                        gap: '20px',
-                    }}>
-
-                        <ButtonComponent type="Types" />
-                        <ButtonComponent type="Quote" />
-                    </div>
                 </div>
-
             </div>
 
             <div className="bottom-section">
