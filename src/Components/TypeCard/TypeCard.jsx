@@ -14,7 +14,7 @@ function TypeCard(props) {
     const history = useHistory();
     const isCedarPage = history.location.pathname === '/fence-details/cedar';
 
-    // Needs handleClick function to route to the correct page
+    // handleClick function to route to the correct page
     const handleClick = route => history.push(`/fence-details/${route}`);
 
     // Check the screen size for responsive design

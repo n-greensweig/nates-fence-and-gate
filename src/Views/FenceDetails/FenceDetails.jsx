@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import { fenceTypes } from "../../Constants/Constants";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ButtonComponent from "../../Components/Button/Button";
 
@@ -16,7 +15,8 @@ function FenceDetails() {
 
     const { type } = useParams();
 
-    const fenceType = fenceTypes.find(f => f.route === type); // Find the fence type that matches the route
+    const fenceType = fenceTypes.find(f => f.route === type) ? fenceTypes.find(f => f.route === type) :
+        fenceTypes[0].cedarTypes.find(f => f.route === type); // Find the fence type that matches the route
     const name = fenceType.name; // Get the name of the fence type
     const images = fenceType.images; // Get the images of the fence type
 
@@ -59,15 +59,13 @@ function FenceDetails() {
                             {/* Fence type description */}
                             <p
                                 style={{
-                                    // marginRight: '20%',
                                     display: 'flex',
                                     flexDirection: 'column',
                                     justifyContent: 'center',
-                                    textAlign: 'justify',
                                     paddingBottom: '5%',
-                                    fontSize: '1.2em'
+                                    fontSize: '1.2em',
                                 }}
-                            >{fenceType.description}</p>
+                            >{fenceType ? fenceType.description : null}</p>
                             <ButtonComponent type={'Quote'} />
                         </div>
 
