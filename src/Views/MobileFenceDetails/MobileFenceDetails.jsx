@@ -9,9 +9,9 @@ function MobileFenceDetails() {
 
     const { type } = useParams();
 
-    const fenceType = fenceTypes.find(f => f.route === type); // Find the fence type that matches the route
-    const name = fenceType.name; // Get the name of the fence type
-    const route = fenceType.route; // Get the route of the fence type
+const fenceType = fenceTypes.find(f => f.route === type) ? fenceTypes.find(f => f.route === type) :
+        fenceTypes[0].cedarTypes.find(f => f.route === type); // Find the fence type that matches the route    const name = fenceType.name; // Get the name of the fence type
+    const name = fenceType.name; // Get the route of the fence type
     const images = fenceType.images; // Get the images of the fence type
 
     return (

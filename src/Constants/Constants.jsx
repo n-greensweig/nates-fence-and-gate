@@ -18,6 +18,7 @@ export const fenceTypes = [
                     'images/cedar/cap-and-trim/cap-and-trim-3.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-4.jpeg',
                 ],
+                route: 'cap-and-trim',
             },
             {
                 name: 'Craftsman',
@@ -33,6 +34,7 @@ export const fenceTypes = [
                     'images/cedar/craftsman/craftsman-4.jpeg',
                     'images/cedar/craftsman/craftsman-5.jpeg',
                 ],
+                route: 'craftsman',
             },
             {
                 name: 'Horizontal',
@@ -40,14 +42,14 @@ export const fenceTypes = [
                 They are easily customizable with picket pattern and height variations. 
                 They come in shorter spans than traditional vertical fencing which help with strength. 
                 Built level for those who like clean straight lines.`,
-                mainImage: 'images/cedar/horizontal/horizontal-1.jpeg',
+                mainImage: 'images/cedar/horizontal/horizontal-4.jpeg',
                 images: [
                     'images/cedar/horizontal/horizontal-1.jpeg',
                     'images/cedar/horizontal/horizontal-2.jpeg',
                     'images/cedar/horizontal/horizontal-3.jpeg',
                     'images/cedar/horizontal/horizontal-4.jpeg',
                 ],
-
+                route: 'horizontal',
             },
             {
                 name: 'Standard',
@@ -61,6 +63,7 @@ export const fenceTypes = [
                     'images/cedar/standard/standard-3.jpeg',
                     'images/cedar/standard/standard-4.jpeg',
                 ],
+                route: 'standard',
             },
         ],
         images: [], // need to specialize for cedar

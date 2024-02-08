@@ -22,12 +22,15 @@ function FenceTypes() {
     return (
         <div>
             <header style={{ fontSize: '2.5rem' }}>Fence Types</header>
-            <p style={{ fontSize: '1rem' }}>Choosing the perfect fence is as unique as your needs and interests.
+            <p style={{
+                fontSize: '1rem',
+            }}>
+                Choosing the perfect fence is as unique as your needs and interests.
                 Explore our wide range of fence types, tailored to match your individual
-                requirements and preferences.</p>
+                requirements and preferences.
+            </p>
 
-            <div className="content" style={{ marginTop: '10%', fontSize: '2rem' }}>
-                <p>View Fence Types</p>
+            <div className="content" style={{ marginTop: isXsScreen || isSmScreen ? '5%' : '3%', fontSize: '2rem' }}>
                 <Grid container spacing={2} minHeight={'5vh'} xs={12} sm={6} md={4} lg={3}
                     style={{
                         marginTop: '0px',
