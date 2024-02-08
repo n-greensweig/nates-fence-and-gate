@@ -40,7 +40,7 @@ export const fenceTypes = [
                 They are easily customizable with picket pattern and height variations. 
                 They come in shorter spans than traditional vertical fencing which help with strength. 
                 Built level for those who like clean straight lines.`,
-                mainImage: 'images/cedar/horizontal/horizontal-1.jpeg',
+                mainImage: 'images/cedar/horizontal/horizontal-4.jpeg',
                 images: [
                     'images/cedar/horizontal/horizontal-1.jpeg',
                     'images/cedar/horizontal/horizontal-2.jpeg',

@@ -1,5 +1,4 @@
-import { Paper, Card, CardActionArea, CardMedia, CardContent, Typography } from "@mui/material";
-
+import { Paper, Card, CardActionArea, CardMedia, CardContent, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function TypeCard(props) {
@@ -13,13 +12,19 @@ function TypeCard(props) {
     };
 
     const history = useHistory();
+    const isCedarPage = history.location.pathname === '/fence-details/cedar';
 
     // Needs handleClick function to route to the correct page
     const handleClick = route => history.push(`/fence-details/${route}`);
 
+    // Check the screen size for responsive design
+    const theme = useTheme();
+    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
+    const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <div>
-            <Paper elevation={3} style={cardStyle}
+            <Paper elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3} style={cardStyle}
                 onClick={() => {
                     props.fenceType.route === 'cedar' ? history.push('/fence-details/cedar') :
                         handleClick(props.fenceType.route)
