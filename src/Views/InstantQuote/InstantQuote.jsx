@@ -71,7 +71,7 @@ function InstantQuote() {
 
                 </div >
             }
-            <iframe src="http://myfence.mysalesman.com/?partnerCode=1226a28ae4ce" title="Instant Quote Form"
+            <iframe src="https://qualify.mysalesman.com/?EC6C557F" title="Instant Quote Form"
                 style={{ width: '100%', height: isSmScreen || isXsScreen ? '600px' : '1000px', overflowX: 'scroll' }}></iframe>
         </>
     )
