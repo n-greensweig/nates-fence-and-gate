@@ -33,13 +33,6 @@ const Navbar = () => {
                             Instant Quote
                         </Link>
                     </li>
-                    <li className='mr-10'>
-                        <Link to='/faq'>
-                            FAQ
-                        </Link>
-                    </li>
-
-
                 </ul>
             </nav>
         </Router>
