@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashRouter as Router } from 'react-router-dom'; // import for routing
 import './Navbar.css';
 import { Button } from '@mui/material';
 
 const Navbar = () => {
+
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => setShowDropdown(!showDropdown);
+
     return (
         <Router>
             <nav className='w-full bg-nates-dark-blue text-white flex flex-row justify-between'>
@@ -19,10 +24,26 @@ const Navbar = () => {
                             Home
                         </Link>
                     </li>
-                    <li className=''>
+                    <li className='relative' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         <Link to='/fence-types'>
                             Fence Types
                         </Link>
+                        {showDropdown && (
+                            <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg">
+                                <li style={{ borderBottom: '2px solid #102942', padding: '10px 0', color: '#102942', }} >
+                                    <Link to="/fence-details/cedar">Cedar</Link>
+                                </li>
+                                <li style={{ borderBottom: '2px solid #102942', padding: '10px 0', color: '#102942', }} >
+                                    <Link to="/fence-details/vinyl">Vinyl</Link>
+                                </li>
+                                <li style={{ borderBottom: '2px solid #102942', padding: '10px 0', color: '#102942', }} >
+                                    <Link to="/fence-details/ornamental">Ornamental</Link>
+                                </li>
+                                <li style={{ padding: '10px 0', color: '#102942', }}>
+                                    <Link to="/fence-details/chain-link">Chain Link</Link>
+                                </li>
+                            </ul>
+                        )}
                     </li>
                     <li className='' style={{ height: '50%' }}>
                         <Link to='/quote'>

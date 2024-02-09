@@ -13,7 +13,7 @@ function LandingPage() {
         <div className='w-full h-full'>
             <div className='bg-hero h-screen flex flex-col space-y-5 justify-center'>
                 <h1 className='text-white text-7xl'>Nate's Fence and Gate</h1>
-                <p className='text-white text-3xl font-thin'>Top rated fence & deck contractor in Minnesota</p>
+                <p className='text-white text-3xl font-thin'>Top-rated fence contractor in Minnesota</p>
                 <div className='flex flex-row justify-center'>
                     <ButtonComponent type="Types" />
                     <ButtonComponent type="Quote" />

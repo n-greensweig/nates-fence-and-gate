@@ -39,7 +39,6 @@ function FenceTypes() {
                         flexWrap: 'wrap',
                         justifyContent: 'center',
                         alignItems: 'center',
-                        gap: '16px',
                         maxWidth: '1400px',
                         margin: '0 auto',
                         padding: '20px 10px',
@@ -50,7 +49,6 @@ function FenceTypes() {
                             <Grid item xs={12} sm={6} md={4} lg={3} key={index}
                                 style={{
                                     height: '500px', // Make wider than it is tall on small screens?
-                                    padding: '0px',
                                 }}
                             >
                                 <TypeCard key={index} fenceType={fenceType} />
