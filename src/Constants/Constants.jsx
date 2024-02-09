@@ -78,7 +78,7 @@ export const fenceTypes = [
             },
             {
                 name: 'Hogwire',
-                description: `Hogwire is a great option for those who want a modern look with a bit of a view.`,
+                description: `Hogwire is a great option when you are looking for an open concept while providing the beauty of a cedar fence. Built level and appealing to the eye.`,
                 mainImage: 'images/cedar/hogwire/hogwire-1.jpeg',
                 images: [
                     'images/cedar/hogwire/hogwire-1.jpeg',

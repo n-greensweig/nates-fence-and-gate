@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import { Typography } from '@mui/material';
 
+import './Footer.css';
+
 const Footer = () => {
     return (
         <footer className='bg-nates-dark-blue text-white flex flex-row justify-evenly border-t-8 border-nates-light-blue mt-14'>
@@ -12,62 +14,25 @@ const Footer = () => {
                     <Typography style={{
                         backgroundColor: 'white',
                         color: '#102942',
+                        margin: '10% auto',
+                        width: '50%',
+                        padding: '5px',
                     }}>
                         <a href="tel:612-702-8681">
                             <SmartphoneIcon style={{ fill: '#0283AB' }} />{' '}
-                            Call or text: 612-702-8681</a>
+                            <span className='hover'>Call or text: 612-702-8681</span></a>
                     </Typography>
                     <p>
-                        <Link to='/' onClick={() => window.scrollTo(0, 0)}
-                            onMouseEnter={e => {
-                                e.target.style.textDecoration = 'underline';
-                                e.target.style.color = '#0283AB';
-                            }}
-                            onMouseLeave={e => {
-                                e.target.style.textDecoration = 'none';
-                                e.target.style.color = 'white';
-                            }}>
+                        <Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover'>
                             Home</Link> |{' '}
-                        <Link to='/fence-types' onClick={() => window.scrollTo(0, 0)}
-                            onMouseEnter={e => {
-                                e.target.style.textDecoration = 'underline';
-                                e.target.style.color = '#0283AB';
-                            }}
-                            onMouseLeave={e => {
-                                e.target.style.textDecoration = 'none';
-                                e.target.style.color = 'white';
-                            }}>
+                        <Link to='/fence-types' onClick={() => window.scrollTo(0, 0)} className='hover'>
                             Fence Types</Link> |{' '}
                         <a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,'
-                            target='_blank'
-                            onMouseEnter={e => {
-                                e.target.style.textDecoration = 'underline';
-                                e.target.style.color = '#0283AB';
-                            }}
-                            onMouseLeave={e => {
-                                e.target.style.textDecoration = 'none';
-                                e.target.style.color = 'white';
-                            }}>
+                            target='_blank' className='hover'>
                             Google Reviews</a> |{' '}
-                        <Link to='/quote' onClick={() => window.scrollTo(0, 0)}
-                            onMouseEnter={e => {
-                                e.target.style.textDecoration = 'underline';
-                                e.target.style.color = '#0283AB';
-                            }}
-                            onMouseLeave={e => {
-                                e.target.style.textDecoration = 'none';
-                                e.target.style.color = 'white';
-                            }}>
+                        <Link to='/quote' onClick={() => window.scrollTo(0, 0)} className='hover'>
                             Instant Quote</Link> |{' '}
-                        <Link to='/about' onClick={() => window.scrollTo(0, 0)}
-                            onMouseEnter={e => {
-                                e.target.style.textDecoration = 'underline';
-                                e.target.style.color = '#0283AB';
-                            }}
-                            onMouseLeave={e => {
-                                e.target.style.textDecoration = 'none';
-                                e.target.style.color = 'white';
-                            }}>
+                        <Link to='/about' onClick={() => window.scrollTo(0, 0)} className='hover'>
                             About</Link>
                     </p>
                 </div>
