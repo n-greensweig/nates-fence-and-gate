@@ -15,6 +15,9 @@ module.exports = {
       brightness: {
         40: '.40',
       },
+      height: {
+        '50vh': 'height: 50vh'
+      },
     },
   },
   plugins: [],
