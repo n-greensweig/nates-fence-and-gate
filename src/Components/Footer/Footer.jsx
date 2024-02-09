@@ -18,11 +18,57 @@ const Footer = () => {
                             Call or text: 612-702-8681</a>
                     </Typography>
                     <p>
-                        <Link to='/' onClick={() => window.scrollTo(0, 0)}>Home</Link> |{' '}
-                        <Link to='/fence-types' onClick={() => window.scrollTo(0, 0)}>Fence Types</Link> |{' '}
-                        <a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,' target='_blank'>Google Reviews</a> |{' '}
-                        <Link to='/quote' onClick={() => window.scrollTo(0, 0)}>Instant Quote</Link> |{' '}
-                        <Link to='/about' onClick={() => window.scrollTo(0, 0)}>About</Link>
+                        <Link to='/' onClick={() => window.scrollTo(0, 0)}
+                            onMouseEnter={e => {
+                                e.target.style.textDecoration = 'underline';
+                                e.target.style.color = '#0283AB';
+                            }}
+                            onMouseLeave={e => {
+                                e.target.style.textDecoration = 'none';
+                                e.target.style.color = 'white';
+                            }}>
+                            Home</Link> |{' '}
+                        <Link to='/fence-types' onClick={() => window.scrollTo(0, 0)}
+                            onMouseEnter={e => {
+                                e.target.style.textDecoration = 'underline';
+                                e.target.style.color = '#0283AB';
+                            }}
+                            onMouseLeave={e => {
+                                e.target.style.textDecoration = 'none';
+                                e.target.style.color = 'white';
+                            }}>
+                            Fence Types</Link> |{' '}
+                        <a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,'
+                            target='_blank'
+                            onMouseEnter={e => {
+                                e.target.style.textDecoration = 'underline';
+                                e.target.style.color = '#0283AB';
+                            }}
+                            onMouseLeave={e => {
+                                e.target.style.textDecoration = 'none';
+                                e.target.style.color = 'white';
+                            }}>
+                            Google Reviews</a> |{' '}
+                        <Link to='/quote' onClick={() => window.scrollTo(0, 0)}
+                            onMouseEnter={e => {
+                                e.target.style.textDecoration = 'underline';
+                                e.target.style.color = '#0283AB';
+                            }}
+                            onMouseLeave={e => {
+                                e.target.style.textDecoration = 'none';
+                                e.target.style.color = 'white';
+                            }}>
+                            Instant Quote</Link> |{' '}
+                        <Link to='/about' onClick={() => window.scrollTo(0, 0)}
+                            onMouseEnter={e => {
+                                e.target.style.textDecoration = 'underline';
+                                e.target.style.color = '#0283AB';
+                            }}
+                            onMouseLeave={e => {
+                                e.target.style.textDecoration = 'none';
+                                e.target.style.color = 'white';
+                            }}>
+                            About</Link>
                     </p>
                 </div>
             </div>
