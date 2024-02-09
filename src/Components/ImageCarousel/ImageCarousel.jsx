@@ -20,29 +20,47 @@ function ImageCarousel(props) {
             {images.map((image, index) => (
                 <div key={index} style={{ position: 'relative' }}>
                     <img src={image} style={{
-                        maxWidth: '100%',
-                        maxHeight: '500px',
-                        height: 'auto',
-                        objectFit: 'contain',
-                        margin: 'auto',
-                        boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                        width: 300,
+                        maxWidth: '100%', // Keep the image width within the container
+                        maxHeight: '800px', // Increase max height for bigger images
+                        height: 'auto', // Maintain aspect ratio
+                        objectFit: 'contain', // Adjust as needed
+                        margin: 'auto', // Center the image
+                        boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Optional: for styling
+                        width: source ? '100%' : '300px', // 100% on LandingPage view, 300px on FenceTypes view
                         marginLeft: "auto",
                         marginRight: "auto",
                     }} alt={`${name} fence`} />
                     {reviews && reviews[index] && (
                         <div style={{
-                            position: 'absolute', // Position the review over the image
-                            bottom: 0, // Align to the bottom of the parent div
+                            position: 'absolute', // Keep the review positioned over the image
+                            top: '50%', // Start at 50% of the parent div's height
+                            left: '50%', // Start at 50% of the parent div's width
+                            transform: 'translate(-50%, -50%)', // Adjust the position to the center
                             backgroundColor: 'rgba(255,255,255,0.7)', // Semi-transparent white background
                             color: 'black', // Text color
                             padding: '20px', // Padding inside the text block
-                            width: '100%', // Take full width of the parent div
+                            textAlign: 'center', // Center the text within the text block
+                            maxWidth: '80%', // Max width of the text block
                             boxSizing: 'border-box', // Include padding in the width calculation
                         }}>
-                            <h2 style={{ margin: 0 }}>{reviews[index].author}</h2>
-                            <p style={{ margin: 0 }}>{reviews[index].text}</p>
-                            <p style={{ margin: 0 }}>{reviews[index].source}</p>
+                            <p style={{
+                                margin: 0,
+                                fontSize: '3rem',
+                                marginBottom: '10px',
+                            }}>
+                                {reviews[index].source}
+                                <div style={{
+                                    borderTop: '2.5px solid black',
+                                    width: '15%',
+                                    margin: '0 auto',
+                                }}></div>
+                            </p>
+                            <p style={{ marginBottom: '10%' }}>{reviews[index].text}</p>
+                            <h2 style={{
+                                margin: 0,
+                                color: '#0283AB',
+                                fontSize: '1.5rem',
+                            }}>{reviews[index].author}</h2>
                         </div>
                     )}
                 </div>
