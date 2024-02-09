@@ -33,7 +33,7 @@ function TypeCard(props) {
             >
                 {/* Need to make cards stretch horizontally on XS and SM screens */}
                 <Card style={{
-                    height: '500px',
+                    height: isCedarPage ? '475px' : '400px',
                     margin: '0px'
                 }}>
                     <CardActionArea>
@@ -65,7 +65,7 @@ function TypeCard(props) {
                             }}
                         >
                             <Typography variant="body2" color="text.secondary">
-                                {props.fenceType.description}
+                                {props.fenceType.introDescription}
                             </Typography>
 
                         </CardContent>
