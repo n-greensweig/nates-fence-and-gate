@@ -28,7 +28,9 @@ const Footer = () => {
             </div>
 
             <div className='h-64 w-1/3'>
-                <img src='../images/logos/nates-logo.jpg' className='h-64 mx-auto'></img>
+                <Link to='/' onClick={() => window.scrollTo(0, 0)}>
+                    <img src='../images/logos/nates-logo.jpg' className='h-64 mx-auto'></img>
+                </Link>
             </div>
 
             <div className='h-64 flex flex-col w-1/3 justify-center'>

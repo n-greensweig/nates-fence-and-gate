@@ -63,6 +63,26 @@ function About() {
 
             </div>
 
+            {/* Galvanized steel info */}
+            <div style={{ marginTop: '5%', }}>
+                <h1 style={{ fontWeight: 'bold', fontSize: '1.5rem', }}>Galvanized steel fence posts offer several advantages over wood posts:</h1>
+                <ol style={{ textAlign: 'left' }}>
+                    <li><span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Corrosion Resistance:</span> Galvanized steel is coated with a layer of zinc, providing excellent corrosion resistance.
+                        This protects the post from rust and deterioration caused by exposure to the elements.</li>
+                    <li><span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Longevity:</span> The galvanization process significantly extends the lifespan of steel posts, making them more durable and
+                        able to withstand harsh weather conditions over an extended period.</li>
+                    <li><span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Low Maintenance:</span> Galvanized steel posts require minimal maintenance compared to wood posts.
+                        They don't rot, warp, or decay, reducing the need for regular upkeep and replacements.</li>
+                    <li><span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Strength and Stability:</span> Galvanized steel is inherently strong, providing robust support for the fence. This strength is crucial in
+                        maintaining the stability of the fence, especially in areas prone to high winds or heavy loads.</li>
+                    <li><span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>Drivability:</span> With our driven system we are eliminating one of the most common issues with fence post here in Minnesota and that’s
+                        frost heaving. Us driving post 4’+ beneath our frost line ensures their will not be any heaving, heaving has near 0% to occur when a post is driven
+                        properly and to depth due to its minimal soil disruption.</li>
+                </ol>
+                <img src="images/galvanized-steel/galvanized-steel.JPEG" alt="Galvanized steel fence post"
+                    style={{ width: '100%', height: 'auto' }} />
+            </div>
+
             {/* FAQ section */}
             <div style={{ marginTop: '5%' }}>
                 <Faq />

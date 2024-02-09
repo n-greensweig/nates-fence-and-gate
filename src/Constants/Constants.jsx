@@ -17,6 +17,10 @@ export const fenceTypes = [
                     'images/cedar/cap-and-trim/cap-and-trim-2.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-3.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-4.jpeg',
+                    'images/cedar/cap-and-trim/cap-and-trim-5.jpeg',
+                    'images/cedar/cap-and-trim/cap-and-trim-6.jpeg',
+                    'images/cedar/cap-and-trim/cap-and-trim-7.jpeg',
+                    'images/cedar/cap-and-trim/cap-and-trim-8.jpeg',
                 ],
                 route: 'cap-and-trim',
             },
@@ -48,6 +52,10 @@ export const fenceTypes = [
                     'images/cedar/horizontal/horizontal-2.jpeg',
                     'images/cedar/horizontal/horizontal-3.jpeg',
                     'images/cedar/horizontal/horizontal-4.jpeg',
+                    'images/cedar/horizontal/horizontal-5.jpeg',
+                    'images/cedar/horizontal/horizontal-6.jpeg',
+                    'images/cedar/horizontal/horizontal-7.jpeg',
+                    'images/cedar/horizontal/horizontal-8.jpeg',
                 ],
                 route: 'horizontal',
             },
@@ -56,14 +64,43 @@ export const fenceTypes = [
                 description: `Our standard privacy option tends to be the most cost effective option for privacy fencing. 
                 Features the choice between side by side picket pattern or overlapping picket for total privacy. Features 
                 the classic dog ear picket at the top. Height available 4’-6’.`,
-                mainImage: 'images/cedar/standard/standard-1.jpeg',
+                mainImage: 'images/cedar/standard/standard-2.jpeg',
                 images: [
                     'images/cedar/standard/standard-1.jpeg',
                     'images/cedar/standard/standard-2.jpeg',
                     'images/cedar/standard/standard-3.jpeg',
                     'images/cedar/standard/standard-4.jpeg',
+                    'images/cedar/standard/standard-5.jpeg',
+                    'images/cedar/standard/standard-6.jpeg',
+                    'images/cedar/standard/standard-7.jpeg',
                 ],
                 route: 'standard',
+            },
+            {
+                name: 'Hogwire',
+                description: `Hogwire is a great option for those who want a modern look with a bit of a view.`,
+                mainImage: 'images/cedar/hogwire/hogwire-1.jpeg',
+                images: [
+                    'images/cedar/hogwire/hogwire-1.jpeg',
+                    'images/cedar/hogwire/hogwire-2.jpeg',
+                    'images/cedar/hogwire/hogwire-3.jpeg',
+                    'images/cedar/hogwire/hogwire-4.jpeg',
+                    'images/cedar/hogwire/hogwire-5.jpeg',
+                ],
+                route: 'hogwire',
+            },
+            {
+                name: 'Custom',
+                description: `Do you have a personal design you’d like to try?
+                Send us some photos and we will be more than willing to brainstorm solutions for you.`,
+                mainImage: 'images/cedar/custom/custom-2.jpeg',
+                images: [
+                    'images/cedar/custom/custom-1.jpeg',
+                    'images/cedar/custom/custom-2.jpeg',
+                    'images/cedar/custom/custom-3.jpeg',
+                    'images/cedar/custom/custom-4.jpeg',
+                ],
+                route: 'custom',
             },
         ],
         images: [], // need to specialize for cedar
@@ -74,11 +111,12 @@ export const fenceTypes = [
         description: `Vinyl fencing is the perfect fence for those who want complete privacy and zero maintenance.
         Available in white or tan featuring a 2x7 rail and 7/8” picket for a stronger more appealing fence.`,
         mainImage: 'images/vinyl/vinyl-3.jpeg',
-        images: ['images/vinyl/vinyl-1.jpeg',
+        images: [
+            'images/vinyl/vinyl-1.jpeg',
             'images/vinyl/vinyl-2.jpeg',
             'images/vinyl/vinyl-3.jpeg',
             'images/vinyl/vinyl-4.jpeg',
-            'images/vinyl/vinyl-5.jpeg'
+            'images/vinyl/vinyl-5.jpeg',
         ],
         route: 'vinyl'
     },
@@ -87,7 +125,8 @@ export const fenceTypes = [
         description: `Our steel ornamental option is a wonderful option for those looking for an open concept. 
         Ornamental is also maintenance free with its sleek powder coated black finish it goes with any property.`,
         mainImage: 'images/ornamental/ornamental-1.jpeg',
-        images: ['images/ornamental/ornamental-1.jpeg',
+        images: [
+            'images/ornamental/ornamental-1.jpeg',
             'images/ornamental/ornamental-2.jpeg',
             'images/ornamental/ornamental-3.jpeg',
             'images/ornamental/ornamental-4.jpeg',
@@ -99,25 +138,14 @@ export const fenceTypes = [
         description: `Chain link is perfect for creating a contained and safe, environment for children and pets.
         We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store quality chain link.`,
         mainImage: 'images/chain-link/chain-link-1-main.jpeg',
-        images: ['images/chain-link/chain-link-1-main.jpeg',
+        images: [
+            'images/chain-link/chain-link-1-main.jpeg',
             'images/chain-link/chain-link-2.jpeg',
             'images/chain-link/chain-link-3.jpeg',
             'images/chain-link/chain-link-4.jpeg',
-            'images/chain-link/chain-link-5.jpeg'
+            'images/chain-link/chain-link-5.jpeg',
         ],
         route: 'chain-link'
-    },
-    {
-        name: 'Custom',
-        description: `Do you have a personal design you’d like to try?
-        Send us some photos and we will be more than willing to brainstorm solutions for you.`,
-        mainImage: 'images/custom/custom-2.jpeg',
-        images: ['images/custom/custom-1.jpeg',
-            'images/custom/custom-2.jpeg',
-            'images/custom/custom-3.jpeg',
-            'images/custom/custom-4.jpeg',
-        ],
-        route: 'custom'
     },
 ];
 
@@ -138,8 +166,6 @@ export const faq = [
     free instant quote tool or reach out for an estimate.
     `,
     },
-
-
     {
         question: "Why steel post?",
         answer: `We are believers in higher quality products.
@@ -178,5 +204,5 @@ export const faq = [
     driven posts can avoid messy, labor-intensive processes, often eliminating the need for heavy machinery and causing
     minimal soil disruptions—critical factors in ensuring a solid fencing solution.
     `,
-    }
+    },
 ];
