@@ -20,13 +20,13 @@ function ImageCarousel(props) {
             {images.map((image, index) => (
                 <div key={index} style={{ position: 'relative' }}>
                     <img src={image} style={{
-                        maxWidth: '100%',
-                        maxHeight: '500px',
-                        height: 'auto',
-                        objectFit: 'contain',
-                        margin: 'auto',
-                        boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                        width: 300,
+                        maxWidth: '100%', // Keep the image width within the container
+                        maxHeight: '800px', // Increase max height for bigger images
+                        height: 'auto', // Maintain aspect ratio
+                        objectFit: 'contain', // Adjust as needed
+                        margin: 'auto', // Center the image
+                        boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Optional: for styling
+                        width: source ? '100%' : '300px', // 100% on LandingPage view, 300px on FenceTypes view
                         marginLeft: "auto",
                         marginRight: "auto",
                     }} alt={`${name} fence`} />
