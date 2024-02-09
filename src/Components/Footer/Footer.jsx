@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SmartphoneIcon from '@mui/icons-material/Smartphone';
+import { Typography } from '@mui/material';
 
 const Footer = () => {
     return (
@@ -7,7 +9,14 @@ const Footer = () => {
             <div className='h-64 w-1/3'>
                 <h3 className='text-5xl'>Contact</h3>
                 <div>
-                    <h2>Contact us:</h2>
+                    <Typography style={{
+                        backgroundColor: 'white',
+                        color: '#102942',
+                    }}>
+                        <a href="tel:612-702-8681">
+                            <SmartphoneIcon style={{ fill: '#0283AB' }} />{' '}
+                            Call or text: 612-702-8681</a>
+                    </Typography>
                     <p>
                         <Link to='/' onClick={() => window.scrollTo(0, 0)}>Home</Link> |{' '}
                         <Link to='/fence-types' onClick={() => window.scrollTo(0, 0)}>Fence Types</Link> |{' '}
