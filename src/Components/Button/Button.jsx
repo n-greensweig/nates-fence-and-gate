@@ -18,6 +18,7 @@ function ButtonComponent(props) {
                 color: props.type === 'Quote' ? '#F2F2F2' : '#102942',
                 opacity: 1,
                 transition: 'opacity 0.3s ease-in-out',
+                border: props.type === 'Quote' ? null : '2px solid #F2F2F2',
                 textTransform: 'none', // Prevent all caps
             }}
             onMouseEnter={(e) => {
