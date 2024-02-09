@@ -63,8 +63,10 @@ function About() {
 
             </div>
 
-            {/* Could include FAQ on About view */}
-            {/* <Faq /> */}
+            {/* FAQ section */}
+            <div style={{ marginTop: '5%' }}>
+                <Faq />
+            </div>
 
         </div>
     )
