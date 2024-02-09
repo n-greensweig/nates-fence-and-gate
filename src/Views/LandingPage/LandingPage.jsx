@@ -11,7 +11,7 @@ function LandingPage() {
 
     return (
         <div>
-            <div className='bg-hero h-screen'>
+            <div className='bg-hero h-screen flex flex-col space-y-5 justify-center'>
                 <h1 className='text-white text-7xl'>Nate's Fence and Gate</h1>
                 <p className='text-white text-3xl font-thin'>Top rated fence & deck contractor in Minnesota</p>
                 <div className='flex flex-row justify-center'>
@@ -21,80 +21,40 @@ function LandingPage() {
                 <p className='text-white text-2xl font-normal'>Learn More (will be at bottom of hero)</p>
             </div>
 
-
-            <div
-                className='content'
-                style={{
-                    position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
-                }}
-            >
-                <div className="button-group" style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    marginTop: '20px',
-                    gap: '20px',
-                }}>
-
-
+            <div className='flex flex-row bg-slate-100 h-4/5'>
+                <div className='w-1/2'>
+                    <p className='text-3xl'>We believe in providing the best possible service to our customers. We take great pride in our work and are committed to providing our customers with the highest quality products and services.</p>
+                </div>
+                <div className='w-1/2'>
+                    <ReviewCarousel />
                 </div>
             </div>
-
-            <div className="bottom-section">
-
-                <div className="top-container"
+            <div className="bottom-container getting-started">
+                <h2>Getting Started:</h2>
+                <div className="button-divs"
                     style={{
                         display: 'flex',
                         flexDirection: 'row',
+                        justifyContent: 'space-around',
                         width: '100%',
+                        gap: '20px',
+
                     }}
                 >
-                    <div className="column"
-                        style={{
-                            width: '50%',
-                        }}
-                    >
-                        <p>At Nate's Fence and Gate, we believe in providing the best possible service to our customers. We take great pride in our work and are committed to providing our customers with the highest quality products and services.</p>
+
+                    <div className="fence-types-group">
+                        <p>View our fencing types</p>
+                        {/* Change button text to just 'Fence Types' */}
+                        <ButtonComponent type="Types" />
                     </div>
-                    <div className="column"
-                        style={{
-                            width: '50%',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            display: 'flex', // Add this line
-                            flexDirection: 'column'
-                        }}
-                    >
-                        <ReviewCarousel />
+                    <div className="quote-groups">
+                        <p>Get an instant quote</p>
+                        <ButtonComponent type="Quote" />
                     </div>
                 </div>
-
-                <div className="bottom-container getting-started">
-                    <h2>Getting Started:</h2>
-                    <div className="button-divs"
-                        style={{
-                            display: 'flex',
-                            flexDirection: 'row',
-                            justifyContent: 'space-around',
-                            width: '100%',
-                            gap: '20px',
-
-                        }}
-                    >
-
-                        <div className="fence-types-group">
-                            <p>View our fencing types</p>
-                            {/* Change button text to just 'Fence Types' */}
-                            <ButtonComponent type="Types" />
-                        </div>
-                        <div className="quote-groups">
-                            <p>Get an instant quote</p>
-                            <ButtonComponent type="Quote" />
-                        </div>
-                    </div>
-                </div>
-
             </div>
+
+
 
         </div>
     )

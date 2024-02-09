@@ -6,7 +6,7 @@ import './Navbar.css';
 const Navbar = () => {
     return (
         <Router>
-            <nav className='bg-nates-dark-blue text-white flex flex-row justify-between'>
+            <nav className='w-full fixed bg-nates-dark-blue text-white flex flex-row justify-between'>
                 <div>
                     <Link to='/'>
                         <img src='../images/logos/nates-logo.jpg' className='h-28 ml-2'></img>
