@@ -32,17 +32,25 @@ function ImageCarousel(props) {
                     }} alt={`${name} fence`} />
                     {reviews && reviews[index] && (
                         <div style={{
-                            position: 'absolute', // Position the review over the image
-                            bottom: 0, // Align to the bottom of the parent div
+                            position: 'absolute', // Keep the review positioned over the image
+                            top: '50%', // Start at 50% of the parent div's height
+                            left: '50%', // Start at 50% of the parent div's width
+                            transform: 'translate(-50%, -50%)', // Adjust the position to the center
                             backgroundColor: 'rgba(255,255,255,0.7)', // Semi-transparent white background
                             color: 'black', // Text color
                             padding: '20px', // Padding inside the text block
-                            width: '100%', // Take full width of the parent div
+                            textAlign: 'center', // Center the text within the text block
+                            maxWidth: '80%', // Max width of the text block
                             boxSizing: 'border-box', // Include padding in the width calculation
                         }}>
-                            <h2 style={{ margin: 0 }}>{reviews[index].author}</h2>
+                            <p style={{
+                                margin: 0,
+                                fontSize: '3rem',
+                                borderBottom: '3px solid black',
+                                marginBottom: '10px',
+                            }}>{reviews[index].source}</p>
                             <p style={{ margin: 0 }}>{reviews[index].text}</p>
-                            <p style={{ margin: 0 }}>{reviews[index].source}</p>
+                            <h2 style={{ margin: 0 }}>{reviews[index].author}</h2>
                         </div>
                     )}
                 </div>
