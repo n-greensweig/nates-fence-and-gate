@@ -46,11 +46,21 @@ function ImageCarousel(props) {
                             <p style={{
                                 margin: 0,
                                 fontSize: '3rem',
-                                borderBottom: '3px solid black',
                                 marginBottom: '10px',
-                            }}>{reviews[index].source}</p>
-                            <p style={{ margin: 0 }}>{reviews[index].text}</p>
-                            <h2 style={{ margin: 0 }}>{reviews[index].author}</h2>
+                            }}>
+                                {reviews[index].source}
+                                <div style={{
+                                    borderTop: '2.5px solid black',
+                                    width: '15%',
+                                    margin: '0 auto',
+                                }}></div>
+                            </p>
+                            <p style={{ marginBottom: '10%' }}>{reviews[index].text}</p>
+                            <h2 style={{
+                                margin: 0,
+                                color: '#0283AB',
+                                fontSize: '1.5rem',
+                            }}>{reviews[index].author}</h2>
                         </div>
                     )}
                 </div>
