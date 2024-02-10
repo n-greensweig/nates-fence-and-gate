@@ -24,24 +24,26 @@ const Navbar = () => {
                             Home
                         </Link>
                     </li>
+
+                    {/* Dropdown on hover */}
                     <li className='relative' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         <Link to='/fence-types'>
                             Fence Types
                         </Link>
                         {showDropdown && (
-                            <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg">
-                                <li style={{ borderBottom: '2px solid #102942', padding: '10px 0', color: '#102942', }} >
-                                    <Link to="/fence-details/cedar">Cedar</Link>
-                                </li>
-                                <li style={{ borderBottom: '2px solid #102942', padding: '10px 0', color: '#102942', }} >
-                                    <Link to="/fence-details/vinyl">Vinyl</Link>
-                                </li>
-                                <li style={{ borderBottom: '2px solid #102942', padding: '10px 0', color: '#102942', }} >
-                                    <Link to="/fence-details/ornamental">Ornamental</Link>
-                                </li>
-                                <li style={{ padding: '10px 0', color: '#102942', }}>
-                                    <Link to="/fence-details/chain-link">Chain Link</Link>
-                                </li>
+                            <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg blue-border">
+                                <Link to="/fence-details/cedar">
+                                    <li className='dropdown-item'>Cedar</li>
+                                </Link>
+                                <Link to="/fence-details/vinyl">
+                                    <li className='dropdown-item'>Vinyl</li>
+                                </Link>
+                                <Link to="/fence-details/ornamental">
+                                    <li className='dropdown-item'>Ornamental</li>
+                                </Link>
+                                <Link to="/fence-details/chain-link">
+                                    <li className='dropdown-item'>Chain Link</li>
+                                </Link>
                             </ul>
                         )}
                     </li>
