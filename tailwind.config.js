@@ -18,6 +18,15 @@ module.exports = {
       height: {
         '50vh': 'height: 50vh'
       },
+      keyframes: {
+        'bounce-fast': { 
+          '0%, 100%':{ transform: 'translatey(-0.25rem)'},
+          '50%':{ transform: 'translatey(1rem)'}
+        }
+      },
+      animation: {
+        'bounce-fast':'bounce-fast 1s ease-in infinite'
+      }
     },
   },
   plugins: [],
