@@ -19,14 +19,14 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <ul className='h-28 flex flex-row justify-between items-center gap-x-48'>
-                    <li className=''>
+                    <li className='nav-link'>
                         <Link to='/'>
                             Home
                         </Link>
                     </li>
 
                     {/* Dropdown on hover */}
-                    <li className='relative' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+                    <li className='relative nav-link' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         <Link to='/fence-types'>
                             Fence Types
                         </Link>
@@ -70,7 +70,7 @@ const Navbar = () => {
                             </Button>
                         </Link>
                     </li>
-                    <li className=''>
+                    <li className='nav-link'>
                         <Link to='/about'>
                             About
                         </Link>
