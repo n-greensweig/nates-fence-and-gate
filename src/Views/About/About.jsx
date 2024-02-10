@@ -1,6 +1,5 @@
 // Responsive imports
-import { useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { useTheme, useMediaQuery } from "@mui/material";
 import Faq from "../FAQ/FAQ";
 
 import { useEffect } from 'react';

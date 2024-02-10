@@ -22,7 +22,6 @@ export const fenceTypes = [
                     'images/cedar/cap-and-trim/cap-and-trim-5.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-6.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-7.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-8.jpeg',
                 ],
                 route: 'cap-and-trim',
             },
@@ -101,7 +100,7 @@ export const fenceTypes = [
                 introDescription: `Do you have a personal design you’d like to try? Send us some photos and we will be more than willing to brainstorm solutions for you.`,
                 description: `Do you have a personal design you’d like to try?
                 Send us some photos and we will be more than willing to brainstorm solutions for you.`,
-                mainImage: 'images/cedar/custom/custom-2.jpeg',
+                mainImage: 'images/cedar/custom/custom-4.jpeg',
                 images: [
                     'images/cedar/custom/custom-1.jpeg',
                     'images/cedar/custom/custom-2.jpeg',
