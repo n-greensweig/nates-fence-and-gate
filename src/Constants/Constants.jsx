@@ -22,7 +22,6 @@ export const fenceTypes = [
                     'images/cedar/cap-and-trim/cap-and-trim-5.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-6.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-7.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-8.jpeg',
                 ],
                 route: 'cap-and-trim',
             },
