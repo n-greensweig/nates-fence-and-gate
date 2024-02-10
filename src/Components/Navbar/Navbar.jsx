@@ -31,7 +31,7 @@ const Navbar = () => {
                             Fence Types
                         </Link>
                         {showDropdown && (
-                            <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg blue-border">
+                            <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg blue-border forefront">
                                 <Link to="/fence-details/cedar">
                                     <li className='dropdown-item'>Cedar</li>
                                 </Link>
