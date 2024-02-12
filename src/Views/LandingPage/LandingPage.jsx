@@ -1,5 +1,7 @@
 import ButtonComponent from "../../Components/Button/Button";
 import ReviewCarousel from "../../Components/ReviewCarousel/ReviewCarousel";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 import { useEffect } from "react";
 
@@ -11,14 +13,17 @@ function LandingPage() {
 
     return (
         <div className='w-full h-full'>
-            <div className='bg-hero h-screen flex flex-col space-y-5 justify-center'>
-                <h1 className='text-white text-7xl'>Nate's Fence and Gate</h1>
-                <p className='text-white text-3xl font-thin'>Top rated fence & deck contractor in Minnesota</p>
-                <div className='flex flex-row justify-center'>
+            <div className='bg-hero h-screen relative'>
+                <h1 className='text-white text-7xl absolute start-1/4 bottom-1/2 mb-14'>Nate's Fence and Gate</h1>
+                <p className='text-white text-3xl font-thin absolute start-1/4 bottom-1/2'>Top rated fence & deck contractor in Minnesota</p>
+                <div className='flex flex-row justify-center absolute start-1/4 bottom-1/2 translate-y-16'>
                     <ButtonComponent type="Types" />
                     <ButtonComponent type="Quote" />
                 </div>
-                <p className='text-white text-2xl font-normal'>Learn More (will be at bottom of hero)</p>
+                <div className='absolute bottom-0 start-1/2 -translate-x-1/2 mb-32'>
+                    <p className='text-white text-2xl font-normal'>Learn More</p>
+                    <FontAwesomeIcon icon={faChevronDown} className='text-white animate-bounce-fast' />
+                </div>
             </div>
 
             <div className='flex flex-row bg-slate-100 h-50vh py-14'>
