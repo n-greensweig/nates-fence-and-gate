@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashRouter as Router } from 'react-router-dom'; // import for routing
 import './Navbar.css';
 import { Button } from '@mui/material';
 
 const Navbar = () => {
+
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => setShowDropdown(!showDropdown);
+
     return (
         <Router>
             <nav className='w-full bg-nates-dark-blue text-white flex flex-row justify-between'>
@@ -14,15 +19,33 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <ul className='h-28 flex flex-row justify-between items-center gap-x-48'>
-                    <li className=''>
+                    <li className='nav-link'>
                         <Link to='/'>
                             Home
                         </Link>
                     </li>
-                    <li className=''>
+
+                    {/* Dropdown on hover */}
+                    <li className='relative nav-link' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         <Link to='/fence-types'>
                             Fence Types
                         </Link>
+                        {showDropdown && (
+                            <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg blue-border forefront">
+                                <Link to="/fence-details/cedar">
+                                    <li className='dropdown-item'>Cedar</li>
+                                </Link>
+                                <Link to="/fence-details/vinyl">
+                                    <li className='dropdown-item'>Vinyl</li>
+                                </Link>
+                                <Link to="/fence-details/ornamental">
+                                    <li className='dropdown-item'>Ornamental</li>
+                                </Link>
+                                <Link to="/fence-details/chain-link">
+                                    <li className='dropdown-item no-bottom'>Chain Link</li>
+                                </Link>
+                            </ul>
+                        )}
                     </li>
                     <li className='' style={{ height: '50%' }}>
                         <Link to='/quote'>
@@ -47,7 +70,7 @@ const Navbar = () => {
                             </Button>
                         </Link>
                     </li>
-                    <li className=''>
+                    <li className='nav-link'>
                         <Link to='/about'>
                             About
                         </Link>
