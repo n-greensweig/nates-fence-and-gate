@@ -1,12 +1,14 @@
 export const fenceTypes = [
     {
         name: 'Cedar',
+        introDescription: `We build all of our wood privacy fences with cedar wood on galvanized steel post.`,
         description: `We build all of our wood privacy fences with cedar wood on galvanized steel post.
         The best part is you don’t need to sacrifice the natural beautiful look of a wood fence for the strength of steel, as we conceal the post with a cover board.`,
         mainImage: 'images/cedar/craftsman/craftsman-1.jpeg',
         cedarTypes: [
             {
                 name: 'Cap and Trim',
+                introDescription: `Our cap and trim look is a great way to add a bit of elegance to traditional vertical fencing.`,
                 description: `Our cap and trim look is a great way to add a bit of elegance to traditional vertical fencing. 
                 Features a deck board cap across the top and the dog ears are covered with 1x4 trim. 
                 This can be built with a side by side picket pattern or an overlapping picket pattern for added depth and privacy. 
@@ -20,13 +22,14 @@ export const fenceTypes = [
                     'images/cedar/cap-and-trim/cap-and-trim-5.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-6.jpeg',
                     'images/cedar/cap-and-trim/cap-and-trim-7.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-8.jpeg',
                 ],
                 route: 'cap-and-trim',
             },
             {
                 name: 'Craftsman',
-                description: `Our craftsman style fencing is  a customizable design that can feature an 
+                introDescription: `Our craftsman style fencing is a customizable design that can feature an 
+                open picket, side by side, and overlapping pattern.`,
+                description: `Our craftsman style fencing is a customizable design that can feature an 
                 open picket, side by side, and overlapping pattern. These are great “good neighbor” fences because 
                 they are built to look the same from either side, often dressed out with 3 decorative trim boards and 
                 have the option of adding cap boards on top as well.`,
@@ -42,6 +45,7 @@ export const fenceTypes = [
             },
             {
                 name: 'Horizontal',
+                introDescription: `Horizontal fences are easily customizable and great for those who want a modern look.`,
                 description: `Horizontal fences are great for those who want a modern look. 
                 They are easily customizable with picket pattern and height variations. 
                 They come in shorter spans than traditional vertical fencing which help with strength. 
@@ -61,6 +65,7 @@ export const fenceTypes = [
             },
             {
                 name: 'Standard',
+                introDescription: `Our standard privacy option tends to be the most cost effective option for privacy fencing.`,
                 description: `Our standard privacy option tends to be the most cost effective option for privacy fencing. 
                 Features the choice between side by side picket pattern or overlapping picket for total privacy. Features 
                 the classic dog ear picket at the top. Height available 4’-6’.`,
@@ -78,7 +83,8 @@ export const fenceTypes = [
             },
             {
                 name: 'Hogwire',
-                description: `Hogwire is a great option for those who want a modern look with a bit of a view.`,
+                introDescription: `Hogwire is a great option when you are looking for an open concept while providing the beauty of a cedar fence.`,
+                description: `Hogwire is a great option when you are looking for an open concept while providing the beauty of a cedar fence. Built level and appealing to the eye.`,
                 mainImage: 'images/cedar/hogwire/hogwire-1.jpeg',
                 images: [
                     'images/cedar/hogwire/hogwire-1.jpeg',
@@ -91,9 +97,10 @@ export const fenceTypes = [
             },
             {
                 name: 'Custom',
+                introDescription: `Do you have a personal design you’d like to try? Send us some photos and we will be more than willing to brainstorm solutions for you.`,
                 description: `Do you have a personal design you’d like to try?
                 Send us some photos and we will be more than willing to brainstorm solutions for you.`,
-                mainImage: 'images/cedar/custom/custom-2.jpeg',
+                mainImage: 'images/cedar/custom/custom-4.jpeg',
                 images: [
                     'images/cedar/custom/custom-1.jpeg',
                     'images/cedar/custom/custom-2.jpeg',
@@ -108,6 +115,7 @@ export const fenceTypes = [
     },
     {
         name: 'Vinyl',
+        introDescription: `Vinyl fencing is the perfect fence for those who want complete privacy and zero maintenance.`,
         description: `Vinyl fencing is the perfect fence for those who want complete privacy and zero maintenance.
         Available in white or tan featuring a 2x7 rail and 7/8” picket for a stronger more appealing fence.`,
         mainImage: 'images/vinyl/vinyl-3.jpeg',
@@ -122,6 +130,7 @@ export const fenceTypes = [
     },
     {
         name: 'Ornamental',
+        introDescription: `Our steel ornamental option is a wonderful option for those looking for an open concept.`,
         description: `Our steel ornamental option is a wonderful option for those looking for an open concept. 
         Ornamental is also maintenance free with its sleek powder coated black finish it goes with any property.`,
         mainImage: 'images/ornamental/ornamental-1.jpeg',
@@ -135,6 +144,7 @@ export const fenceTypes = [
     },
     {
         name: 'Chain Link',
+        introDescription: `Chain link is perfect for creating a contained and safe, environment for children and pets.`,
         description: `Chain link is perfect for creating a contained and safe, environment for children and pets.
         We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store quality chain link.`,
         mainImage: 'images/chain-link/chain-link-1-main.jpeg',
