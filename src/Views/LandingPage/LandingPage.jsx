@@ -13,11 +13,13 @@ function LandingPage() {
 
     return (
         <div className='w-full h-full'>
-            <div className='bg-hero h-screen relative'>
+            <div className='bg-hero-landing h-screen relative'>
                 <h1 className='text-white text-7xl absolute start-1/4 bottom-1/2 mb-14'>Nate's Fence and Gate</h1>
                 <p className='text-white text-3xl font-thin absolute start-1/4 bottom-1/2'>Top rated fence & deck contractor in Minnesota</p>
-                <div className='flex flex-row justify-center absolute start-1/4 bottom-1/2 translate-y-16'>
+                <div className='absolute start-1/4 bottom-1/2 translate-y-16'>
                     <ButtonComponent type="Types" />
+                </div>
+                <div className='absolute start-1/4 bottom-1/2 translate-x-36 translate-y-16 '>
                     <ButtonComponent type="Quote" />
                 </div>
                 <div className='absolute bottom-0 start-1/2 -translate-x-1/2 mb-32'>
