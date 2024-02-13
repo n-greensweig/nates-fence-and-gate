@@ -10,13 +10,13 @@ module.exports = {
         'nates-light-blue': '#0283AB'
       },
       backgroundImage: {
-        'hero': "url('../public/images/cedar/craftsman/hero1.jpeg')",
+        'hero-landing': "url('../public/images/cedar/craftsman/hero1.jpeg')",
+        'hero-fence-types': "url('../public/images/vinyl/hero2.jpg')",
       },
       brightness: {
         40: '.40',
       },
       height: {
-        '50vh': 'height: 50vh',
       },
       keyframes: {
         'bounce-fast': {
