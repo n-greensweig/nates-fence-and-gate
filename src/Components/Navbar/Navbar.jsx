@@ -15,18 +15,18 @@ const Navbar = () => {
             <nav className='w-full bg-nates-dark-blue text-white flex flex-row justify-between'>
                 <div>
                     <Link to='/'>
-                        <img src='../images/logos/nates-logo.jpg' className='h-28 ml-2'></img>
+                        <img src='../images/logos/nates-logo.jpg' className='h-28 ml-2 '></img>
                     </Link>
                 </div>
-                <ul className='h-28 flex flex-row justify-between items-center gap-x-48'>
-                    <li className='nav-link'>
+                <ul className='h-28 flex flex-row justify-between items-center gap-x-48 mr-4'>
+                    <li className='nav-link text-xl'>
                         <Link to='/'>
                             Home
                         </Link>
                     </li>
 
                     {/* Dropdown on hover */}
-                    <li className='relative nav-link' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
+                    <li className='relative nav-link text-thin text-xl' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
                         <Link to='/fence-types'>
                             Fence Types
                         </Link>
@@ -46,6 +46,11 @@ const Navbar = () => {
                                 </Link>
                             </ul>
                         )}
+                    </li>
+                    <li className='nav-link text-xl'>
+                        <Link to='/about'>
+                            About
+                        </Link>
                     </li>
                     <li className='' style={{ height: '50%' }}>
                         <Link to='/quote'>
@@ -70,11 +75,7 @@ const Navbar = () => {
                             </Button>
                         </Link>
                     </li>
-                    <li className='nav-link'>
-                        <Link to='/about'>
-                            About
-                        </Link>
-                    </li>
+
                 </ul>
             </nav>
         </Router>
