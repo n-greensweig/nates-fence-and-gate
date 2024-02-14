@@ -12,7 +12,8 @@ module.exports = {
           "url('../public/images/cedar/craftsman/3xl-hero1.jpeg')",
         "xl-hero-landing":
           "url('../public/images/cedar/craftsman/xl-hero1.jpeg')",
-        "hero-fence-types": "url('../public/images/vinyl/hero2.jpg')",
+        "3xl-hero-fence-types": "url('../public/images/vinyl/hero2.jpg')",
+        "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.jpg')",
       },
       brightness: {
         40: ".40",
