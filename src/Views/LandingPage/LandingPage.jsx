@@ -12,7 +12,7 @@ function LandingPage() {
 
   return (
     <div className="w-full h-full">
-      <div className="bg-hero-landing h-screen relative">
+      <div className="3xl:bg-3xl-hero-landing xl:bg-xl-hero-landing h-screen relative">
         <h1 className="text-white text-7xl absolute start-1/4 bottom-1/2 mb-14">
           Nate's Fence and Gate
         </h1>
