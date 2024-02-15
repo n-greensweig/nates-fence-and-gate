@@ -8,12 +8,17 @@ module.exports = {
         "nates-light-blue": "#0283AB",
       },
       backgroundImage: {
+        // Landing page heroes
         "3xl-hero-landing":
           "url('../public/images/cedar/craftsman/3xl-hero1.jpeg')",
         "xl-hero-landing":
           "url('../public/images/cedar/craftsman/xl-hero1.jpeg')",
-        "3xl-hero-fence-types": "url('../public/images/vinyl/hero2.jpg')",
+        // Fence types page heroes
+        "3xl-hero-fence-types": "url('../public/images/vinyl/3xl-hero2.jpg')",
         "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.jpg')",
+        // About page heroes
+        "3xl-hero-about": "url('../public/images/ornamental/3xl-hero3.jpg')",
+        "xl-hero-about": "url('../public/images/ornamental/xl-hero3.jpg')",
       },
       brightness: {
         40: ".40",

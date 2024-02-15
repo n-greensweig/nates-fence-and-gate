@@ -16,13 +16,12 @@ function About() {
     }, []);
 
     return (
-        <div style={{
-            display: 'flex',
-            flexDirection: 'column',
-            margin: '0 5%',
-        }}>
-            <h1 style={{ fontSize: '2.5rem' }}>About</h1>
-            <h2 style={{ fontSize: '1.5rem', marginBottom: '2.5%' }}>Nate's Fence and Gate strives to give homeowners a unique and affordable fence experience.</h2>
+        <div className='w-screen h-screen'>
+            <div className='3xl:bg-3xl-hero-about xl:bg-xl-hero-about h-1/2 flex flex-col justify-center'>
+            <h1 className='text-white text-7xl'>About</h1>
+            <h2 className='text-white text-3xl'>Nate's Fence and Gate strives to give homeowners a unique and affordable fence experience.</h2>
+            </div>
+         
             <div className="content" style={{
                 display: 'flex',
                 flexDirection: isSmScreen || isXsScreen ? 'column' : 'row',
