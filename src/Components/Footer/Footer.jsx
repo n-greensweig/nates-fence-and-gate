@@ -7,7 +7,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className='bg-nates-dark-blue text-white flex flex-row justify-evenly border-t-8 border-nates-light-blue mt-14'>
+        <footer className='bg-nates-dark-blue text-white flex flex-row justify-evenly border-t-8 border-nates-light-blue w-screen'>
             <div className='h-64 w-1/3'>
                 <h3 className='text-5xl'>Contact</h3>
                 <div>
