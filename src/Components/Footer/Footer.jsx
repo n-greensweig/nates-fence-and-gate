@@ -8,7 +8,7 @@ import './Footer.css';
 const Footer = () => {
     return (
         <footer className='bg-nates-dark-blue text-white flex flex-row justify-evenly border-t-8 border-nates-light-blue w-screen'>
-            <div className='h-64 w-1/3'>
+            <div className='w-1/3 flex flex-col'>
                 <h3 className='text-5xl'>Contact</h3>
                 <div>
                     <Typography style={{
@@ -22,6 +22,8 @@ const Footer = () => {
                             <SmartphoneIcon style={{ fill: '#0283AB' }} />{' '}
                             <span className='hover'>Call or text: 612-702-8681</span></a>
                     </Typography>
+                </div>
+                <div>
                     <p>
                         <Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover'>
                             Home</Link> |{' '}
