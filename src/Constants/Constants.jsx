@@ -100,7 +100,7 @@ export const fenceTypes = [
                 introDescription: `Do you have a personal design you’d like to try? Send us some photos and we will be more than willing to brainstorm solutions for you.`,
                 description: `Do you have a personal design you’d like to try?
                 Send us some photos and we will be more than willing to brainstorm solutions for you.`,
-                mainImage: 'images/cedar/custom/custom-4.jpeg',
+                mainImage: 'images/cedar/custom/custom-1.jpeg',
                 images: [
                     'images/cedar/custom/custom-1.jpeg',
                     'images/cedar/custom/custom-2.jpeg',
