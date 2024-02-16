@@ -3,11 +3,11 @@ import ImageCarousel from "../../Components/ImageCarousel/ImageCarousel";
 function ReviewCarousel() {
 
     const images = [
-        `images/cedar/craftsman/craftsman-1.jpeg`,
-        `images/cedar/craftsman/craftsman-2.jpeg`,
-        `images/cedar/craftsman/craftsman-3.jpeg`,
-        `images/cedar/craftsman/craftsman-4.jpeg`,
-        `images/cedar/horizontal/horizontal-2.jpeg`,
+        `images/review-photos/becky-review.jpeg`,
+        `images/review-photos/erica-review.jpeg`,
+        `images/review-photos/nathan-review.jpeg`,
+        `images/review-photos/kelly-review.jpeg`,
+        `images/review-photos/karin-review.jpeg`,
     ];
 
     const reviews = [
