@@ -17,7 +17,7 @@ function LandingPage() {
           Nate's Fence and Gate
         </h1>
         <p className="text-white text-3xl font-thin absolute start-1/4 bottom-1/2">
-          Top rated fence & deck contractor in Minnesota
+          Top-rated fence contractor in Minnesota
         </p>
         <div className="absolute start-1/4 bottom-1/2 translate-y-16">
           <ButtonComponent type="Types" />
