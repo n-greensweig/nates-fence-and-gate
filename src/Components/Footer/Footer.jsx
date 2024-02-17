@@ -50,25 +50,25 @@ const Footer = () => {
                 <div className='mb-5'>
                     <h3 className='text-5xl'>Service Areas</h3>
                 </div>
-                <div className='flex flex-row justify-between mr-5 gap-1'>
+                <div className='flex flex-row justify-between mr-5 gap-2'>
                     <div style={{ textAlign: 'center' }}>
                         <p>Blaine</p>
                         <p>Brooklyn Center</p>
                         <p>Brooklyn Park</p>
                         <p>Circle Pines</p>
-                        <p>Columbia Heights</p>
+                        <p style={{ whiteSpace: 'nowrap' }}>Columbia Heights</p>
                     </div>
                     <div style={{ textAlign: 'center' }}>
                         <p>Coon Rapids</p>
                         <p>Crystal</p>
-                        <p>Falcon Heights</p>
+                        <p style={{ whiteSpace: 'nowrap' }}>Falcon Heights</p>
                         <p>Fridley</p>
                         <p>Golden Valley</p>
                     </div>
                     <div style={{ textAlign: 'center' }}>
                         <p>Lexington</p>
                         <p>Lino Lakes</p>
-                        <p>New Brighton</p>
+                        <p style={{ whiteSpace: 'nowrap' }}>New Brighton</p>
                         <p>Minneapolis</p>
                         <p>Richfield</p>
                     </div>
@@ -77,7 +77,7 @@ const Footer = () => {
                         <p>Roseville</p>
                         <p>Shoreview</p>
                         <p>St. Louis Park</p>
-                        <p>White Bear Lake</p>
+                        <p style={{ whiteSpace: 'nowrap' }}>White Bear Lake</p>
                     </div>
                 </div>
             </div>
