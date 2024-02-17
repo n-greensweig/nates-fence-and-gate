@@ -13,6 +13,8 @@ module.exports = {
           "url('../public/images/cedar/craftsman/3xl-hero1.jpeg')",
         "xl-hero-landing":
           "url('../public/images/cedar/craftsman/xl-hero1.jpeg')",
+        "xs-hero-landing":
+          "url('../public/images/cedar/custom/xs-hero4.jpg')",
         // Fence types page heroes
         "3xl-hero-fence-types": "url('../public/images/vinyl/3xl-hero2.jpg')",
         "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.jpg')",
@@ -34,6 +36,8 @@ module.exports = {
         "bounce-fast": "bounce-fast 1s ease-in infinite",
       },
       screens: {
+        xs: "350px",
+
         sm: "640px",
         // => @media (min-width: 640px) { ... }
 
