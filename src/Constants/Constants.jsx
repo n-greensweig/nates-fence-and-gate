@@ -144,8 +144,8 @@ export const fenceTypes = [
     },
     {
         name: 'Chain Link',
-        introDescription: `Chain link is perfect for creating a contained and safe, environment for children and pets.`,
-        description: `Chain link is perfect for creating a contained and safe, environment for children and pets.
+        introDescription: `Chain link is perfect for creating a contained and safe environment for children and pets.`,
+        description: `Chain link is perfect for creating a contained and safe environment for children and pets.
         We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store quality chain link.`,
         mainImage: 'images/chain-link/chain-link-1-main.jpeg',
         images: [
