@@ -3,7 +3,7 @@
   text-decoration: underline;
 }
 
-li { 
+footer li { 
   white-space: nowrap;
 }
 
@@ -31,4 +31,66 @@ li {
   .contact-section-container {
       margin-bottom: 20px;
   }
+}
+
+/* ... other styles ... */
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  footer ul { 
+    flex-direction: row !important;
+  }
+}
+
+/* Contact Section Styling */
+.contact-section-container {
+  background-color: rgba(0, 40, 131, 0.1); 
+  border-radius: 8px; 
+  padding: 15px;
+}
+
+.call-to-action {
+  background-color: #0283AB; 
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* ... Other styles remain the same */
+
+/* Navigation Styling */
+.main-navigation .nav-list {
+  list-style: none;
+  padding: 0;        
+  flex-direction: column; /* Default to column layout */
+}
+
+.main-navigation .nav-item { 
+ padding: 0.5em 0;
+}
+
+@media (min-width: 768px) { /* Adjust breakpoint to 'md' size if needed */
+.main-navigation .nav-list {
+  flex-direction: row;    /* Switch to row layout */
+  flex-wrap: wrap;        /* Allow wrapping */ 
+}
+}
+
+/* ... Other styles remain the same */
+
+/* Navigation Styling */
+.main-navigation .nav-list {
+  list-style: none;
+  padding: 0;        
+  flex-direction: column; /* Default to column layout */
+}
+
+.main-navigation .nav-item { 
+ padding: 0.5em 0;
+}
+
+@media (min-width: 768px) { /* Adjust breakpoint to 'md' size if needed */
+.main-navigation .nav-list {
+  flex-direction: row;    /* Switch to row layout */
+  flex-wrap: wrap;        /* Allow wrapping */ 
+}
 }

@@ -3,36 +3,84 @@ import { Link } from 'react-router-dom';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import { Typography } from '@mui/material';
 
-import './Footer.css'; // Assuming your styles are here
+import './Footer.css';
+
+// Responsive imports
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 const Footer = () => {
+
+    // Check the screen size for responsive design
+    const theme = useTheme();
+    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
+    const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <footer className='bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center'>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'> {/* Adjust gaps as needed */}
 
                 {/* Contact & Navigation */}
-                <section className='w-full md:w-auto contact-section-container'> {/* New container */}
-                    <h3 className='text-2xl md:text-3xl font-bold mb-10'>Get in Touch!</h3>
-                    <div className='flex items-center justify-center text-center md:text-left gap-4 pb-4 md:pb-0 md:mb-10'>
-                        <a href="tel:612-702-8681" >
-                            <SmartphoneIcon fontSize='large' style={{ fill: '#0283AB' }} />
-                        </a>
-                        <Typography className='ml-2'>
-                            <a href="tel:612-702-8681" className='call-to-action '>
-                                Call or Text: 612-702-8681
+                {isXsScreen || isSmScreen ?
+
+                    // Mobile view
+                    <section className='w-full md:w-auto contact-section-container'>
+                        <h3 className='text-2xl md:text-3xl font-bold mb-8'>Get in Touch!</h3>
+                        <div className='flex items-center justify-center text-center md:text-left gap-4 pb-4 md:pb-0 md:mb-10'>
+                            <a href="tel:612-702-8681" >
+                                <SmartphoneIcon fontSize='large' style={{ fill: '#0283AB' }} />
                             </a>
-                        </Typography>
-                    </div>
-                    <nav> {/* Added for semantic clarity */}
-                        <ul className='flex flex-col md:flex-row gap-4 text-base' style={{ width: 'fit-content', }}>
-                            <li><Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Home</Link></li>|
-                            <li><Link to='/fence-types' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Fence Types</Link></li>|
-                            <li><a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,' target='_blank' className='hover text-nates-accent'>Google Reviews</a></li>|
-                            <li><Link to='/quote' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Instant Quote</Link></li>|
-                            <li><Link to='/about' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>About</Link></li>
-                        </ul>
-                    </nav>
-                </section>
+                            <Typography className='ml-2'>
+                                <a href="tel:612-702-8681" className='call-to-action'>
+                                    Call or Text: 612-702-8681
+                                </a>
+                            </Typography>
+                        </div>
+                        <nav aria-label="Main Navigation" className="main-navigation">
+                            <ul className='nav-list'>
+                                <li className="nav-item">
+                                    <Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Home</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to='/fence-types' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Fence Types</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,' target='_blank' className='hover text-nates-accent'>Google Reviews</a>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to='/quote' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Instant Quote</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to='/about' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>About</Link>
+                                </li>
+                            </ul>
+                        </nav>
+                    </section> :
+
+                    // Desktop view
+                    <section className='w-full md:w-auto contact-section-container'> {/* New container */}
+                        <h3 className='text-2xl md:text-3xl font-bold mb-8'>Get in Touch!</h3>
+                        <div className='flex items-center justify-center text-center md:text-left gap-4 pb-4 md:pb-0 md:mb-10'>
+                            <a href="tel:612-702-8681" >
+                                <SmartphoneIcon fontSize='large' style={{ fill: '#0283AB' }} />
+                            </a>
+                            <Typography className='ml-2'>
+                                <a href="tel:612-702-8681" className='call-to-action '>
+                                    Call or Text: 612-702-8681
+                                </a>
+                            </Typography>
+                        </div>
+                        <nav> {/* Added for semantic clarity */}
+                            <ul className='flex flex-col md:flex-row gap-4 text-base' style={{ width: 'fit-content', }}>
+                                <li><Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Home</Link></li>|
+                                <li><Link to='/fence-types' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Fence Types</Link></li>|
+                                <li><a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,' target='_blank' className='hover text-nates-accent'>Google Reviews</a></li>|
+                                <li><Link to='/quote' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Instant Quote</Link></li>|
+                                <li><Link to='/about' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>About</Link></li>
+                            </ul>
+                        </nav>
+                    </section>
+                }
 
                 {/* Logo */}
                 <div className='text-center h-24 md:h-32 mx-auto md:mx-0'>
@@ -44,7 +92,7 @@ const Footer = () => {
 
                 {/* Service Areas */}
                 <section className='w-full md:w-auto md:mr-auto'> {/* Adjusted classes to move the service locations list to the left */}
-                    <h3 className='text-2xl md:text-3xl font-bold mb-4'>We Serve:</h3>
+                    <h3 className='text-2xl md:text-3xl font-bold mb-4'>Service Areas:</h3>
                     <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
                         { /* Consider adjusting columns on both viewports */}
                         <li>Blaine</li>
