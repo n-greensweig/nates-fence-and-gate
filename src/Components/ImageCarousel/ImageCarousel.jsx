@@ -4,17 +4,16 @@ function ImageCarousel(props) {
 
     const images = props.images;
     const name = props.name;
-    const source = props.source;
+    const origin = props.origin;
     const reviews = props.reviews; // assuming you pass an array of review objects with 'text' and 'author' properties
 
     return (
         <Carousel
-            showArrows={true}
-            showThumbs={source ? false : true}
+            showArrows={origin ? true : false}
+            showThumbs={origin ? false : true}
             showStatus={false}
             infiniteLoop={true}
-            interval={source ? 10000 : 5000}
-            autoPlay={true}
+            interval={origin ? 10000 : 5000}
             width={'100%'}
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
                 hasPrev && (
@@ -25,6 +24,8 @@ function ImageCarousel(props) {
                     </button>
                 )
             }
+            thumbWidth={100} // Adjust the width of the thumbnails
+            thumbHeight={100} // Adjust the height of the thumbnails
             renderArrowNext={(onClickHandler, hasNext, label) =>
                 hasNext && (
                     <button type="button" onClick={onClickHandler} title={label} style={{ position: 'absolute', zIndex: 2, top: '50%', right: 15, transform: 'translateY(-50%)', background: 'rgba(255, 255, 255, 0.5)', border: 'none', borderRadius: '50%', padding: '10px', cursor: 'pointer' }}>
@@ -44,7 +45,7 @@ function ImageCarousel(props) {
                         objectFit: 'contain', // Adjust as needed
                         margin: 'auto', // Center the image
                         boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Optional: for styling
-                        width: source ? '100%' : '300px', // 100% on LandingPage view, 300px on FenceTypes view
+                        width: origin ? '100%' : '50%', // 100% on LandingPage view, 300px on FenceDetails view
                         marginLeft: "auto",
                         marginRight: "auto",
                     }} alt={`${name} fence`} />
