@@ -135,7 +135,10 @@ const Navbar = () => {
         },
         bmItemList: {
             color: '#b8b7ad',
-            padding: '0.8em'
+            padding: '0.8em',
+            display: 'flex',
+            flexDirection: 'column', // Align items vertically
+            alignItems: 'center', // Center align items horizontally
         },
         bmItem: {
             display: 'inline-block'
