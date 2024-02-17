@@ -80,7 +80,7 @@ const Footer = () => {
                 {/* Contact & Navigation */}
                 <section className='w-full md:w-auto contact-section-container'> {/* New container */}
                     <h3 className='text-2xl md:text-3xl font-bold mb-4'>Get in Touch!</h3>
-                    <div className='flex items-center text-center md:text-left gap-4 pb-4 md:pb-0 mb-9'>
+                    <div className='flex items-center text-center md:text-left gap-4 pb-4 md:pb-0 md:mb-14'>
                         <SmartphoneIcon fontSize='large' style={{ fill: '#0283AB' }} />
                         <Typography className='ml-2'>
                             <a href="tel:612-702-8681" className='call-to-action'>
