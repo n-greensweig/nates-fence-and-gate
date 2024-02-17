@@ -29,14 +29,14 @@ function About() {
                 <div className="w-1/3 sm:w-full xs:w-full">
 
                     <h2 className='text-3xl'>Our Goal</h2>
-                    <p className='mt-4 text-xl text-left'>Our goal is to provide everyone a comfortable outdoor living space, security for pets, children,
+                    <p className='mt-4 text-xl text-left xs:mr-8 ml-8'>Our goal is to provide everyone a comfortable outdoor living space, security for pets, children,
                         privacy from busy roads, neighbors and add curb appeal to your property! Whatever your home
                         fencing needs may be we got you covered.</p>
                 </div>
 
                 <div className="w-1/3 sm:w-full xs:w-full">
                     <h2 className='text-3xl'>Our Standards</h2>
-                    <p className='mt-4 text-xl text-left'>We offer innovative post pounding methods on every type of fence we install.
+                    <p className='mt-4 text-xl text-left xs:mr-8 ml-8'>We offer innovative post pounding methods on every type of fence we install.
                         What others consider upgrades, we consider run of the mill. When it comes to materials,
                         we drive thicker gauge steel in the ground for all of our fence systems and all posts are driven 4-5’ deep.
                         We do <strong>NOT</strong> subcontract our jobs. Any fence we install is done in house, and we pride ourselves on the quality control of
