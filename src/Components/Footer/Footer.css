@@ -23,6 +23,10 @@ li {
   display: inline-block; /* To ensure it only takes up necessary space */
 }
 
+.call-to-action:hover {
+  background-color: #005A7F; /* Darker shade of your brand color */
+}
+
 @media (max-width: 768px) { /* Apply smaller margin on smaller screens */
   .contact-section-container {
       margin-bottom: 20px;
