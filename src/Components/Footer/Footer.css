@@ -2,3 +2,29 @@
   color: #0283AB;
   text-decoration: underline;
 }
+
+li { 
+  white-space: nowrap;
+}
+
+/* Styling for the contact section container */
+.contact-section-container {
+  background-color: rgba(0, 40, 131, 0.1); /* Slightly lighter blue example */
+  border-radius: 8px; 
+  padding: 15px; /* Add internal spacing */
+}
+
+/* Button-like styling for the phone number */
+.call-to-action {
+  background-color: #0283AB; /* Use your brand color */
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: inline-block; /* To ensure it only takes up necessary space */
+}
+
+@media (max-width: 768px) { /* Apply smaller margin on smaller screens */
+  .contact-section-container {
+      margin-bottom: 20px;
+  }
+}
