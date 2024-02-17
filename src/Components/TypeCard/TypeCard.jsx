@@ -28,9 +28,7 @@ function TypeCard(props) {
                 onClick={() => {
                     props.fenceType.route === 'cedar' ? history.push('/fence-details/cedar') :
                         handleClick(props.fenceType.route)
-                }
-                }
-            >
+                }}>
                 {/* Need to make cards stretch horizontally on XS and SM screens */}
                 <Card style={{
                     height: isCedarPage && !(isXsScreen || isSmScreen) ? '475px' : '400px',

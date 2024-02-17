@@ -64,6 +64,7 @@ function FenceDetails() {
                                     justifyContent: 'center',
                                     paddingBottom: '5%',
                                     fontSize: '1.2em',
+                                    textAlign: 'left',
                                 }}
                             >{fenceType ? fenceType.description : null}</p>
                             <ButtonComponent type={'Quote'} />
