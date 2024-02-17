@@ -60,7 +60,7 @@ function ReviewCarousel() {
 
     return (
         <div>
-            <ImageCarousel images={images} reviews={reviews} source={'LandingPage'} />
+            <ImageCarousel images={images} reviews={reviews} origin={'LandingPage'} />
         </div>
     )
 }
