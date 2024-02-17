@@ -24,3 +24,17 @@
 .forefront {
     z-index: 999;
 }
+
+.desktop-menu {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-menu {
+        display: flex;
+    }
+
+    .bm-burger-button {
+        display: none;
+    }
+}

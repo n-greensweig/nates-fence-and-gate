@@ -2,3 +2,95 @@
   color: #0283AB;
   text-decoration: underline;
 }
+
+footer li { 
+  white-space: nowrap;
+}
+
+/* Styling for the contact section container */
+.contact-section-container {
+  background-color: rgba(0, 40, 131, 0.1); /* Slightly lighter blue example */
+  border-radius: 8px; 
+  padding: 15px; /* Add internal spacing */
+}
+
+/* Button-like styling for the phone number */
+.call-to-action {
+  background-color: #0283AB; /* Use your brand color */
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: inline-block; /* To ensure it only takes up necessary space */
+}
+
+.call-to-action:hover {
+  background-color: #005A7F; /* Darker shade of your brand color */
+}
+
+@media (max-width: 768px) { /* Apply smaller margin on smaller screens */
+  .contact-section-container {
+      margin-bottom: 20px;
+  }
+}
+
+/* ... other styles ... */
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  footer ul { 
+    flex-direction: row !important;
+  }
+}
+
+/* Contact Section Styling */
+.contact-section-container {
+  background-color: rgba(0, 40, 131, 0.1); 
+  border-radius: 8px; 
+  padding: 15px;
+}
+
+.call-to-action {
+  background-color: #0283AB; 
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+/* ... Other styles remain the same */
+
+/* Navigation Styling */
+.main-navigation .nav-list {
+  list-style: none;
+  padding: 0;        
+  flex-direction: column; /* Default to column layout */
+}
+
+.main-navigation .nav-item { 
+ padding: 0.5em 0;
+}
+
+@media (min-width: 768px) { /* Adjust breakpoint to 'md' size if needed */
+.main-navigation .nav-list {
+  flex-direction: row;    /* Switch to row layout */
+  flex-wrap: wrap;        /* Allow wrapping */ 
+}
+}
+
+/* ... Other styles remain the same */
+
+/* Navigation Styling */
+.main-navigation .nav-list {
+  list-style: none;
+  padding: 0;        
+  flex-direction: column; /* Default to column layout */
+}
+
+.main-navigation .nav-item { 
+ padding: 0.5em 0;
+}
+
+@media (min-width: 768px) { /* Adjust breakpoint to 'md' size if needed */
+.main-navigation .nav-list {
+  flex-direction: row;    /* Switch to row layout */
+  flex-wrap: wrap;        /* Allow wrapping */ 
+}
+}
