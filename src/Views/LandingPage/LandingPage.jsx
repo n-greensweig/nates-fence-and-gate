@@ -12,8 +12,8 @@ function LandingPage() {
 
   return (
     <div className="w-full h-full">
-      <div className="3xl:bg-3xl-hero-landing xl:bg-xl-hero-landing h-screen relative">
-        <h1 className="text-white text-7xl absolute start-1/4 bottom-1/2 mb-14">
+      <div className="xs:bg-xs-hero-landing xl:bg-xl-hero-landing 3xl:bg-3xl-hero-landing h-screen relative">
+        <h1 className="text-white xs:text-2xl sm:text-7xl absolute start-1/4 bottom-1/2 mb-14">
           Nate's Fence and Gate
         </h1>
         <p className="text-white text-3xl font-thin absolute start-1/4 bottom-1/2">
@@ -34,10 +34,10 @@ function LandingPage() {
         </div>
       </div>
 
-      <div className="flex flex-row bg-slate-100 h-50vh py-14">
-        <div className="w-1/2 flex justify-center ">
-          <div className="w-1/2">
-            <h2 className="text-3xl text-left border-l-4 border-nates-light-blue pl-24">
+      <div className="flex bg-slate-100 h-50vh py-14 w-screen xs:flex-col sm:flex-row">
+        <div className="flex xs:w-2/3 xs:m-auto xs:pb-10 sm:w-1/2 sm:justify-center">
+          <div className="sm:w-1/2">
+            <h2 className="xs:text-xl sm:text-3xl sm:text-left xs:text-center sm:border-l-4 border-nates-light-blue sm:pl-24">
               We believe in providing the best possible service to our
               customers. Taking great pride in our work, we are committed to
               providing our customers with the highest quality products and
@@ -45,13 +45,13 @@ function LandingPage() {
             </h2>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="xs:w-2/3 xs: m-auto sm:w-1/2">
           <ReviewCarousel />
         </div>
       </div>
 
       <div className="bottom-container getting-started mt-14">
-        <h2 className="text-4xl">Choose from our many different fence types</h2>
+        <h2 className="xs:text-3xl sm:text-4xl pb-6">Get Started</h2>
         <div
           className="button-divs"
           style={{
@@ -62,13 +62,11 @@ function LandingPage() {
             gap: "20px",
           }}
         >
-          <div className="fence-types-group">
-            <p>View our fencing types</p>
+          <div className="fence-types-group">            
             {/* Change button text to just 'Fence Types' */}
             <ButtonComponent type="Types" />
           </div>
           <div className="quote-groups">
-            <p>Get an instant quote</p>
             <ButtonComponent type="Quote" />
           </div>
         </div>
