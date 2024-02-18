@@ -18,7 +18,7 @@ function FenceTypes() {
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <div className="h-screen w-screen" style={{ marginBottom: '10%', }}>
+    <div className="md:h-screen md:w-screen xl:h-screen xl:w-screen" style={{ marginBottom: '10%', }}>
       <div className="3xl:bg-3xl-hero-fence-types xl:bg-xl-hero-fence-types h-1/2 flex flex-col justify-center">
         <h1 className="text-7xl text-white mb-5">Fence Types</h1>
         <p className="text-white text-3xl font-thin">
@@ -65,6 +65,7 @@ function FenceTypes() {
                 key={index}
                 style={{
                   height: "500px", // Make wider than it is tall on small screens?
+                  border: '2px solid red',
                 }}
               >
                 <TypeCard key={index} fenceType={fenceType} />

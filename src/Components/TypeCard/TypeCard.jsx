@@ -23,7 +23,7 @@ function TypeCard(props) {
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <div>
+        <div style={{ border: '2px solid purple' }}>
             <Paper elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3} style={cardStyle}
                 onClick={() => {
                     props.fenceType.route === 'cedar' ? history.push('/fence-details/cedar') :
@@ -40,7 +40,8 @@ function TypeCard(props) {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'center',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                padding: '0px',
                             }}
                         >
                             <Typography gutterBottom variant="h5" component="div">
@@ -62,10 +63,11 @@ function TypeCard(props) {
                                 textAlign: 'left'
                             }}
                         >
-                            <Typography variant="body2" color="text.secondary">
-                                {props.fenceType.introDescription}
-                            </Typography>
-
+                            {isXsScreen || isSmScreen ? null :
+                                <Typography variant="body2" color="text.secondary">
+                                    {props.fenceType.introDescription}
+                                </Typography>
+                            }
                         </CardContent>
                     </CardActionArea>
                 </Card>
