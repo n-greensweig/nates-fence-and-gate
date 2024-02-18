@@ -51,7 +51,7 @@ function LandingPage() {
       </div>
 
       <div className="bottom-container getting-started mt-14">
-        <h2 className="xs:text-3xl sm:text-4xl pb-6">Get Started</h2>
+        <h2 className="xs:text-3xl sm:text-4xl pb-6">Getting Started</h2>
         <div
           className="button-divs"
           style={{
