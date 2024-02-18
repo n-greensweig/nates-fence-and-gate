@@ -1,5 +1,8 @@
 import ImageCarousel from "../../Components/ImageCarousel/ImageCarousel";
 
+// Responsive imports
+import { useTheme, useMediaQuery } from "@mui/material";
+
 function ReviewCarousel() {
 
     const images = [
@@ -8,6 +11,14 @@ function ReviewCarousel() {
         `images/review-photos/nathan-review.jpeg`,
         `images/review-photos/kelly-review.jpeg`,
         `images/review-photos/karin-review.jpeg`,
+    ];
+
+    const mobileImages = [
+        `images/review-photos/becky-review-mobile.jpeg`,
+        `images/review-photos/erica-review-mobile.jpeg`,
+        `images/review-photos/nathan-review-mobile.jpeg`,
+        `images/review-photos/kelly-review-mobile.jpeg`,
+        `images/review-photos/karin-review-mobile.jpeg`,
     ];
 
     const reviews = [
@@ -58,9 +69,14 @@ function ReviewCarousel() {
         },
     ];
 
+    // Check the screen size for responsive design
+    const theme = useTheme();
+    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
+    const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
         <div>
-            <ImageCarousel images={images} reviews={reviews} origin={'LandingPage'} />
+            <ImageCarousel images={isXsScreen || isSmScreen ? mobileImages : images} reviews={reviews} origin={'LandingPage'} />
         </div>
     )
 }
