@@ -23,7 +23,7 @@ function TypeCard(props) {
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <div>
+        <div style={{ marginBottom: isXsScreen || isSmScreen ? '5%' : null}}>
             <Paper elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3} style={cardStyle}
                 onClick={() => {
                     props.fenceType.route === 'cedar' ? history.push('/fence-details/cedar') :
