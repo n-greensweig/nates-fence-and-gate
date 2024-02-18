@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import { Typography } from '@mui/material';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 import './Footer.css';
 
@@ -11,13 +12,16 @@ import { useTheme } from "@mui/material/styles";
 
 const Footer = () => {
 
+    const history = useHistory();
+    const isQuotePage = history.location.pathname === '/quote';
+
     // Check the screen size for responsive design
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <footer className='bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center'>
+        <footer className={`bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${isQuotePage ? 'mt-0' : 'mt-16'}`}>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'> {/* Adjust gaps as needed */}
 
                 {/* Contact & Navigation */}

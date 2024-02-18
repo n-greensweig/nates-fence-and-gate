@@ -25,7 +25,7 @@ function InstantQuote() {
                     className='instant-quote-hero'
                     style={{
                         position: 'relative',
-                        height: '100vh',
+                        height: '80vh',
                         backgroundSize: 'cover'
                     }}
                 >
