@@ -64,7 +64,10 @@ function FenceTypes() {
                 lg={3}
                 key={index}
                 style={{
-                  height: "500px", // Make wider than it is tall on small screens?
+                  height: "auto", // Make wider than it is tall on small screens?
+                  border: '2px solid red',
+                  margin: '0px',
+                  padding: '0px 10px',
                 }}
               >
                 <TypeCard key={index} fenceType={fenceType} />
