@@ -37,7 +37,7 @@ function LandingPage() {
       <div className="flex bg-slate-100 h-50vh py-14 w-screen xs:flex-col sm:flex-row">
         <div className="flex xs:w-2/3 xs:m-auto xs:pb-10 sm:w-1/2 sm:justify-center">
           <div className="sm:w-1/2">
-            <h2 className="xs:text-xl sm:text-3xl sm:text-left xs:text-center sm:border-l-4 border-nates-light-blue sm:pl-24">
+            <h2 className="xs:text-xl sm:text-3xl sm:text-left xs:text-left sm:border-l-4 border-nates-light-blue xs:border-l-4 border-nates-light-blue xs:pl-2 sm:pl-24">
               We believe in providing the best possible service to our
               customers. Taking great pride in our work, we are committed to
               providing our customers with the highest quality products and

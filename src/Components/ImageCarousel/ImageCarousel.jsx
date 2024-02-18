@@ -1,11 +1,19 @@
 import { Carousel } from "react-responsive-carousel";
 
+// Responsive imports
+import { useTheme, useMediaQuery } from "@mui/material";
+
 function ImageCarousel(props) {
 
     const images = props.images;
     const name = props.name;
     const origin = props.origin;
     const reviews = props.reviews; // assuming you pass an array of review objects with 'text' and 'author' properties
+
+    // Check the screen size for responsive design
+    const theme = useTheme();
+    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
+    const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <Carousel
@@ -45,7 +53,7 @@ function ImageCarousel(props) {
                         objectFit: 'contain', // Adjust as needed
                         margin: 'auto', // Center the image
                         boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Optional: for styling
-                        width: origin ? '100%' : '50%', // 100% on LandingPage view, 300px on FenceDetails view
+                        width: origin ? '100%' : '50%', // 100% on LandingPage view, 50% on FenceDetails view
                         marginLeft: "auto",
                         marginRight: "auto",
                     }} alt={`${name} fence`} />
@@ -57,7 +65,7 @@ function ImageCarousel(props) {
                             transform: 'translate(-50%, -50%)', // Adjust the position to the center
                             backgroundColor: 'rgba(255,255,255,0.7)', // Semi-transparent white background
                             color: 'black', // Text color
-                            padding: '20px', // Padding inside the text block
+                            padding: isXsScreen || isSmScreen ? '30px' : '20px', // Padding inside the text block
                             textAlign: 'center', // Center the text within the text block
                             maxWidth: '80%', // Max width of the text block
                             boxSizing: 'border-box', // Include padding in the width calculation
@@ -66,6 +74,7 @@ function ImageCarousel(props) {
                                 margin: 0,
                                 fontSize: '3rem',
                                 marginBottom: '10px',
+                                lineHeight: isXsScreen || isSmScreen ? 1 : null,
                             }}>
                                 {reviews[index].source}
                                 <div style={{
@@ -74,7 +83,7 @@ function ImageCarousel(props) {
                                     margin: '0 auto',
                                 }}></div>
                             </p>
-                            <p style={{ marginBottom: '10%' }}>{reviews[index].text}</p>
+                            <p style={{ marginBottom: '10%', }}>{reviews[index].text}</p>
                             <h2 style={{
                                 margin: 0,
                                 color: '#0283AB',

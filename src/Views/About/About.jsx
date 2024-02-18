@@ -1,8 +1,8 @@
 // Responsive imports
 import { useTheme, useMediaQuery } from "@mui/material";
-import Faq from "../FAQ/FAQ";
-
 import { useEffect } from 'react';
+
+import Faq from "../FAQ/FAQ";
 
 function About() {
 
