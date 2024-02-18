@@ -15,6 +15,28 @@ function ImageCarousel(props) {
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
+    const getResponsiveStyles = () => {
+        if (isXsScreen) {
+            return {
+                reviewPadding: '10px',
+                reviewFontSize: '2vw', // Smaller font size for XS screens
+                reviewMaxWidth: '90%', // Allow more width for the text on very small screens
+            };
+        } else if (isSmScreen) {
+            return {
+                reviewPadding: '20px',
+                reviewFontSize: '2.5vw', // Slightly larger font size for SM screens
+                reviewMaxWidth: '85%', // Adjust max width for small screens
+            };
+        } else {
+            return {
+                reviewPadding: '20px',
+                reviewFontSize: '3rem', // Default font size for larger screens
+                reviewMaxWidth: '80%', // Default max width
+            };
+        }
+    };
+
     return (
         <Carousel
             showArrows={origin ? true : false}
@@ -65,29 +87,35 @@ function ImageCarousel(props) {
                             transform: 'translate(-50%, -50%)', // Adjust the position to the center
                             backgroundColor: 'rgba(255,255,255,0.7)', // Semi-transparent white background
                             color: 'black', // Text color
-                            padding: isXsScreen || isSmScreen ? '30px' : '20px', // Padding inside the text block
+                            padding: isXsScreen || isSmScreen ? '5px' : '20px', // Padding inside the text block
                             textAlign: 'center', // Center the text within the text block
                             maxWidth: '80%', // Max width of the text block
                             boxSizing: 'border-box', // Include padding in the width calculation
+                            // border: '2px solid red',
                         }}>
                             <p style={{
                                 margin: 0,
-                                fontSize: '3rem',
+                                fontSize: isXsScreen || isSmScreen ? '15px' : '3rem',
                                 marginBottom: '10px',
                                 lineHeight: isXsScreen || isSmScreen ? 1 : null,
                             }}>
                                 {reviews[index].source}
                                 <div style={{
-                                    borderTop: '2.5px solid black',
+                                    borderTop: isXsScreen || isSmScreen ? '1.5px solid black' : '2.5px solid black',
                                     width: '15%',
-                                    margin: '0 auto',
+                                    margin: isXsScreen || isSmScreen ? '5px auto' : '0 auto',
                                 }}></div>
                             </p>
-                            <p style={{ marginBottom: '10%', }}>{reviews[index].text}</p>
+                            <p style={{
+                                marginBottom: '10%',
+                                fontSize: isXsScreen || isSmScreen ? '10px' : null,
+                                lineHeight: isXsScreen || isSmScreen ? '1.2' : null,
+                                textAlign: isXsScreen || isSmScreen ? 'left' : null,
+                            }}>{reviews[index].text}</p>
                             <h2 style={{
                                 margin: 0,
                                 color: '#0283AB',
-                                fontSize: '1.5rem',
+                                fontSize: isXsScreen || isSmScreen ? '10px' : '1.5rem',
                             }}>{reviews[index].author}</h2>
                         </div>
                     )}
