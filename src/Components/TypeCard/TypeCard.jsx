@@ -28,12 +28,10 @@ function TypeCard(props) {
                 onClick={() => {
                     props.fenceType.route === 'cedar' ? history.push('/fence-details/cedar') :
                         handleClick(props.fenceType.route)
-                }
-                }
-            >
+                }}>
                 {/* Need to make cards stretch horizontally on XS and SM screens */}
                 <Card style={{
-                    height: isCedarPage ? '475px' : '400px',
+                    height: isCedarPage && !(isXsScreen || isSmScreen) ? '475px' : '400px',
                     margin: '0px'
                 }}>
                     <CardActionArea>
@@ -42,7 +40,8 @@ function TypeCard(props) {
                                 display: 'flex',
                                 flexDirection: 'column',
                                 justifyContent: 'center',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                padding: '0px',
                             }}
                         >
                             <Typography gutterBottom variant="h5" component="div">
@@ -64,10 +63,11 @@ function TypeCard(props) {
                                 textAlign: 'left'
                             }}
                         >
-                            <Typography variant="body2" color="text.secondary">
-                                {props.fenceType.introDescription}
-                            </Typography>
-
+                            {isXsScreen || isSmScreen ? null :
+                                <Typography variant="body2" color="text.secondary">
+                                    {props.fenceType.introDescription}
+                                </Typography>
+                            }
                         </CardContent>
                     </CardActionArea>
                 </Card>

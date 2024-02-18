@@ -26,7 +26,7 @@ const Navbar = () => {
     // Define styles for the burger menu
     var styles = {
         bmBurgerButton: {
-            position: 'fixed',
+            position: 'absolute',
             width: '36px',
             height: '30px',
             left: '36px',
