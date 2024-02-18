@@ -95,31 +95,56 @@ const Footer = () => {
                 </div>
 
                 {/* Service Areas */}
-                <section className='w-full md:w-auto md:mr-auto'> {/* Adjusted classes to move the service locations list to the left */}
+                <section className='w-full md:w-auto md:mr-auto md:mr-10'
+                // style={{ border: '2px solid red', marginRight: '10px', }}
+                > {/* Adjusted classes to move the service locations list to the left */}
                     <h3 className='text-2xl md:text-3xl font-bold mb-4'>Service Areas:</h3>
-                    <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
+                    {isXsScreen || isSmScreen ? <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
                         { /* Consider adjusting columns on both viewports */}
                         <li>Blaine</li>
-                        <li>Brooklyn Center</li>
-                        <li>Brooklyn Park</li>
-                        <li>Circle Pines</li>
-                        <li>Columbia Heights</li>
-                        <li>Coon Rapids</li>
-                        <li>Crystal</li>
-                        <li>Falcon Heights</li>
-                        <li>Fridley</li>
-                        <li>Golden Valley</li>
                         <li>Lexington</li>
+                        <li>Brooklyn Center</li>
                         <li>Lino Lakes</li>
+                        <li>Brooklyn Park</li>
                         <li>New Brighton</li>
+                        <li>Circle Pines</li>
                         <li>Minneapolis</li>
+                        <li>Columbia Heights</li>
                         <li>Richfield</li>
+                        <li>Coon Rapids</li>
                         <li>Robbinsdale</li>
+                        <li>Crystal</li>
                         <li>Roseville</li>
+                        <li>Falcon Heights</li>
                         <li>Shoreview</li>
+                        <li>Fridley</li>
                         <li>St. Louis Park</li>
+                        <li>Golden Valley</li>
                         <li>White Bear Lake</li>
-                    </ul>
+                    </ul> :
+                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
+                            { /* Consider adjusting columns on both viewports */}
+                            <li>Blaine</li>
+                            <li>Coon Rapids</li>
+                            <li>Lexington</li>
+                            <li>Robbinsdale</li>
+                            <li>Brooklyn Center</li>
+                            <li>Crystal</li>
+                            <li>Lino Lakes</li>
+                            <li>Roseville</li>
+                            <li>Brooklyn Park</li>
+                            <li>Falcon Heights</li>
+                            <li>New Brighton</li>
+                            <li>Shoreview</li>
+                            <li>Circle Pines</li>
+                            <li>Fridley</li>
+                            <li>Minneapolis</li>
+                            <li>St. Louis Park</li>
+                            <li>Columbia Heights</li>
+                            <li>Golden Valley</li>
+                            <li>Richfield</li>
+                            <li>White Bear Lake</li>
+                        </ul>}
                 </section>
 
             </div>
