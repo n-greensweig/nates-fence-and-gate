@@ -23,7 +23,7 @@ function TypeCard(props) {
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <div style={{border: '2px solid purple',}}>
+        <div>
             <Paper elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3} style={cardStyle}
                 onClick={() => {
                     props.fenceType.route === 'cedar' ? history.push('/fence-details/cedar') :
@@ -31,8 +31,9 @@ function TypeCard(props) {
                 }}>
                 {/* Need to make cards stretch horizontally on XS and SM screens */}
                 <Card style={{
-                    height: isCedarPage && !(isXsScreen || isSmScreen) ? '475px' : '360px',
+                    height: isCedarPage ? (isXsScreen || isSmScreen ? 'auto' : '450px') : '375px',
                     margin: '0px',
+                    paddingTop: '10px',
                 }}>
                     <CardActionArea>
                         <CardContent
@@ -61,6 +62,7 @@ function TypeCard(props) {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 textAlign: 'left',
+                                paddingBottom: '10px',
                             }}
                         >
                             {isXsScreen || isSmScreen ? null :

@@ -65,7 +65,6 @@ function FenceTypes() {
                 key={index}
                 style={{
                   height: "auto", // Make wider than it is tall on small screens?
-                  border: '2px solid red',
                   margin: '0px',
                   padding: '0px 10px',
                 }}
