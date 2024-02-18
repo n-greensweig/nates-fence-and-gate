@@ -2,16 +2,11 @@ import { fenceTypes } from "../../Constants/Constants";
 import TypeCard from "../../Components/TypeCard/TypeCard";
 
 // Responsive imports
-import { useMediaQuery, useTheme, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 function CedarDetails() {
 
     const cedarTypes = fenceTypes[0].cedarTypes;
-
-    // Check the screen size for responsive design
-    const theme = useTheme();
-    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
-    const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <div className="container" style={{ display: 'flex', justifyContent: 'center', padding: '20px', margin: '0 auto', }}>

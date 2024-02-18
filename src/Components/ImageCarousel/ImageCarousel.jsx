@@ -15,28 +15,6 @@ function ImageCarousel(props) {
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-    const getResponsiveStyles = () => {
-        if (isXsScreen) {
-            return {
-                reviewPadding: '10px',
-                reviewFontSize: '2vw', // Smaller font size for XS screens
-                reviewMaxWidth: '90%', // Allow more width for the text on very small screens
-            };
-        } else if (isSmScreen) {
-            return {
-                reviewPadding: '20px',
-                reviewFontSize: '2.5vw', // Slightly larger font size for SM screens
-                reviewMaxWidth: '85%', // Adjust max width for small screens
-            };
-        } else {
-            return {
-                reviewPadding: '20px',
-                reviewFontSize: '3rem', // Default font size for larger screens
-                reviewMaxWidth: '80%', // Default max width
-            };
-        }
-    };
-
     return (
         <Carousel
             showArrows={origin ? true : false}
