@@ -17,7 +17,8 @@ function About() {
 
     return (
         <div className='w-screen'>
-            <div className='3xl:bg-3xl-hero-about xl:bg-xl-hero-about h-96 flex flex-col justify-center'>
+            <div className='bg-xl-hero-about bg-no-repeat bg-center
+            h-96 flex flex-col justify-center'>
                 <h1 className='text-white text-7xl -translate-y-10'>About</h1>
                 <h2 className='text-white text-3xl -translate-y-5 font-thin'>Nate's Fence and Gate strives to give homeowners a unique and affordable fence experience</h2>
             </div>
@@ -26,7 +27,7 @@ function About() {
                 flexDirection: isSmScreen || isXsScreen ? 'column' : 'row',
             }}>
 
-                <div className="w-1/3 sm:w-full xs:w-full">
+                <div className="w-1/3 sm:w-full xs:w-full sm:mb-16 xs:mb-16">
 
                     <h2 className='text-3xl'>Our Goal</h2>
                     <p className='mt-4 text-xl text-left xs:mr-8 ml-8'>Our goal is to provide everyone a comfortable outdoor living space, security for pets, children,
@@ -43,6 +44,7 @@ function About() {
                         each of our installs. This allows us to streamline a smooth process from consultation to installation! 🛠️🏡</p>
                 </div>
             </div>
+            <div style={{ borderBottom: '4px solid #0283AB', width: '100%', }}></div>
 
             {/* Galvanized steel info */}
             <div className='pt-10'>
@@ -67,6 +69,7 @@ function About() {
                         properly and to depth due to its minimal soil disruption.</li>
                 </ol>
             </div>
+            <div style={{ borderBottom: '4px solid #102942', width: '100%', }}></div>
 
             {/* FAQ section */}
             <div className='py-1 bg-slate-100 pb-16'>
