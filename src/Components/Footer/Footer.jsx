@@ -13,7 +13,8 @@ import { useTheme } from "@mui/material/styles";
 const Footer = () => {
 
     const history = useHistory();
-    const isQuoteOrAboutPage = history.location.pathname === '/quote' || history.location.pathname === '/about';
+    const isQuoteOrAboutOrTypesPage = history.location.pathname === '/quote' ||
+        history.location.pathname === '/about' || history.location.pathname === '/fence-types';
 
     // Check the screen size for responsive design
     const theme = useTheme();
@@ -21,7 +22,7 @@ const Footer = () => {
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <footer className={`bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${isQuoteOrAboutPage ? 'mt-0' : 'mt-16'}`}>
+        <footer className={`bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${isQuoteOrAboutOrTypesPage ? 'mt-0' : 'mt-16'}`}>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'> {/* Adjust gaps as needed */}
 
                 {/* Contact & Navigation */}
@@ -87,7 +88,7 @@ const Footer = () => {
                 }
 
                 {/* Logo */}
-                <div className='text-center h-24 md:h-32 mx-auto md:mx-0' style={{ width: 'fit-content', height: 'fit-content', margin: isXsScreen || isSmScreen ? '10px auto 10px auto' : '30px auto 0px auto'}}>
+                <div className='text-center h-24 md:h-32 mx-auto md:mx-0' style={{ width: 'fit-content', height: 'fit-content', margin: isXsScreen || isSmScreen ? '10px auto 10px auto' : '30px auto 0px auto' }}>
                     <Link to='/' onClick={() => window.scrollTo(0, 0)}>
                         <img src='../images/logos/nates-logo.jpg' alt="Nate's Fence & Gate Logo" className='h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out' />
                     </Link>

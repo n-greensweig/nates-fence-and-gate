@@ -32,7 +32,7 @@ function FenceDetails() {
     }, [fenceType]);
 
     return (
-        <>
+        <div>
             {isXsScreen || isSmScreen ? <MobileFenceDetails /> :
                 <div>
                     <h1 style={{ fontSize: '2rem' }}>{name}</h1>
@@ -73,7 +73,7 @@ function FenceDetails() {
                     </div>
                 </div>
             }
-        </>
+        </div>
     );
 }
 
