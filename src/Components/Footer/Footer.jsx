@@ -21,9 +21,10 @@ const Footer = () => {
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
-        <footer className={`bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${noMargin ? 'mt-0' : 'mt-16'}`}>
+        <footer className={`bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${noMargin ? 'mt-0' : 'mt-16'} absolute`}>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'> {/* Adjust gaps as needed */}
 
                 {/* Contact & Navigation */}
@@ -62,7 +63,6 @@ const Footer = () => {
                             </ul>
                         </nav>
                     </section> :
-
                     // Desktop view
                     <section className='w-full md:w-auto contact-section-container'> {/* New container */}
                         <h3 className='text-2xl md:text-3xl font-bold mb-8'>Get in Touch!</h3>
@@ -101,7 +101,7 @@ const Footer = () => {
                 // style={{ border: '2px solid red', marginRight: '10px', }}
                 > {/* Adjusted classes to move the service locations list to the left */}
                     <h3 className='text-2xl md:text-3xl font-bold mb-4'>Service Areas:</h3>
-                    {isXsScreen || isSmScreen ? <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
+                    {isXsScreen || isSmScreen || isMdScreen ? <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
                         { /* Consider adjusting columns on both viewports */}
                         <li>Blaine</li>
                         <li>Lexington</li>
@@ -124,29 +124,29 @@ const Footer = () => {
                         <li>Golden Valley</li>
                         <li>White Bear Lake</li>
                     </ul> :
-                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm' style={{ fontSize: '13px' }}>
-                            { /* Consider adjusting columns on both viewports */}
-                            <li>Blaine</li>
-                            <li>Coon Rapids</li>
-                            <li>Lexington</li>
-                            <li>Robbinsdale</li>
-                            <li>Brooklyn Center</li>
-                            <li>Crystal</li>
-                            <li>Lino Lakes</li>
-                            <li>Roseville</li>
-                            <li>Brooklyn Park</li>
-                            <li>Falcon Heights</li>
-                            <li>New Brighton</li>
-                            <li>Shoreview</li>
-                            <li>Circle Pines</li>
-                            <li>Fridley</li>
-                            <li>Minneapolis</li>
-                            <li>St. Louis Park</li>
-                            <li>Columbia Heights</li>
-                            <li>Golden Valley</li>
-                            <li>Richfield</li>
-                            <li>White Bear Lake</li>
-                        </ul>}
+                    <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm' style={{ fontSize: '13px' }}>
+                        { /* Consider adjusting columns on both viewports */}
+                        <li>Blaine</li>
+                        <li>Coon Rapids</li>
+                        <li>Lexington</li>
+                        <li>Robbinsdale</li>
+                        <li>Brooklyn Center</li>
+                        <li>Crystal</li>
+                        <li>Lino Lakes</li>
+                        <li>Roseville</li>
+                        <li>Brooklyn Park</li>
+                        <li>Falcon Heights</li>
+                        <li>New Brighton</li>
+                        <li>Shoreview</li>
+                        <li>Circle Pines</li>
+                        <li>Fridley</li>
+                        <li>Minneapolis</li>
+                        <li>St. Louis Park</li>
+                        <li>Columbia Heights</li>
+                        <li>Golden Valley</li>
+                        <li>Richfield</li>
+                        <li>White Bear Lake</li>
+                    </ul>}
                 </section>
 
             </div>
