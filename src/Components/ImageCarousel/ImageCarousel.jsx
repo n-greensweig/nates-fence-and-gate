@@ -69,9 +69,8 @@ function ImageCarousel(props) {
                             textAlign: 'center', // Center the text within the text block
                             maxWidth: '80%', // Max width of the text block
                             boxSizing: 'border-box', // Include padding in the width calculation
-                            // border: '2px solid red',
                         }}>
-                            <p style={{
+                            <h3 style={{
                                 margin: 0,
                                 fontSize: isXsScreen || isSmScreen ? '15px' : '3rem',
                                 marginBottom: '10px',
@@ -83,7 +82,7 @@ function ImageCarousel(props) {
                                     width: '15%',
                                     margin: isXsScreen || isSmScreen ? '5px auto' : '0 auto',
                                 }}></div>
-                            </p>
+                            </h3>
                             <p style={{
                                 marginBottom: '10%',
                                 fontSize: isXsScreen || isSmScreen ? '10px' : null,

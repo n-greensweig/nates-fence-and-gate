@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+/* For headings and subtitles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel Decorative', 'Georgia', 'Times New Roman', serif
+  ;
+}
+
+/* For paragraphs and list items */
+p, ul, ol, li {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', 'sans-serif';
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
