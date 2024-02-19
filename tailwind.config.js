@@ -15,9 +15,12 @@ module.exports = {
           "url('../public/images/cedar/craftsman/xl-hero1.jpeg')",
         "xs-hero-landing":
           "url('../public/images/mobile-heros/mobile-hero-lp.jpeg')",
-        // Fence types page heroes
-        "3xl-hero-fence-types": "url('../public/images/vinyl/3xl-hero2.jpg')",
-        "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.jpg')",
+          // Fence types page heroes
+          "3xl-hero-fence-types": "url('../public/images/vinyl/3xl-hero2.jpg')",
+          "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.jpg')",
+          "xs-hero-fence-types":
+          "url('../public/images/mobile-heros/mobile-hero-lp.jpeg')",
+            // "url('../public/images/mobile-heros/mobile-hero-fence-types.jpeg')",
         // About page heroes
         "3xl-hero-about": "url('../public/images/ornamental/3xl-hero3.jpg')",
         "xl-hero-about": "url('../public/images/ornamental/xl-hero3.jpg')",
