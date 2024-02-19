@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 import { Button } from '@mui/material';
 import { slide as Menu } from 'react-burger-menu'; // Import the slide animation
+
+// Import icons
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-
-// Responsive imports
-import { useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function MobileNavbar() {
 
@@ -18,7 +18,10 @@ function MobileNavbar() {
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     const handleStateChange = state => setMenuOpen(state.isOpen);
-    const closeMenu = () => setMenuOpen(false);
+    const closeMenu = () => {
+        setMenuOpen(false);
+        setShowDropdown(false);
+    }
 
     // Define styles for the burger menu
     var styles = {
@@ -39,17 +42,21 @@ function MobileNavbar() {
         bmMenu: {
             background: '#373a47',
             padding: '2.5em 1.5em 0',
-            fontSize: '1.15em'
+            fontSize: '1.15em',
         },
         bmItemList: {
-            color: '#b8b7ad',
+            color: '#fff',
             padding: '0.8em',
             display: 'flex',
             flexDirection: 'column', // Align items vertically
-            alignItems: 'center', // Center align items horizontally
+            alignItems: 'flex-start', // Center align items horizontally
+            justifyContent: 'flex-start',
         },
         bmItem: {
-            display: 'inline-block'
+            display: 'inline-block',
+            marginBottom: '10px',
+            justifyContent: 'left',
+            fontSize: '2rem',
         },
         bmOverlay: {
             background: 'rgba(0, 0, 0, 0.3)'
@@ -77,9 +84,35 @@ function MobileNavbar() {
                 styles={styles}
                 left
                 className='hide'
-                >
-                <Link to="/" onClick={closeMenu}>Home</Link>
-                <Link to="/fence-types" onClick={toggleDropdown}>Fence Types</Link>
+            >
+                <Link to="/quote" onClick={closeMenu}>
+                    <Button style={{
+                        backgroundColor: 'white',
+                        color: '#0283AB',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: '2px solid #0283AB',
+                        fontWeight: 'bold',
+                        borderRadius: '5px',
+                        padding: '0 1rem',
+                        textTransform: 'none',
+                        height: '3rem',
+                        transition: 'opacity 0.3s',
+                    }}
+                        onMouseEnter={e => e.target.style.opacity = 0.8}
+                        onMouseLeave={e => e.target.style.opacity = 1}
+                    >
+                        Instant Quote
+                    </Button>
+                </Link>
+                <Link to="/" onClick={closeMenu} style={{ borderBottom: '1px solid white', width: '100%', textAlign: 'left' }}>Home</Link>
+                <div style={{ borderBottom: '1px solid white', width: '100%', textAlign: 'left', }}>
+                    <Link to="/fence-types" onClick={closeMenu}>
+                        Fence Types
+                    </Link>
+                    {showDropdown ? <KeyboardArrowDownIcon  onClick={toggleDropdown} style={{ fontSize: '2rem', textAlign: 'end' }} /> : <KeyboardArrowRightIcon  onClick={toggleDropdown} style={{ fontSize: '2rem', textAlign: 'end' }} />}
+                </div>
                 {showDropdown && (
                     <ul className="menu-dropdown bg-white text-black mt-1 p-2 rounded-lg shadow-lg">
                         <Link to="/fence-details/cedar" onClick={closeMenu}>
@@ -96,27 +129,7 @@ function MobileNavbar() {
                         </Link>
                     </ul>
                 )}
-                <Link to="/about" onClick={closeMenu}>About</Link>
-                <Link to="/quote" onClick={closeMenu}>
-                    <Button style={{
-                        backgroundColor: 'white',
-                        color: '#0283AB',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        border: '2px solid #0283AB',
-                        fontWeight: 'bold',
-                        borderRadius: '5px',
-                        padding: '0 1rem',
-                        textTransform: 'none',
-                        transition: 'opacity 0.3s',
-                    }}
-                        onMouseEnter={e => e.target.style.opacity = 0.8}
-                        onMouseLeave={e => e.target.style.opacity = 1}
-                    >
-                        Instant Quote
-                    </Button>
-                </Link>
+                <Link to="/about" onClick={closeMenu} style={{ borderBottom: '1px solid white', width: '100%', textAlign: 'left', marginBottom: '20px', }}>About</Link>
             </Menu>
         </div>
     );
