@@ -14,7 +14,7 @@ module.exports = {
         "xl-hero-landing":
           "url('../public/images/cedar/craftsman/xl-hero1.jpeg')",
         "xs-hero-landing":
-          "url('../public/images/mobile-heros/mobile-hero-lp.jpeg')",
+          "url('../public/images/mobile-heros/mobile-hero-lp-sm.jpeg')",
           // Fence types page heroes
           "3xl-hero-fence-types": "url('../public/images/vinyl/3xl-hero2.jpg')",
           "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.jpg')",

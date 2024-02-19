@@ -21,22 +21,23 @@ function LandingPage() {
 
   return (
     <div className="w-full h-full">
-      <div className="xs:bg-xs-hero-landing xl:bg-xl-hero-landing 3xl:bg-3xl-hero-landing h-screen relative"
+      <div className="3xl:bg-3xl-hero-landing 2xl:bg-xl-hero-landing 
+      xl:bg-xl-hero-landing lg:bg-xl-hero-landing md:bg-xl-hero-landing
+      sm:bg-xl-hero-landing xs:bg-xl-hero-landing bg-cover bg-no-repeat bg-center
+      h-screen relative"
         style={{
           paddingLeft: isXsScreen || isSmScreen ? null : '25%',
           margin: isXsScreen || isSmScreen ? '0 auto' : null,
         }}
       >
-        <h1 className="text-white xs:text-2xl sm:text-7xl start-1/4 bottom-1/2 mb-14"
+        <h1 className="text-white xs:text-2xl sm:text-7xl start-1/4 bottom-1/2"
           style={{
-            // border: '2px solid red',
-            paddingTop: isXsScreen || isSmScreen ? '60%' : '25%',
-            paddingBottom: isXsScreen || isSmScreen ? '1%' : '1%',
+            paddingTop: isXsScreen || isSmScreen ? '20%' : '25%',
+            paddingBottom: isXsScreen || isSmScreen ? '5%' : '1%',
             marginBottom: '1%',
-            fontSize: isXsScreen || isSmScreen ? '2.1rem' : null,
-            textAlign: 'left',
-            paddingLeft: isXsScreen || isSmScreen ? '3%' : '0%',
-            // border: '2px solid blue',
+            fontSize: isXsScreen || isSmScreen ? '2.5rem' : null,
+            textAlign: isXsScreen || isSmScreen ? 'center' : 'left',
+            margin: isXsScreen || isSmScreen ? '0 auto' : null,
           }}
         >
           Nate's Fence and Gate
@@ -45,20 +46,20 @@ function LandingPage() {
           style={{
             marginBottom: '0px',
             paddingBottom: isXsScreen || isSmScreen ? '10%' : '1%',
-            fontSize: isXsScreen || isSmScreen ? '1.2rem' : null,
-            textAlign: 'left',
-            paddingLeft: isXsScreen || isSmScreen ? '3%' : '0%',
+            fontSize: isXsScreen || isSmScreen ? '1.5rem' : null,
+            textAlign: isXsScreen || isSmScreen ? 'center' : 'left',
+            margin: isXsScreen || isSmScreen ? '0 auto' : null,
+            marginTop: '0px',
           }}
         >
           Top-rated fence contractor in Minnesota
         </p>
         <div style={{
-          marginRight: isXsScreen || isSmScreen ? '10%' : '0%',
           display: 'flex',
           height: 'fit-content',
           width: 'fit-content',
-          marginTop: isXsScreen || isSmScreen ? '60%' : '1%',
-          marginLeft: isXsScreen || isSmScreen ? '13%' : null,
+          paddingTop: isXsScreen || isSmScreen ? '10%' : '1%',
+          margin: isXsScreen || isSmScreen ? '0 auto' : null,
         }}>
           <div className="mr-3">
             <ButtonComponent type="Types" />
@@ -66,7 +67,11 @@ function LandingPage() {
           <div className="">
             <ButtonComponent type="Quote" />
           </div>
-          <div className="absolute bottom-0 start-1/2 -translate-x-1/2 mb-32">
+          <div className="absolute bottom-0 start-1/2 -translate-x-1/2 mb-32"
+            style={{
+              marginTop: isXsScreen || isSmScreen ? '60%' : '1%',
+            }}
+          >
             <p className="text-white text-2xl font-normal">Learn More</p>
             <FontAwesomeIcon
               icon={faChevronDown}

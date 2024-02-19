@@ -17,7 +17,7 @@ function About() {
 
     return (
         <div className='w-screen'>
-            <div className='bg-xl-hero-about
+            <div className='bg-xl-hero-about bg-no-repeat bg-center
             h-96 flex flex-col justify-center'>
                 <h1 className='text-white text-7xl -translate-y-10'>About</h1>
                 <h2 className='text-white text-3xl -translate-y-5 font-thin'>Nate's Fence and Gate strives to give homeowners a unique and affordable fence experience</h2>
