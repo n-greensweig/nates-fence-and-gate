@@ -5,32 +5,67 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 import { useEffect } from "react";
 
+// Responsive imports
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+
 function LandingPage() {
   useEffect(() => {
     document.title = "Nate's Fence and Gate";
   }, []);
 
+  // Check the screen size for responsive design
+  const theme = useTheme();
+  const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
+  const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <div className="w-full h-full">
-      <div className="xs:bg-xs-hero-landing xl:bg-xl-hero-landing 3xl:bg-3xl-hero-landing h-screen relative">
-        <h1 className="text-white xs:text-2xl sm:text-7xl absolute start-1/4 bottom-1/2 mb-14">
+      <div className="xs:bg-xs-hero-landing xl:bg-xl-hero-landing 3xl:bg-3xl-hero-landing h-screen relative"
+        style={{ paddingLeft: '25%' }}
+      >
+        <h1 className="text-white xs:text-2xl sm:text-7xl start-1/4 bottom-1/2 mb-14"
+          style={{
+            // border: '2px solid red',
+            paddingTop: isXsScreen || isSmScreen ? '58%' : '25%',
+            paddingBottom: isXsScreen || isSmScreen ? '10%' : '1%',
+            marginBottom: '1%',
+            fontSize: isXsScreen || isSmScreen ? '2rem' : null,
+            textAlign: 'left',
+          }}
+        >
           Nate's Fence and Gate
         </h1>
-        <p className="text-white text-3xl font-thin absolute start-1/4 bottom-1/2">
+        <p className="text-white text-3xl font-thin start-1/4 bottom-1/2"
+          style={{
+            marginBottom: '0px',
+            paddingBottom: isXsScreen || isSmScreen ? '10%' : '1%',
+            fontSize: isXsScreen || isSmScreen ? '1.1rem' : null,
+            textAlign: 'left',
+          }}
+        >
           Top-rated fence contractor in Minnesota
         </p>
-        <div className="absolute start-1/4 bottom-1/2 translate-y-16">
-          <ButtonComponent type="Types" />
-        </div>
-        <div className="absolute start-1/4 bottom-1/2 translate-x-36 translate-y-16 ">
-          <ButtonComponent type="Quote" />
-        </div>
-        <div className="absolute bottom-0 start-1/2 -translate-x-1/2 mb-32">
-          <p className="text-white text-2xl font-normal">Learn More</p>
-          <FontAwesomeIcon
-            icon={faChevronDown}
-            className="text-white animate-bounce-fast"
-          />
+        <div style={{
+          marginRight: isXsScreen || isSmScreen ? '10%' : '0%',
+          display: 'flex',
+          height: 'fit-content',
+          width: 'fit-content',
+          marginTop: isXsScreen || isSmScreen ? '10%' : '1%',
+        }}>
+          <div className="mr-3">
+            <ButtonComponent type="Types" />
+          </div>
+          <div className="">
+            <ButtonComponent type="Quote" />
+          </div>
+          <div className="absolute bottom-0 start-1/2 -translate-x-1/2 mb-32">
+            <p className="text-white text-2xl font-normal">Learn More</p>
+            <FontAwesomeIcon
+              icon={faChevronDown}
+              className="text-white animate-bounce-fast"
+            />
+          </div>
         </div>
       </div>
 
@@ -62,7 +97,7 @@ function LandingPage() {
             gap: "20px",
           }}
         >
-          <div className="fence-types-group">            
+          <div className="fence-types-group">
             {/* Change button text to just 'Fence Types' */}
             <ButtonComponent type="Types" />
           </div>
