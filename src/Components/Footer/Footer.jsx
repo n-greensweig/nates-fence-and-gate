@@ -22,13 +22,17 @@ const Footer = () => {
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
+    const isXlScreen = useMediaQuery(theme.breakpoints.down('xl'));
+    const isXxlScreen = useMediaQuery(theme.breakpoints.down('xxl'));
+
 
     return (
-        <footer className={`bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${noMargin ? 'mt-0' : 'mt-16'} absolute`}>
+        <footer className={`bg-gradient-to-r w-full from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${noMargin ? 'mt-0' : 'mt-16'} absolute`}>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'> {/* Adjust gaps as needed */}
 
                 {/* Contact & Navigation */}
-                {isXsScreen || isSmScreen ?
+                {isXsScreen || isSmScreen || isMdScreen || isLgScreen ?
 
                     // Mobile view
                     <section className='w-full md:w-auto contact-section-container'>
@@ -89,7 +93,7 @@ const Footer = () => {
                 }
 
                 {/* Logo */}
-                <div className='text-center h-24 md:h-32 mx-auto md:mx-0' style={{ width: 'fit-content', height: 'fit-content', margin: isXsScreen || isSmScreen ? '10px auto 10px auto' : '30px auto 0px auto' }}>
+                <div className='text-center h-24 md:h-32 mx-auto md:mx-0' style={{ width: 'fit-content', height: 'fit-content', margin: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '10px auto 10px auto' : '30px auto 0px auto' }}>
                     <Link to='/' onClick={() => window.scrollTo(0, 0)}>
                         <img src='../images/logos/nates-logo.jpg' alt="Nate's Fence & Gate Logo" className='h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out' />
                     </Link>
@@ -97,56 +101,55 @@ const Footer = () => {
                 </div>
 
                 {/* Service Areas */}
-                <section className='w-full md:w-auto md:mr-auto md:mr-10'
-                // style={{ border: '2px solid red', marginRight: '10px', }}
-                > {/* Adjusted classes to move the service locations list to the left */}
+                <section className='w-full'> {/* Adjusted classes to move the service locations list to the left */}
                     <h3 className='text-2xl md:text-3xl font-bold mb-4'>Service Areas:</h3>
-                    {isXsScreen || isSmScreen || isMdScreen ? <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
-                        { /* Consider adjusting columns on both viewports */}
-                        <li>Blaine</li>
-                        <li>Lexington</li>
-                        <li>Brooklyn Center</li>
-                        <li>Lino Lakes</li>
-                        <li>Brooklyn Park</li>
-                        <li>New Brighton</li>
-                        <li>Circle Pines</li>
-                        <li>Minneapolis</li>
-                        <li>Columbia Heights</li>
-                        <li>Richfield</li>
-                        <li>Coon Rapids</li>
-                        <li>Robbinsdale</li>
-                        <li>Crystal</li>
-                        <li>Roseville</li>
-                        <li>Falcon Heights</li>
-                        <li>Shoreview</li>
-                        <li>Fridley</li>
-                        <li>St. Louis Park</li>
-                        <li>Golden Valley</li>
-                        <li>White Bear Lake</li>
-                    </ul> :
-                    <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm' style={{ fontSize: '13px' }}>
-                        { /* Consider adjusting columns on both viewports */}
-                        <li>Blaine</li>
-                        <li>Coon Rapids</li>
-                        <li>Lexington</li>
-                        <li>Robbinsdale</li>
-                        <li>Brooklyn Center</li>
-                        <li>Crystal</li>
-                        <li>Lino Lakes</li>
-                        <li>Roseville</li>
-                        <li>Brooklyn Park</li>
-                        <li>Falcon Heights</li>
-                        <li>New Brighton</li>
-                        <li>Shoreview</li>
-                        <li>Circle Pines</li>
-                        <li>Fridley</li>
-                        <li>Minneapolis</li>
-                        <li>St. Louis Park</li>
-                        <li>Columbia Heights</li>
-                        <li>Golden Valley</li>
-                        <li>Richfield</li>
-                        <li>White Bear Lake</li>
-                    </ul>}
+                    {isXsScreen || isSmScreen || isMdScreen || isLgScreen ?
+                        <ul className='grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
+                            { /* Consider adjusting columns on both viewports */}
+                            <li>Blaine</li>
+                            <li>Lexington</li>
+                            <li>Brooklyn Center</li>
+                            <li>Lino Lakes</li>
+                            <li>Brooklyn Park</li>
+                            <li>New Brighton</li>
+                            <li>Circle Pines</li>
+                            <li>Minneapolis</li>
+                            <li>Columbia Heights</li>
+                            <li>Richfield</li>
+                            <li>Coon Rapids</li>
+                            <li>Robbinsdale</li>
+                            <li>Crystal</li>
+                            <li>Roseville</li>
+                            <li>Falcon Heights</li>
+                            <li>Shoreview</li>
+                            <li>Fridley</li>
+                            <li>St. Louis Park</li>
+                            <li>Golden Valley</li>
+                            <li>White Bear Lake</li>
+                        </ul> :
+                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm' style={{ fontSize: '13px' }}>
+                            { /* Consider adjusting columns on both viewports */}
+                            <li>Blaine</li>
+                            <li>Coon Rapids</li>
+                            <li>Lexington</li>
+                            <li>Robbinsdale</li>
+                            <li>Brooklyn Center</li>
+                            <li>Crystal</li>
+                            <li>Lino Lakes</li>
+                            <li>Roseville</li>
+                            <li>Brooklyn Park</li>
+                            <li>Falcon Heights</li>
+                            <li>New Brighton</li>
+                            <li>Shoreview</li>
+                            <li>Circle Pines</li>
+                            <li>Fridley</li>
+                            <li>Minneapolis</li>
+                            <li>St. Louis Park</li>
+                            <li>Columbia Heights</li>
+                            <li>Golden Valley</li>
+                            <li>Richfield</li>
+                            <li>White Bear Lake</li>
+                        </ul>}
                 </section>
 
             </div>
