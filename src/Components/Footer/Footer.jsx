@@ -106,9 +106,10 @@ const Footer = () => {
 
                 {/* Service Areas */}
                 <section className='w-full'> {/* Adjusted classes to move the service locations list to the left */}
-                    <h3 className='text-2xl md:text-3xl font-bold mb-4'>Service Areas:</h3>
+                    <h3 className='text-2xl md:text-3xl font-bold mb-4' 
+                    style={{marginLeft: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? null : '-15%'}}>Service Areas:</h3>
                     {isXsScreen || isSmScreen || isMdScreen || isLgScreen ?
-                        <ul className='grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
+                        <ul className='grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px', }}>
                             { /* Consider adjusting columns on both viewports */}
                             <li>Blaine</li>
                             <li>Lexington</li>
@@ -131,7 +132,8 @@ const Footer = () => {
                             <li>Golden Valley</li>
                             <li>White Bear Lake</li>
                         </ul> :
-                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm' style={{ fontSize: '13px' }}>
+                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm'
+                        style={{ fontSize: '13px', height: '80%', marginLeft: '-15%', }}>
                             { /* Consider adjusting columns on both viewports */}
                             <li>Blaine</li>
                             <li>Coon Rapids</li>
