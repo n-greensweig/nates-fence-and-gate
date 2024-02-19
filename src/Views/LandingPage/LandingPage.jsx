@@ -22,16 +22,21 @@ function LandingPage() {
   return (
     <div className="w-full h-full">
       <div className="xs:bg-xs-hero-landing xl:bg-xl-hero-landing 3xl:bg-3xl-hero-landing h-screen relative"
-        style={{ paddingLeft: '25%' }}
+        style={{
+          paddingLeft: isXsScreen || isSmScreen ? null : '25%',
+          margin: isXsScreen || isSmScreen ? '0 auto' : null,
+        }}
       >
         <h1 className="text-white xs:text-2xl sm:text-7xl start-1/4 bottom-1/2 mb-14"
           style={{
             // border: '2px solid red',
-            paddingTop: isXsScreen || isSmScreen ? '58%' : '25%',
-            paddingBottom: isXsScreen || isSmScreen ? '10%' : '1%',
+            paddingTop: isXsScreen || isSmScreen ? '60%' : '25%',
+            paddingBottom: isXsScreen || isSmScreen ? '1%' : '1%',
             marginBottom: '1%',
-            fontSize: isXsScreen || isSmScreen ? '2rem' : null,
+            fontSize: isXsScreen || isSmScreen ? '2.1rem' : null,
             textAlign: 'left',
+            paddingLeft: isXsScreen || isSmScreen ? '3%' : '0%',
+            // border: '2px solid blue',
           }}
         >
           Nate's Fence and Gate
@@ -40,8 +45,9 @@ function LandingPage() {
           style={{
             marginBottom: '0px',
             paddingBottom: isXsScreen || isSmScreen ? '10%' : '1%',
-            fontSize: isXsScreen || isSmScreen ? '1.1rem' : null,
+            fontSize: isXsScreen || isSmScreen ? '1.2rem' : null,
             textAlign: 'left',
+            paddingLeft: isXsScreen || isSmScreen ? '3%' : '0%',
           }}
         >
           Top-rated fence contractor in Minnesota
@@ -51,7 +57,8 @@ function LandingPage() {
           display: 'flex',
           height: 'fit-content',
           width: 'fit-content',
-          marginTop: isXsScreen || isSmScreen ? '10%' : '1%',
+          marginTop: isXsScreen || isSmScreen ? '60%' : '1%',
+          marginLeft: isXsScreen || isSmScreen ? '13%' : null,
         }}>
           <div className="mr-3">
             <ButtonComponent type="Types" />
