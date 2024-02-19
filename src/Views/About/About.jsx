@@ -47,6 +47,12 @@ function About() {
             {/* Galvanized steel info */}
             <div className='pt-10'>
                 <h1 className='text-3xl mb-10'><strong>Why we use galvanized steel posts:</strong></h1>
+                <div className='flex w-screen justify-evenly'>
+                    <img src="images/galvanized-steel/galvanized-steel-1.JPEG" alt="Galvanized steel fence post" className='w-1/4 mb-14 sm:w-1/3 xs:w-1/3'>
+                    </img>
+                    <img src="images/galvanized-steel/galvanized-steel-2.JPEG" alt="Galvanized steel fence post" className='w-1/4 mb-14 sm:w-1/3 xs:w-1/3'>
+                    </img>
+                </div>
                 <ol className='w-2/3 m-auto mb-10 text-left'>
                     <li className='text-xl pb-5 border-b-4'><strong>Corrosion Resistance</strong>: Galvanized steel is coated with a layer of zinc, providing excellent corrosion resistance.
                         This protects the post from rust and deterioration caused by exposure to the elements.</li>
@@ -60,16 +66,10 @@ function About() {
                         frost heaving. Driving post 4’+ beneath our frost line ensures their will not be any heaving, as heaving has near 0% occurrence rate when a post is driven
                         properly and to depth due to its minimal soil disruption.</li>
                 </ol>
-                <div className='flex w-screen justify-evenly'>
-                    <img src="images/galvanized-steel/galvanized-steel-1.JPEG" alt="Galvanized steel fence post" className='w-1/3'>
-                    </img>
-                    <img src="images/galvanized-steel/galvanized-steel-2.JPEG" alt="Galvanized steel fence post" className='w-1/3'>
-                    </img>
-                </div>
             </div>
 
             {/* FAQ section */}
-            <div className='py-14 bg-slate-100'>
+            <div className='py-1 bg-slate-100 pb-16'>
                 <Faq />
             </div>
 

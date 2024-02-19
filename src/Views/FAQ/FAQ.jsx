@@ -14,7 +14,7 @@ function Faq() {
 
     return (
         <>
-            <h1 style={{ fontSize: '2.5rem' }}>FAQ</h1>
+            <h1 className="mb-5 mt-5" style={{ fontSize: '2.5rem' }}>FAQ</h1>
             <div className="faq-container">
                 {/* Render FAQ accordions using data from Constants.jsx */}
                 {/* Add link to instant quote form in second answer */}

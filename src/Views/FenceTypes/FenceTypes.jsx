@@ -18,10 +18,10 @@ function FenceTypes() {
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <div className="md:h-screen md:w-screen xl:h-screen xl:w-screen" style={{ marginBottom: '10%', }}>
+    <div className="md:h-screen md:w-screen xl:h-screen xl:w-screen bg-slate-100" style={{ paddingBottom: '10%', minHeight: '100vh' }}>
       <div className="3xl:bg-3xl-hero-fence-types xl:bg-xl-hero-fence-types h-1/2 flex flex-col justify-center">
         <h1 className="text-7xl text-white mb-5">Fence Types</h1>
-        <p className="text-white text-3xl font-thin">
+        <p className="text-white text-3xl font-thin" style={{ width: '50%', margin: '0 auto', }}>
           Choosing the perfect fence is as unique as your needs and interests.
           Explore our wide range of fence types, tailored to match your
           individual requirements and preferences.
