@@ -61,7 +61,7 @@ function MobileNavbar() {
         <div>
             {/* Trigger Button (use fixed positioning) */}
             <Button
-                style={{ ...styles.bmBurgerButton, position: 'fixed', zIndex: 999 }}
+                style={{ ...styles.bmBurgerButton, position: 'absolute', zIndex: 999 }}
                 onClick={toggleMenu}
                 startIcon={menuOpen ?
                     <MenuOpenIcon style={{ color: 'white', fontSize: '4rem' }} /> :
