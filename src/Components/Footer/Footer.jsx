@@ -75,7 +75,7 @@ const Footer = () => {
                             </Typography>
                         </div>
                         <nav> {/* Added for semantic clarity */}
-                            <ul className='flex flex-col md:flex-row gap-4 text-base' style={{ width: 'fit-content', }}>
+                            <ul className='flex flex-col md:flex-row gap-4 text-base sm:ml-4' style={{ width: 'fit-content', }}>
                                 <li><Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Home</Link></li>|
                                 <li><Link to='/fence-types' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Fence Types</Link></li>|
                                 <li><a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,' target='_blank' className='hover text-nates-accent'>Google Reviews</a></li>|
@@ -87,11 +87,11 @@ const Footer = () => {
                 }
 
                 {/* Logo */}
-                <div className='text-center h-24 md:h-32 mx-auto md:mx-0'>
+                <div className='text-center h-24 md:h-32 mx-auto md:mx-0' style={{ width: 'fit-content', height: 'fit-content', margin: isXsScreen || isSmScreen ? '10px auto 10px auto' : '30px auto 0px auto'}}>
                     <Link to='/' onClick={() => window.scrollTo(0, 0)}>
                         <img src='../images/logos/nates-logo.jpg' alt="Nate's Fence & Gate Logo" className='h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out' />
                     </Link>
-                    <p className='text-sm text-nates-gray mt-2'>&copy; {new Date().getFullYear()} Nate's Fence & Gate. All Rights Reserved.</p>
+                    <p className='text-sm text-nates-gray mt-2' style={{ width: '60%', textAlign: 'center', margin: '0 auto', }}>&copy; {new Date().getFullYear()} Nate's Fence & Gate. All Rights Reserved.</p>
                 </div>
 
                 {/* Service Areas */}
@@ -122,7 +122,7 @@ const Footer = () => {
                         <li>Golden Valley</li>
                         <li>White Bear Lake</li>
                     </ul> :
-                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm' style={{ fontSize: '13px' }}>
+                        <ul className='grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm' style={{ fontSize: '13px' }}>
                             { /* Consider adjusting columns on both viewports */}
                             <li>Blaine</li>
                             <li>Coon Rapids</li>
