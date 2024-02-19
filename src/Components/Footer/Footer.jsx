@@ -36,12 +36,12 @@ const Footer = () => {
 
                     // Mobile view
                     <section className='w-full md:w-auto contact-section-container'>
-                        <h3 className='text-2xl md:text-3xl font-bold mb-8'>Get in Touch!</h3>
-                        <div className='flex items-center justify-center text-center md:text-left gap-4 pb-4 md:pb-0 md:mb-10'>
+                        <h3 className='text-2xl md:text-3xl font-bold mb-8 md:mb-4'>Get in Touch!</h3>
+                        <div className='flex items-center justify-center text-center md:text-left gap-4 pb-4 md:pb-0 md:mb-2'>
                             <a href="tel:612-702-8681" >
                                 <SmartphoneIcon fontSize='large' style={{ fill: '#0283AB' }} />
                             </a>
-                            <Typography className='ml-2'>
+                            <Typography className='ml-2' style={{ fontSize: isMdScreen || isLgScreen ? '.7rem' : null }}>
                                 <a href="tel:612-702-8681" className='call-to-action'>
                                     Call or Text: 612-702-8681
                                 </a>
@@ -49,7 +49,7 @@ const Footer = () => {
                         </div>
                         <nav aria-label="Main Navigation" className="main-navigation">
                             <ul className='nav-list'>
-                                <li className="nav-item">
+                                <li lassName="nav-item">
                                     <Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Home</Link>
                                 </li>
                                 <li className="nav-item">
@@ -81,11 +81,11 @@ const Footer = () => {
                             </Typography>
                         </div>
                         <nav> {/* Added for semantic clarity */}
-                            <ul className='flex flex-col md:flex-row gap-4 text-base sm:ml-4' style={{ width: 'fit-content', }}>
-                                <li><Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Home</Link></li>|
-                                <li><Link to='/fence-types' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Fence Types</Link></li>|
-                                <li><a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,' target='_blank' className='hover text-nates-accent'>Google Reviews</a></li>|
-                                <li><Link to='/quote' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Instant Quote</Link></li>|
+                            <ul className='flex flex-col md:flex-row gap-4 text-base sm:ml-4' style={{ width: 'fit-content', marginRight: '1000px' }}>
+                                <li><Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Home</Link></li>
+                                <li><Link to='/fence-types' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Fence Types</Link></li>
+                                <li><a href='https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,,' target='_blank' className='hover text-nates-accent'>Google Reviews</a></li>
+                                <li><Link to='/quote' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Instant Quote</Link></li>
                                 <li><Link to='/about' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>About</Link></li>
                             </ul>
                         </nav>
@@ -93,7 +93,11 @@ const Footer = () => {
                 }
 
                 {/* Logo */}
-                <div className='text-center h-24 md:h-32 mx-auto md:mx-0' style={{ width: 'fit-content', height: 'fit-content', margin: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '10px auto 10px auto' : '30px auto 0px auto' }}>
+                <div className='text-center h-24 md:h-32 mx-auto md:mx-0'
+                    style={{
+                        width: 'fit-content', height: 'fit-content',
+                        margin: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '10px auto 10px auto' : '30px auto 0px auto',
+                    }}>
                     <Link to='/' onClick={() => window.scrollTo(0, 0)}>
                         <img src='../images/logos/nates-logo.jpg' alt="Nate's Fence & Gate Logo" className='h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out' />
                     </Link>
@@ -153,7 +157,7 @@ const Footer = () => {
                 </section>
 
             </div>
-        </footer>
+        </footer >
     );
 };
 

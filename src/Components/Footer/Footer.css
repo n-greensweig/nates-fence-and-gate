@@ -7,6 +7,10 @@ footer li {
   white-space: nowrap;
 }
 
+footer ul {
+  white-space: wrap;
+}
+
 /* Button-like styling for the phone number */
 .call-to-action {
   background-color: #0283AB; /* Use your brand color */
