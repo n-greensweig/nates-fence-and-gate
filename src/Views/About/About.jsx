@@ -69,7 +69,7 @@ function About() {
             </div>
 
             {/* FAQ section */}
-            <div className='py-1 bg-slate-100'>
+            <div className='py-1 bg-slate-100 pb-16'>
                 <Faq />
             </div>
 

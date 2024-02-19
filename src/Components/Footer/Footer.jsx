@@ -13,7 +13,7 @@ import { useTheme } from "@mui/material/styles";
 const Footer = () => {
 
     const history = useHistory();
-    const isQuotePage = history.location.pathname === '/quote';
+    const isQuoteOrAboutPage = history.location.pathname === '/quote' || history.location.pathname === '/about';
 
     // Check the screen size for responsive design
     const theme = useTheme();
@@ -21,7 +21,7 @@ const Footer = () => {
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
-        <footer className={`bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${isQuotePage ? 'mt-0' : 'mt-16'}`}>
+        <footer className={`bg-gradient-to-r from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${isQuoteOrAboutPage ? 'mt-0' : 'mt-16'}`}>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'> {/* Adjust gaps as needed */}
 
                 {/* Contact & Navigation */}
