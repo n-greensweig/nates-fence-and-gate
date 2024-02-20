@@ -85,33 +85,12 @@ function MobileNavbar() {
                 left
                 className='hide'
             >
-                <Link to="/quote" onClick={closeMenu}>
-                    <Button style={{
-                        backgroundColor: 'white',
-                        color: '#0283AB',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        border: '2px solid #0283AB',
-                        fontWeight: 'bold',
-                        borderRadius: '5px',
-                        padding: '0 1rem',
-                        textTransform: 'none',
-                        height: '3rem',
-                        transition: 'opacity 0.3s',
-                    }}
-                        onMouseEnter={e => e.target.style.opacity = 0.8}
-                        onMouseLeave={e => e.target.style.opacity = 1}
-                    >
-                        Instant Quote
-                    </Button>
-                </Link>
                 <Link to="/" onClick={closeMenu} style={{ borderBottom: '1px solid white', width: '100%', textAlign: 'left' }}>Home</Link>
                 <div style={{ borderBottom: '1px solid white', width: '100%', textAlign: 'left', }}>
                     <Link to="/fence-types" onClick={closeMenu}>
                         Fence Types
                     </Link>
-                    {showDropdown ? <KeyboardArrowDownIcon  onClick={toggleDropdown} style={{ fontSize: '2rem', textAlign: 'end' }} /> : <KeyboardArrowRightIcon  onClick={toggleDropdown} style={{ fontSize: '2rem', textAlign: 'end' }} />}
+                    {showDropdown ? <KeyboardArrowDownIcon onClick={toggleDropdown} style={{ fontSize: '2rem', textAlign: 'end' }} /> : <KeyboardArrowRightIcon onClick={toggleDropdown} style={{ fontSize: '2rem', textAlign: 'end' }} />}
                 </div>
                 {showDropdown && (
                     <ul className="menu-dropdown bg-white text-black mt-1 p-2 rounded-lg shadow-lg">
@@ -130,6 +109,28 @@ function MobileNavbar() {
                     </ul>
                 )}
                 <Link to="/about" onClick={closeMenu} style={{ borderBottom: '1px solid white', width: '100%', textAlign: 'left', marginBottom: '20px', }}>About</Link>
+                <Link to="/quote" onClick={closeMenu}>
+                    <Button style={{
+                        backgroundColor: 'white',
+                        color: '#0283AB',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        border: '2px solid #0283AB',
+                        fontWeight: 'bold',
+                        borderRadius: '5px',
+                        padding: '0 1rem',
+                        textTransform: 'none',
+                        height: '4rem',
+                        width: '100%',
+                        transition: 'opacity 0.3s',
+                    }}
+                        onMouseEnter={e => e.target.style.opacity = 0.8}
+                        onMouseLeave={e => e.target.style.opacity = 1}
+                    >
+                        <h1>Instant Quote</h1>
+                    </Button>
+                </Link>
             </Menu>
         </div>
     );
