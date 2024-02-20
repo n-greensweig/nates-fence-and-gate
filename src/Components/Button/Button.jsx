@@ -9,8 +9,6 @@ function ButtonComponent(props) {
     const path = type === 'Quote' ? '/quote' : type === 'Types' ? '/fence-types' : null; // path to redirect to
     const text = type === 'Quote' ? 'Get Free Instant Quote' : type === 'Types' ? 'View Fence Types' : null; // text to display on button
 
-    const docTitle = document.title; // get the current document title
-
     return (
         <Button
             style={{
@@ -18,13 +16,12 @@ function ButtonComponent(props) {
                 color: props.type === 'Quote' ? '#F2F2F2' : '#102942',
                 opacity: 1,
                 transition: 'opacity 0.3s ease-in-out',
-                border: props.type === 'Quote' ? null : '2px solid #F2F2F2',
                 textTransform: 'none', // Prevent all caps
             }}
             onMouseEnter={(e) => {
                 e.target.style.color = props.type === 'Quote' ? '#F2F2F2' : '#102942';
                 e.target.style.border = props.type === 'Quote' ? null : '2px solid #102942';
-                e.target.style.opacity = props.type === 'Quote' ? 0.7 : null; // Set opacity to 70%
+                e.target.style.opacity = 0.7; // Set opacity to 70%
             }}
             onMouseLeave={(e) => {
                 e.target.style.color = props.type === 'Quote' ? '#F2F2F2' : '#102942';

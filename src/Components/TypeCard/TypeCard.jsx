@@ -15,25 +15,34 @@ function TypeCard(props) {
     const isCedarPage = history.location.pathname === '/fence-details/cedar';
 
     // handleClick function to route to the correct page
-    const handleClick = route => history.push(`/fence-details/${route}`);
+    const handleClick = route => {
+        history.push(`/fence-details/${route}`);
+        window.scrollTo(0, 0);
+    };
+
+    const handleCedarClick = () => {
+        history.push('/fence-details/cedar');
+        window.scrollTo(0, 0);
+    };
 
     // Check the screen size for responsive design
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
+
+
     return (
         <div style={{ marginBottom: isXsScreen || isSmScreen ? '5%' : null }}>
             <Paper elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3} style={cardStyle}
                 onClick={() => {
-                    props.fenceType.route === 'cedar' ? history.push('/fence-details/cedar') :
-                        handleClick(props.fenceType.route)
+                    props.fenceType.route === 'cedar' ? handleCedarClick() : handleClick(props.fenceType.route)
                 }}
             >
                 {/* Need to make cards stretch horizontally on XS and SM screens */}
                 <Card
                     style={{
-                        height: isCedarPage ? (isXsScreen || isSmScreen ? 'auto' : '450px') : '375px',
+                        height: isCedarPage ? (isXsScreen || isSmScreen ? 'auto' : '450px') : 'auto',
                         margin: '0px',
                         paddingTop: '10px',
                     }}
@@ -50,7 +59,13 @@ function TypeCard(props) {
                             }}
                         >
                             <Typography gutterBottom variant="h5" component="div">
-                                {props.fenceType.name}
+                                <h1>{props.fenceType.name}</h1>
+                                {isXsScreen || isSmScreen ? <p style={{
+                                    textAlign: 'center',
+                                    fontSize: '.6em',
+                                    padding: '1% 5%',
+                                    color: '#2F4F4F',
+                                }}>{props.fenceType.introDescription}</p> : null}
                             </Typography>
                         </CardContent>
                         <CardMedia

@@ -18,6 +18,8 @@ function LandingPage() {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <div className="w-full h-full">
@@ -33,9 +35,9 @@ function LandingPage() {
         <h1 className="text-white xs:text-2xl sm:text-7xl start-1/4 bottom-1/2"
           style={{
             paddingTop: isXsScreen || isSmScreen ? '20%' : '25%',
-            paddingBottom: isXsScreen || isSmScreen ? '5%' : '1%',
+            paddingBottom: isXsScreen || isSmScreen ? '3%' : '1%',
             marginBottom: '1%',
-            fontSize: isXsScreen || isSmScreen ? '2.5rem' : null,
+            fontSize: isXsScreen || isSmScreen ? '2.2rem' : null,
             textAlign: isXsScreen || isSmScreen ? 'center' : 'left',
             margin: isXsScreen || isSmScreen ? '0 auto' : null,
           }}
@@ -45,8 +47,8 @@ function LandingPage() {
         <p className="text-white text-3xl font-thin start-1/4 bottom-1/2"
           style={{
             marginBottom: '0px',
-            paddingBottom: isXsScreen || isSmScreen ? '10%' : '1%',
-            fontSize: isXsScreen || isSmScreen ? '1.5rem' : null,
+            paddingBottom: isXsScreen || isSmScreen ? '20%' : '1%',
+            fontSize: isXsScreen || isSmScreen ? '1.3rem' : null,
             textAlign: isXsScreen || isSmScreen ? 'center' : 'left',
             margin: isXsScreen || isSmScreen ? '0 auto' : null,
             marginTop: '0px',
@@ -81,10 +83,22 @@ function LandingPage() {
         </div>
       </div>
 
-      <div className="flex bg-slate-100 h-50vh py-14 w-screen xs:flex-col sm:flex-row">
-        <div className="flex xs:w-2/3 xs:m-auto xs:pb-10 sm:w-1/2 sm:justify-center">
-          <div className="sm:w-1/2">
-            <h2 className="xs:text-xl sm:text-3xl sm:text-left xs:text-left sm:border-l-4 border-nates-light-blue xs:border-l-4 border-nates-light-blue xs:pl-2 sm:pl-24">
+      <div className="flex bg-slate-100 h-50vh py-14 w-screen"
+        style={{
+          flexDirection: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? 'column' : 'row',
+        }}>
+        <div className="flex xs:w-2/3 xs:m-auto xs:pb-10 sm:w-1/2 sm:justify-center sm:items-center"
+          style={{
+            width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : null,
+            justifyContent: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? 'left' : null,
+          }}
+        >
+          <div style={{
+            width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : '50%',
+            marginBottom: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '5%' : null,
+          }}>
+            <h2 className="xs:text-xl sm:text-3xl sm:text-left xs:text-left sm:border-l-4 border-nates-light-blue xs:border-l-4 border-nates-light-blue xs:pl-2 sm:pl-24"
+            >
               We believe in providing the best possible service to our
               customers. Taking great pride in our work, we are committed to
               providing our customers with the highest quality products and
@@ -92,21 +106,23 @@ function LandingPage() {
             </h2>
           </div>
         </div>
-        <div className="xs:w-2/3 xs: m-auto sm:w-1/2">
+        <div className="m-auto sm:w-1/2" style={{
+          width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : null,
+        }}>
           <ReviewCarousel />
         </div>
       </div>
 
       <div className="bottom-container getting-started mt-14">
-        <h2 className="xs:text-3xl sm:text-4xl pb-6">Getting Started</h2>
+        <h2 className="xs:text-3xl sm:text-4xl pb-6">Get Started!</h2>
         <div
           className="button-divs"
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-around",
+            justifyContent: "center",
             width: "100%",
-            gap: "20px",
+            gap: "40px",
           }}
         >
           <div className="fence-types-group">

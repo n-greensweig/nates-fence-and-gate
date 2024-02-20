@@ -14,6 +14,8 @@ function ImageCarousel(props) {
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
+    const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
     return (
         <Carousel
@@ -25,7 +27,7 @@ function ImageCarousel(props) {
             width={'100%'}
             renderArrowPrev={(onClickHandler, hasPrev, label) =>
                 hasPrev && (
-                    <button type="button" onClick={onClickHandler} title={label} style={{ position: 'absolute', zIndex: 2, top: '50%', left: 15, transform: 'translateY(-50%)', background: 'rgba(255, 255, 255, 0.5)', border: 'none', borderRadius: '50%', padding: '10px', cursor: 'pointer' }}>
+                    <button type="button" onClick={onClickHandler} title={label} style={{ position: 'absolute', zIndex: 2, top: '40%', left: 15, transform: 'translateY(-40%)', background: 'rgba(255, 255, 255, 0.5)', border: 'none', borderRadius: '40%', padding: '10px', cursor: 'pointer' }}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-left" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M10.354 1.646a.5.5 0 0 1 0 .708L5.707 8l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z" />
                         </svg>
@@ -36,7 +38,7 @@ function ImageCarousel(props) {
             thumbHeight={100} // Adjust the height of the thumbnails
             renderArrowNext={(onClickHandler, hasNext, label) =>
                 hasNext && (
-                    <button type="button" onClick={onClickHandler} title={label} style={{ position: 'absolute', zIndex: 2, top: '50%', right: 15, transform: 'translateY(-50%)', background: 'rgba(255, 255, 255, 0.5)', border: 'none', borderRadius: '50%', padding: '10px', cursor: 'pointer' }}>
+                    <button type="button" onClick={onClickHandler} title={label} style={{ position: 'absolute', zIndex: 2, top: '40%', right: 15, transform: 'translateY(-40%)', background: 'rgba(255, 255, 255, 0.5)', border: 'none', borderRadius: '50%', padding: '10px', cursor: 'pointer' }}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16">
                             <path fillRule="evenodd" d="M5.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L10.293 8 5.646 3.354a.5.5 0 0 1 0-.708z" />
                         </svg>
@@ -67,12 +69,13 @@ function ImageCarousel(props) {
                             color: 'black', // Text color
                             padding: isXsScreen || isSmScreen ? '5px' : '20px', // Padding inside the text block
                             textAlign: 'center', // Center the text within the text block
-                            maxWidth: '80%', // Max width of the text block
+                            maxWidth: '100%', // Max width of the text block
                             boxSizing: 'border-box', // Include padding in the width calculation
+                            width: '65%',
                         }}>
                             <h3 style={{
                                 margin: 0,
-                                fontSize: isXsScreen || isSmScreen ? '15px' : '3rem',
+                                fontSize: isXsScreen || isSmScreen ? '2rem' : '3rem',
                                 marginBottom: '10px',
                                 lineHeight: isXsScreen || isSmScreen ? 1 : null,
                             }}>
@@ -85,14 +88,14 @@ function ImageCarousel(props) {
                             </h3>
                             <p style={{
                                 marginBottom: '10%',
-                                fontSize: isXsScreen || isSmScreen ? '10px' : null,
+                                fontSize: isXsScreen || isSmScreen ? '14px' : null,
                                 lineHeight: isXsScreen || isSmScreen ? '1.2' : null,
                                 textAlign: isXsScreen || isSmScreen ? 'left' : null,
                             }}>{reviews[index].text}</p>
                             <h2 style={{
                                 margin: 0,
                                 color: '#0283AB',
-                                fontSize: isXsScreen || isSmScreen ? '10px' : '1.5rem',
+                                fontSize: isXsScreen || isSmScreen ? '14px' : '1.5rem',
                             }}>{reviews[index].author}</h2>
                         </div>
                     )}

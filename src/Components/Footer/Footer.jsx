@@ -23,8 +23,6 @@ const Footer = () => {
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
     const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
-    const isXlScreen = useMediaQuery(theme.breakpoints.down('xl'));
-    const isXxlScreen = useMediaQuery(theme.breakpoints.down('xxl'));
 
 
     return (
