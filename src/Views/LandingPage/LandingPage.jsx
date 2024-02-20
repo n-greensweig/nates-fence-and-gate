@@ -18,6 +18,8 @@ function LandingPage() {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <div className="w-full h-full">
@@ -98,7 +100,7 @@ function LandingPage() {
       </div>
 
       <div className="bottom-container getting-started mt-14">
-        <h2 className="xs:text-3xl sm:text-4xl pb-6">Getting Started</h2>
+        <h2 className="xs:text-3xl sm:text-4xl pb-6">Get Started!</h2>
         <div
           className="button-divs"
           style={{
