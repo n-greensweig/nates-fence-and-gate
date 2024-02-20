@@ -52,8 +52,7 @@ function FenceTypes() {
             justifyContent: "center",
             alignItems: "center",
             maxWidth: "1400px",
-            margin: "0 auto",
-            padding: "20px 10px",
+            padding: "20px",
           }}
         >
           {fenceTypes.map((fenceType, index) => {
