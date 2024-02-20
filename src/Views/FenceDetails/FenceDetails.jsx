@@ -48,7 +48,6 @@ function FenceDetails() {
                             flexDirection: 'row',
                             justifyContent: 'flex-start',
                             width: '100%',
-                            // border: '2px solid green',
                         }}>
 
                         <div style={{
@@ -58,7 +57,6 @@ function FenceDetails() {
                             flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            // border: '2px solid blue',
                         }}>
                             {/* Fence type description */}
                             <p
@@ -70,7 +68,6 @@ function FenceDetails() {
                                     textAlign: 'left',
                                     padding: isCedarPage ? '0% 20% 3% 20%' : '0% 10% 3% 10%',
                                     margin: '0 auto',
-                                    // border: '2px solid red',
                                 }}
                             >{fenceType ? fenceType.description : null}</p>
                             <ButtonComponent type={'Quote'} />
