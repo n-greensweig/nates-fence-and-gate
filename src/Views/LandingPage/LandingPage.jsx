@@ -106,9 +106,9 @@ function LandingPage() {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-around",
+            justifyContent: "center",
             width: "100%",
-            gap: "20px",
+            gap: "40px",
           }}
         >
           <div className="fence-types-group">
