@@ -20,7 +20,10 @@ function About() {
             <div className='bg-xl-hero-about bg-no-repeat bg-center
             h-96 flex flex-col justify-center'>
                 <h1 className='text-white text-7xl -translate-y-10'>About</h1>
-                <h2 className='text-white text-3xl -translate-y-5 font-thin'>Nate's Fence and Gate strives to give homeowners a unique and affordable fence experience</h2>
+                <h2 className='text-white text-3xl -translate-y-5 font-thin'
+                    style={{
+                        padding: isXsScreen || isSmScreen ? '2% 2%' : null,
+                    }}>Nate's Fence and Gate strives to give homeowners a unique and affordable fence experience</h2>
             </div>
 
             <div className="flex justify-evenly py-10 bg-slate-100" style={{
