@@ -6,6 +6,7 @@ import ButtonComponent from "../../Components/Button/Button";
 
 import ImageCarousel from "../../Components/ImageCarousel/ImageCarousel";
 import MobileFenceDetails from "../MobileFenceDetails/MobileFenceDetails";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 // Responsive imports
 import { useMediaQuery } from "@mui/material";
@@ -14,11 +15,14 @@ import { useTheme } from "@mui/material/styles";
 function FenceDetails() {
 
     const { type } = useParams();
+    const history = useHistory();
 
     const fenceType = fenceTypes.find(f => f.route === type) ? fenceTypes.find(f => f.route === type) :
         fenceTypes[0].cedarTypes.find(f => f.route === type); // Find the fence type that matches the route
     const name = fenceType.name; // Get the name of the fence type
     const images = fenceType.images; // Get the images of the fence type
+
+    const isCedarPage = history.location.pathname === '/fence-details/cedar'; // Check if the current page is the Cedar Fence Details page
 
     // Check the screen size for responsive design
     const theme = useTheme();
@@ -62,9 +66,10 @@ function FenceDetails() {
                                     display: 'flex',
                                     flexDirection: 'column',
                                     justifyContent: 'center',
-                                    paddingBottom: '5%',
                                     fontSize: '1.2em',
                                     textAlign: 'left',
+                                    padding: isCedarPage ? '0 20% 3% 20%' : null,
+                                    margin: '0 auto',
                                 }}
                             >{fenceType ? fenceType.description : null}</p>
                             <ButtonComponent type={'Quote'} />
