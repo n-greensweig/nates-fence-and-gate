@@ -45,6 +45,7 @@ function TypeCard(props) {
                         height: isCedarPage ? (isXsScreen || isSmScreen ? 'auto' : '450px') : 'auto',
                         margin: '0px',
                         paddingTop: '10px',
+                        borderBottom: isXsScreen || isSmScreen ? "10px solid #0283AB" : null,
                     }}
                     className="bg-slate-100 hover:bg-slate-200 cursor-pointer"
                 >
