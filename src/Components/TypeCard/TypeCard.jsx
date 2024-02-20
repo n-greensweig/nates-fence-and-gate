@@ -15,7 +15,15 @@ function TypeCard(props) {
     const isCedarPage = history.location.pathname === '/fence-details/cedar';
 
     // handleClick function to route to the correct page
-    const handleClick = route => history.push(`/fence-details/${route}`);
+    const handleClick = route => {
+        history.push(`/fence-details/${route}`);
+        window.scrollTo(0, 0);
+    };
+
+    const handleCedarClick = () => {
+        history.push('/fence-details/cedar');
+        window.scrollTo(0, 0);
+    };
 
     // Check the screen size for responsive design
     const theme = useTheme();
@@ -26,8 +34,7 @@ function TypeCard(props) {
         <div style={{ marginBottom: isXsScreen || isSmScreen ? '5%' : null }}>
             <Paper elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3} style={cardStyle}
                 onClick={() => {
-                    props.fenceType.route === 'cedar' ? history.push('/fence-details/cedar') :
-                        handleClick(props.fenceType.route)
+                    props.fenceType.route === 'cedar' ? handleCedarClick() : handleClick(props.fenceType.route)
                 }}
             >
                 {/* Need to make cards stretch horizontally on XS and SM screens */}
