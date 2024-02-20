@@ -84,11 +84,19 @@ function LandingPage() {
       </div>
 
       <div className="flex bg-slate-100 h-50vh py-14 w-screen"
-        style={{ flexDirection: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? 'column' : 'row', }}>
+        style={{
+          flexDirection: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? 'column' : 'row',
+        }}>
         <div className="flex xs:w-2/3 xs:m-auto xs:pb-10 sm:w-1/2 sm:justify-center sm:items-center"
-          style={{ width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : null, }}
+          style={{
+            width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : null,
+            justifyContent: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? 'left' : null,
+          }}
         >
-          <div className="sm:w-1/2">
+          <div style={{
+            width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : '50%',
+            marginBottom: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '5%' : null,
+          }}>
             <h2 className="xs:text-xl sm:text-3xl sm:text-left xs:text-left sm:border-l-4 border-nates-light-blue xs:border-l-4 border-nates-light-blue xs:pl-2 sm:pl-24"
             >
               We believe in providing the best possible service to our
@@ -98,7 +106,9 @@ function LandingPage() {
             </h2>
           </div>
         </div>
-        <div className="m-auto sm:w-1/2" style={{ width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : null }}>
+        <div className="m-auto sm:w-1/2" style={{
+          width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : null,
+        }}>
           <ReviewCarousel />
         </div>
       </div>
