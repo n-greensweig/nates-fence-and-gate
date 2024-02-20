@@ -30,6 +30,8 @@ function TypeCard(props) {
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
+
+
     return (
         <div style={{ marginBottom: isXsScreen || isSmScreen ? '5%' : null }}>
             <Paper elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3} style={cardStyle}
@@ -40,7 +42,7 @@ function TypeCard(props) {
                 {/* Need to make cards stretch horizontally on XS and SM screens */}
                 <Card
                     style={{
-                        height: isCedarPage ? (isXsScreen || isSmScreen ? 'auto' : '450px') : '375px',
+                        height: isCedarPage ? (isXsScreen || isSmScreen ? 'auto' : '450px') : 'auto',
                         margin: '0px',
                         paddingTop: '10px',
                     }}

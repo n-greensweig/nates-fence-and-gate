@@ -115,7 +115,7 @@ export const fenceTypes = [
     },
     {
         name: 'Vinyl',
-        introDescription: `Vinyl fencing is the perfect fence for those who want complete privacy and zero maintenance.`,
+        introDescription: `Vinyl fencing is the perfect fence for those who want privacy and zero maintenance.`,
         description: `Vinyl fencing is the perfect fence for those who want complete privacy and zero maintenance.
         Available in white or tan featuring a 2x7 rail and 7/8” picket for a stronger more appealing fence.`,
         mainImage: 'images/vinyl/vinyl-3.jpeg',
@@ -130,7 +130,7 @@ export const fenceTypes = [
     },
     {
         name: 'Ornamental',
-        introDescription: `Our steel ornamental option is a wonderful option for those looking for an open concept.`,
+        introDescription: `Ornamental is a wonderful option for those looking for an open concept.`,
         description: `Our steel ornamental option is a wonderful option for those looking for an open concept. 
         Ornamental is also maintenance free with its sleek powder coated black finish it goes with any property.`,
         mainImage: 'images/ornamental/ornamental-1.jpeg',
@@ -144,7 +144,7 @@ export const fenceTypes = [
     },
     {
         name: 'Chain Link',
-        introDescription: `Chain link is perfect for creating a contained and safe environment for children and pets.`,
+        introDescription: `Chain link is perfect for creating a safe environment for children and pets.`,
         description: `Chain link is perfect for creating a contained and safe environment for children and pets.
         We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store quality chain link.`,
         mainImage: 'images/chain-link/chain-link-1-main.jpeg',
