@@ -18,6 +18,8 @@ function LandingPage() {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <div className="w-full h-full">
@@ -81,10 +83,14 @@ function LandingPage() {
         </div>
       </div>
 
-      <div className="flex bg-slate-100 h-50vh py-14 w-screen xs:flex-col sm:flex-row">
-        <div className="flex xs:w-2/3 xs:m-auto xs:pb-10 sm:w-1/2 sm:justify-center">
+      <div className="flex bg-slate-100 h-50vh py-14 w-screen"
+        style={{ flexDirection: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? 'column' : 'row' }}>
+        <div className="flex xs:w-2/3 xs:m-auto xs:pb-10 sm:w-1/2 sm:justify-center sm:items-center"
+          style={{ width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : null,}}
+        >
           <div className="sm:w-1/2">
-            <h2 className="xs:text-xl sm:text-3xl sm:text-left xs:text-left sm:border-l-4 border-nates-light-blue xs:border-l-4 border-nates-light-blue xs:pl-2 sm:pl-24">
+            <h2 className="xs:text-xl sm:text-3xl sm:text-left xs:text-left sm:border-l-4 border-nates-light-blue xs:border-l-4 border-nates-light-blue xs:pl-2 sm:pl-24"
+            >
               We believe in providing the best possible service to our
               customers. Taking great pride in our work, we are committed to
               providing our customers with the highest quality products and
@@ -92,7 +98,7 @@ function LandingPage() {
             </h2>
           </div>
         </div>
-        <div className="m-auto sm:w-1/2" style={{ width: isXsScreen || isSmScreen ? '90%' : null }}>
+        <div className="m-auto sm:w-1/2" style={{ width: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '90%' : null }}>
           <ReviewCarousel />
         </div>
       </div>
