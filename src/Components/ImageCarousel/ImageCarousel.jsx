@@ -67,7 +67,7 @@ function ImageCarousel(props) {
                             transform: 'translate(-50%, -50%)', // Adjust the position to the center
                             backgroundColor: 'rgba(255,255,255,0.7)', // Semi-transparent white background
                             color: 'black', // Text color
-                            padding: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '5px' : '20px', // Padding inside the text block
+                            padding: isXsScreen || isSmScreen ? '5px' : '20px', // Padding inside the text block
                             textAlign: 'center', // Center the text within the text block
                             maxWidth: '100%', // Max width of the text block
                             boxSizing: 'border-box', // Include padding in the width calculation
@@ -75,27 +75,27 @@ function ImageCarousel(props) {
                         }}>
                             <h3 style={{
                                 margin: 0,
-                                fontSize: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '2rem' : '3rem',
+                                fontSize: isXsScreen || isSmScreen ? '2rem' : '3rem',
                                 marginBottom: '10px',
-                                lineHeight: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? 1 : null,
+                                lineHeight: isXsScreen || isSmScreen ? 1 : null,
                             }}>
                                 {reviews[index].source}
                                 <div style={{
-                                    borderTop: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '1.5px solid black' : '2.5px solid black',
+                                    borderTop: isXsScreen || isSmScreen ? '1.5px solid black' : '2.5px solid black',
                                     width: '15%',
-                                    margin: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '5px auto' : '0 auto',
+                                    margin: isXsScreen || isSmScreen ? '5px auto' : '0 auto',
                                 }}></div>
                             </h3>
                             <p style={{
                                 marginBottom: '10%',
-                                fontSize: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '14px' : null,
-                                lineHeight: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '1.2' : null,
-                                textAlign: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? 'left' : null,
+                                fontSize: isXsScreen || isSmScreen ? '14px' : null,
+                                lineHeight: isXsScreen || isSmScreen ? '1.2' : null,
+                                textAlign: isXsScreen || isSmScreen ? 'left' : null,
                             }}>{reviews[index].text}</p>
                             <h2 style={{
                                 margin: 0,
                                 color: '#0283AB',
-                                fontSize: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '14px' : '1.5rem',
+                                fontSize: isXsScreen || isSmScreen ? '14px' : '1.5rem',
                             }}>{reviews[index].author}</h2>
                         </div>
                     )}

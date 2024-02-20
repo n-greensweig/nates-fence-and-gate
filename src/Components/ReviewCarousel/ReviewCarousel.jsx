@@ -78,7 +78,7 @@ function ReviewCarousel() {
 
     return (
         <div>
-            <ImageCarousel images={isXsScreen || isSmScreen || isMdScreen || isLgScreen ? mobileImages : images} reviews={reviews} origin={'LandingPage'} />
+            <ImageCarousel images={isXsScreen || isSmScreen ? mobileImages : images} reviews={reviews} origin={'LandingPage'} />
         </div>
     )
 }
