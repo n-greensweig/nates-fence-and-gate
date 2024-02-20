@@ -33,9 +33,9 @@ function LandingPage() {
         <h1 className="text-white xs:text-2xl sm:text-7xl start-1/4 bottom-1/2"
           style={{
             paddingTop: isXsScreen || isSmScreen ? '20%' : '25%',
-            paddingBottom: isXsScreen || isSmScreen ? '5%' : '1%',
+            paddingBottom: isXsScreen || isSmScreen ? '3%' : '1%',
             marginBottom: '1%',
-            fontSize: isXsScreen || isSmScreen ? '2.5rem' : null,
+            fontSize: isXsScreen || isSmScreen ? '2.2rem' : null,
             textAlign: isXsScreen || isSmScreen ? 'center' : 'left',
             margin: isXsScreen || isSmScreen ? '0 auto' : null,
           }}
@@ -45,8 +45,8 @@ function LandingPage() {
         <p className="text-white text-3xl font-thin start-1/4 bottom-1/2"
           style={{
             marginBottom: '0px',
-            paddingBottom: isXsScreen || isSmScreen ? '10%' : '1%',
-            fontSize: isXsScreen || isSmScreen ? '1.5rem' : null,
+            paddingBottom: isXsScreen || isSmScreen ? '20%' : '1%',
+            fontSize: isXsScreen || isSmScreen ? '1.3rem' : null,
             textAlign: isXsScreen || isSmScreen ? 'center' : 'left',
             margin: isXsScreen || isSmScreen ? '0 auto' : null,
             marginTop: '0px',
