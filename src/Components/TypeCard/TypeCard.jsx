@@ -57,7 +57,13 @@ function TypeCard(props) {
                             }}
                         >
                             <Typography gutterBottom variant="h5" component="div">
-                                {props.fenceType.name}
+                                <h1>{props.fenceType.name}</h1>
+                                {isXsScreen || isSmScreen ? <p style={{
+                                    textAlign: 'center',
+                                    fontSize: '.6em',
+                                    padding: '1% 5%',
+                                    color: '#2F4F4F',
+                                }}>{props.fenceType.introDescription}</p> : null}
                             </Typography>
                         </CardContent>
                         <CardMedia
