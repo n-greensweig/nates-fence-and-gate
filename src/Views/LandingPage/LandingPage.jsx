@@ -18,8 +18,6 @@ function LandingPage() {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
-  const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
   return (
     <div className="w-full h-full">
@@ -94,7 +92,7 @@ function LandingPage() {
             </h2>
           </div>
         </div>
-        <div className="xs:w-2/3 xs: m-auto sm:w-1/2">
+        <div className="m-auto sm:w-1/2" style={{ width: isXsScreen || isSmScreen ? '90%' : null }}>
           <ReviewCarousel />
         </div>
       </div>

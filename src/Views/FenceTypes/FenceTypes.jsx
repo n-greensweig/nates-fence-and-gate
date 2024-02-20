@@ -16,8 +16,6 @@ function FenceTypes() {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const isMdScreen = useMediaQuery(theme.breakpoints.down("md"));
-  const isLgScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
   return (
     <div className="md:h-screen md:w-screen xl:h-screen xl:w-screen bg-slate-100" style={{ paddingBottom: '5%', minHeight: '100vh', overflowY: 'scroll', }}>
