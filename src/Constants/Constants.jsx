@@ -11,8 +11,8 @@ export const fenceTypes = [
                 introDescription: `Our cap and trim look is a great way to add a bit of elegance to traditional vertical fencing.`,
                 description: `Our cap and trim look is a great way to add a bit of elegance to traditional vertical fencing. 
                 Features a deck board cap across the top and the dog ears are covered with 1x4 trim. 
-                This can be built with a side by side picket pattern or an overlapping picket pattern for added depth and privacy. 
-                Heights available 4’, 5’, 6’.`,
+                This can be built with a side-by-side picket pattern or an overlapping picket pattern for added depth and privacy. 
+                Heights available: 4’, 5’, 6’.`,
                 mainImage: 'images/cedar/cap-and-trim/cap-and-trim-1.jpeg',
                 images: [
                     'images/cedar/cap-and-trim/cap-and-trim-1.jpeg',
@@ -28,11 +28,10 @@ export const fenceTypes = [
             {
                 name: 'Craftsman',
                 introDescription: `Our craftsman style fencing is a customizable design that can feature an 
-                open picket, side by side, and overlapping pattern.`,
-                description: `Our craftsman style fencing is a customizable design that can feature an 
-                open picket, side by side, and overlapping pattern. These are great “good neighbor” fences because 
-                they are built to look the same from either side, often dressed out with 3 decorative trim boards and 
-                have the option of adding cap boards on top as well.`,
+                open picket, side-by-side, and overlapping pattern.`,
+                description: `Our Craftsman-style fencing is a customizable design that can feature an open picket, side-by-side, and 
+                overlapping pattern. These are great 'good neighbor' fences because they are built to look the same from either side, often adorned 
+                with three decorative trim boards and the option of adding cap boards on top as well.`,
                 mainImage: 'images/cedar/craftsman/craftsman-1.jpeg',
                 images: [
                     'images/cedar/craftsman/craftsman-1.jpeg',
@@ -48,8 +47,8 @@ export const fenceTypes = [
                 introDescription: `Horizontal fences are easily customizable and great for those who want a modern look.`,
                 description: `Horizontal fences are great for those who want a modern look. 
                 They are easily customizable with picket pattern and height variations. 
-                They come in shorter spans than traditional vertical fencing which help with strength. 
-                Built level for those who like clean straight lines.`,
+                They come in shorter spans than traditional vertical fencing, which helps with strength. 
+                Built level for those who like clean, straight lines.`,
                 mainImage: 'images/cedar/horizontal/horizontal-4.jpeg',
                 images: [
                     'images/cedar/horizontal/horizontal-1.jpeg',
@@ -65,10 +64,10 @@ export const fenceTypes = [
             },
             {
                 name: 'Standard',
-                introDescription: `Our standard privacy option tends to be the most cost effective option for privacy fencing.`,
-                description: `Our standard privacy option tends to be the most cost effective option for privacy fencing. 
-                Features the choice between side by side picket pattern or overlapping picket for total privacy. Features 
-                the classic dog ear picket at the top. Height available 4’-6’.`,
+                introDescription: `Our standard privacy option tends to be the most cost-effective option for privacy fencing.`,
+                description: `Our standard privacy option tends to be the most cost-effective option for privacy fencing. 
+                Features the choice between side-by-side picket pattern or overlapping picket for total privacy, as well as 
+                the classic dog ear picket at the top. Heights available: 4’-6’.`,
                 mainImage: 'images/cedar/standard/standard-2.jpeg',
                 images: [
                     'images/cedar/standard/standard-1.jpeg',
@@ -117,7 +116,7 @@ export const fenceTypes = [
         name: 'Vinyl',
         introDescription: `Vinyl fencing is the perfect fence for those who want privacy and zero maintenance.`,
         description: `Vinyl fencing is the perfect fence for those who want complete privacy and zero maintenance.
-        Available in white or tan featuring a 2x7 rail and 7/8” picket for a stronger more appealing fence.`,
+        Available in white or tan featuring a 2x7 rail and 7/8” picket for a stronger, more appealing fence.`,
         mainImage: 'images/vinyl/vinyl-3.jpeg',
         images: [
             'images/vinyl/vinyl-1.jpeg',
@@ -132,7 +131,7 @@ export const fenceTypes = [
         name: 'Ornamental',
         introDescription: `Ornamental is a wonderful option for those looking for an open concept.`,
         description: `Our steel ornamental option is a wonderful option for those looking for an open concept. 
-        Ornamental is also maintenance free with its sleek powder coated black finish it goes with any property.`,
+        Ornamental is also maintenance-free with its sleek powder coated black finish it goes with any property.`,
         mainImage: 'images/ornamental/ornamental-1.jpeg',
         images: [
             'images/ornamental/ornamental-1.jpeg',
@@ -146,7 +145,7 @@ export const fenceTypes = [
         name: 'Chain Link',
         introDescription: `Chain link is perfect for creating a safe environment for children and pets.`,
         description: `Chain link is perfect for creating a contained and safe environment for children and pets.
-        We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store quality chain link.`,
+        We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store-quality chain link.`,
         mainImage: 'images/chain-link/chain-link-1-main.jpeg',
         images: [
             'images/chain-link/chain-link-1-main.jpeg',
@@ -172,7 +171,7 @@ export const faq = [
     {
         question: "How much does a fence cost?",
         answer: `The cost of a fence can vary based on factors such as material,
-    length, height, and any additional features, we encourage you to try our
+    length, height, and any additional features. We encourage you to try our
     free instant quote tool or reach out for an estimate.
     `,
     },
@@ -180,8 +179,8 @@ export const faq = [
         question: "Why steel post?",
         answer: `We are believers in higher quality products.
     Galvanized steel will outlast a wood post everyday of the week.
-    Driving capabilities are added benefits allowing us to have stronger, cleaner installation
-    with out the use of heavy machinery or lugging around hazardous concrete.
+    Driving capabilities are added benefits allowing us to have a stronger, cleaner installation
+    without the use of heavy machinery or lugging around hazardous concrete.
     `,
     },
     {
@@ -212,7 +211,7 @@ export const faq = [
     with driven posts. Our method involves driving thick steel posts deeper than typical concrete installations,
     reaching below the frost line in Minnesota to prevent heaving. Unlike concrete, which can crack over time, our
     driven posts can avoid messy, labor-intensive processes, often eliminating the need for heavy machinery and causing
-    minimal soil disruptions—critical factors in ensuring a solid fencing solution.
+    minimal soil disruptions — critical factors in ensuring a solid fencing solution.
     `,
     },
 ];

@@ -23,7 +23,7 @@ function FenceTypes() {
         <h1 className="xs:text-5xl md:text-7xl xs:pt-10 md:pt-0 text-white mb-5">Fence Types</h1>
         <p className="xs:w-2/3 xs:mx-auto xs:text-xl xs:pb-10 text-white md:text-3xl font-thin">
           Choosing the perfect fence is as unique as your needs and interests.
-          Explore our wide range of fence types, tailored to match your
+          Explore our wide range of fence types, each tailored to match your
           individual requirements and preferences.
         </p>
       </div>
