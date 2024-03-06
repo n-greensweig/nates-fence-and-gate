@@ -7,7 +7,7 @@
 - [Acknowledgments](#Acknowledgments)
 
 ## Description
-Nate's Fence and Gate allows users to view several different fence types across the application and consider what option suits their needs. The app is built with React, Tailwind CSS, and mySalesman and is hosted at [https://www.natesfenceandgate.com](https://www.natesfenceandgate.com) using AWS and Heroku. Users may submit a free instant quote form using mySalesman's backend technology that is integrated into the project. The application is responsive across all screen sizes and is deployed as the business's primary channel for market visibility.
+Nate's Fence and Gate allows users to view several different fence types across the application and consider what option suits their needs. The app is built with React, Tailwind CSS, and mySalesman and is hosted at [https://www.natesfenceandgate.com](https://www.natesfenceandgate.com) using AWS and Heroku. Users may submit a free instant quote form using mySalesman's backend technology that is integrated into the project. The application is responsive across all screen sizes and serves the business's primary channel for market visibility.
 
 ## Set-up
 1. Fork and clone this repository
