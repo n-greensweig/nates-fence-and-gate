@@ -4,7 +4,7 @@ export const fenceTypes = [
         introDescription: `We build all of our wood privacy fences with cedar wood on galvanized steel post.`,
         description: `We build all of our wood privacy fences with cedar wood on galvanized steel post.
         The best part is you don’t need to sacrifice the natural beautiful look of a wood fence for the strength of steel, as we conceal the post with a cover board.`,
-        mainImage: 'images/cedar/craftsman/craftsman-1.jpeg',
+        mainImage: 'images/cedar/craftsman/craftsman-1.webp',
         cedarTypes: [
             {
                 name: 'Cap and Trim',
@@ -32,13 +32,13 @@ export const fenceTypes = [
                 description: `Our Craftsman-style fencing is a customizable design that can feature an open picket, side-by-side, and 
                 overlapping pattern. These are great 'good neighbor' fences because they are built to look the same from either side, often adorned 
                 with three decorative trim boards and the option of adding cap boards on top as well.`,
-                mainImage: 'images/cedar/craftsman/craftsman-1.jpeg',
+                mainImage: 'images/cedar/craftsman/craftsman-1.webp',
                 images: [
-                    'images/cedar/craftsman/craftsman-1.jpeg',
-                    'images/cedar/craftsman/craftsman-2.jpeg',
-                    'images/cedar/craftsman/craftsman-3.jpeg',
-                    'images/cedar/craftsman/craftsman-4.jpeg',
-                    'images/cedar/craftsman/craftsman-5.jpeg',
+                    'images/cedar/craftsman/craftsman-1.webp',
+                    'images/cedar/craftsman/craftsman-2.webp',
+                    'images/cedar/craftsman/craftsman-3.webp',
+                    'images/cedar/craftsman/craftsman-4.webp',
+                    'images/cedar/craftsman/craftsman-5.webp',
                 ],
                 route: 'craftsman',
             },
@@ -146,13 +146,13 @@ export const fenceTypes = [
         introDescription: `Chain link is perfect for creating a safe environment for children and pets.`,
         description: `Chain link is perfect for creating a contained and safe environment for children and pets.
         We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store-quality chain link.`,
-        mainImage: 'images/chain-link/chain-link-1-main.jpeg',
+        mainImage: 'images/chain-link/chain-link-1-main.webp',
         images: [
-            'images/chain-link/chain-link-1-main.jpeg',
-            'images/chain-link/chain-link-2.jpeg',
-            'images/chain-link/chain-link-3.jpeg',
-            'images/chain-link/chain-link-4.jpeg',
-            'images/chain-link/chain-link-5.jpeg',
+            'images/chain-link/chain-link-1-main.webp',
+            'images/chain-link/chain-link-2.webp',
+            'images/chain-link/chain-link-3.webp',
+            'images/chain-link/chain-link-4.webp',
+            'images/chain-link/chain-link-5.webp',
         ],
         route: 'chain-link'
     },
