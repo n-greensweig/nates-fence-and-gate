@@ -1,3 +1,4 @@
+// Components/ImageCarousel/ImageCarousel.jsx
 import { Carousel } from "react-responsive-carousel";
 
 // Responsive imports

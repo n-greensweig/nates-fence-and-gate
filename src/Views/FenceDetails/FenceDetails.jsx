@@ -1,12 +1,13 @@
+// Views/FenceDetails/FenceDetails.jsx
 import { useEffect } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useParams } from "react-router-dom";
 import { fenceTypes } from "../../Constants/Constants";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ButtonComponent from "../../Components/Button/Button";
 
 import ImageCarousel from "../../Components/ImageCarousel/ImageCarousel";
 import MobileFenceDetails from "../MobileFenceDetails/MobileFenceDetails";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useNavigate, useLocation } from "react-router-dom";
 
 // Responsive imports
 import { useMediaQuery } from "@mui/material";
@@ -15,14 +16,16 @@ import { useTheme } from "@mui/material/styles";
 function FenceDetails() {
 
     const { type } = useParams();
-    const history = useHistory();
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location.pathname);
 
     const fenceType = fenceTypes.find(f => f.route === type) ? fenceTypes.find(f => f.route === type) :
         fenceTypes[0].cedarTypes.find(f => f.route === type); // Find the fence type that matches the route
     const name = fenceType.name; // Get the name of the fence type
     const images = fenceType.images; // Get the images of the fence type
 
-    const isCedarPage = history.location.pathname === '/fence-details/cedar'; // Check if the current page is the Cedar Fence Details page
+    const isCedarPage = location.pathname === '/fence-details/cedar'; // Check if the current page is the Cedar Fence Details page
 
     // Check the screen size for responsive design
     const theme = useTheme();
@@ -82,6 +85,5 @@ function FenceDetails() {
         </div>
     );
 }
-
 
 export default FenceDetails;

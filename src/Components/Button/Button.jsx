@@ -1,9 +1,9 @@
 import { Button } from "@mui/material";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import {useNavigate} from "react-router-dom";
 
 function ButtonComponent(props) {
 
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const type = props.type; // type of button
     const path = type === 'Quote' ? '/quote' : type === 'Types' ? '/fence-types' : null; // path to redirect to
@@ -28,7 +28,7 @@ function ButtonComponent(props) {
                 e.target.style.border = null;
                 e.target.style.opacity = 1; // Reset opacity to 100%
             }}
-            onClick={props.type ? () => history.push(path) : null}
+            onClick={props.type ? () => navigate(path) : null}
         >
             {text}
         </Button>

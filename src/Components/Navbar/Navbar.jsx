@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HashRouter as Router } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from '@mui/material';
-import { slide as Menu } from 'react-burger-menu'; // Import the slide animation
-
 import MobileNavbar from '../MobileNavbar/MobileNavbar';
 
 // Responsive imports
@@ -23,46 +20,61 @@ const Navbar = () => {
     const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
     const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
+    const isMobile = isXsScreen || isSmScreen || isMdScreen || isLgScreen;
+
     return (
-        <Router>
-            <nav className='w-full bg-nates-dark-blue text-white flex flex-row justify-between items-center'>
-                {isXsScreen || isSmScreen || isMdScreen || isLgScreen ? null : <div>
+        <nav className='w-full bg-nates-dark-blue text-white flex flex-row justify-between items-center'>
+            {/* Logo on large screens */}
+            {!isMobile && (
+                <div>
                     <Link to='/'>
-                        <img src='../images/logos/nates-logo.jpg' className='h-28 ml-2 '></img>
+                        <img
+                            src='../images/logos/nates-logo.jpg'
+                            className='h-28 ml-2'
+                            alt="Nate's Logo"
+                        />
                     </Link>
-                </div>}
+                </div>
+            )}
 
-                {isXsScreen || isSmScreen || isMdScreen || isLgScreen ? <MobileNavbar /> :
-
-                    <ul className='h-28 flex flex-row justify-between items-center gap-x-48 mr-4'>
-                        <li className='nav-link text-xl'>
-                            <Link to='/'>Home</Link>
-                        </li>
-                        <li className='relative nav-link text-thin text-xl' onMouseEnter={toggleDropdown} onMouseLeave={toggleDropdown}>
-                            <Link to='/fence-types'>Fence Types</Link>
-                            {showDropdown && (
-                                <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg blue-border forefront">
-                                    <Link to="/fence-details/cedar">
-                                        <li className='dropdown-item'>Cedar</li>
-                                    </Link>
-                                    <Link to="/fence-details/vinyl">
-                                        <li className='dropdown-item'>Vinyl</li>
-                                    </Link>
-                                    <Link to="/fence-details/ornamental">
-                                        <li className='dropdown-item'>Ornamental</li>
-                                    </Link>
-                                    <Link to="/fence-details/chain-link">
-                                        <li className='dropdown-item no-bottom'>Chain Link</li>
-                                    </Link>
-                                </ul>
-                            )}
-                        </li>
-                        <li className='nav-link text-xl'>
-                            <Link to='/about'>About</Link>
-                        </li>
-                        <li style={{ height: '50%' }}>
-                            <Link to='/quote'>
-                                <Button style={{
+            {/* Mobile Navbar */}
+            {isMobile ? (
+                <MobileNavbar />
+            ) : (
+                <ul className='h-28 flex flex-row justify-between items-center gap-x-48 mr-4'>
+                    <li className='nav-link text-xl'>
+                        <Link to='/'>Home</Link>
+                    </li>
+                    <li
+                        className='relative nav-link text-thin text-xl'
+                        onMouseEnter={toggleDropdown}
+                        onMouseLeave={toggleDropdown}
+                    >
+                        <Link to='/fence-types'>Fence Types</Link>
+                        {showDropdown && (
+                            <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg blue-border forefront">
+                                <li className='dropdown-item'>
+                                    <Link to="/fence-details/cedar">Cedar</Link>
+                                </li>
+                                <li className='dropdown-item'>
+                                    <Link to="/fence-details/vinyl">Vinyl</Link>
+                                </li>
+                                <li className='dropdown-item'>
+                                    <Link to="/fence-details/ornamental">Ornamental</Link>
+                                </li>
+                                <li className='dropdown-item no-bottom'>
+                                    <Link to="/fence-details/chain-link">Chain Link</Link>
+                                </li>
+                            </ul>
+                        )}
+                    </li>
+                    <li className='nav-link text-xl'>
+                        <Link to='/about'>About</Link>
+                    </li>
+                    <li style={{ height: '50%' }}>
+                        <Link to='/quote'>
+                            <Button
+                                style={{
                                     backgroundColor: 'white',
                                     color: '#0283AB',
                                     height: '100%',
@@ -76,22 +88,29 @@ const Navbar = () => {
                                     textTransform: 'none',
                                     transition: 'opacity 0.3s',
                                 }}
-                                    onMouseEnter={e => e.target.style.opacity = 0.8}
-                                    onMouseLeave={e => e.target.style.opacity = 1}
-                                >
-                                    Instant Quote
-                                </Button>
-                            </Link>
-                        </li>
-                    </ul>
-                }
-                {isXsScreen || isSmScreen || isMdScreen || isLgScreen ? <div>
+                                onMouseEnter={e => (e.target.style.opacity = 0.8)}
+                                onMouseLeave={e => (e.target.style.opacity = 1)}
+                            >
+                                Instant Quote
+                            </Button>
+                        </Link>
+                    </li>
+                </ul>
+            )}
+
+            {/* Logo on mobile screens */}
+            {isMobile && (
+                <div>
                     <Link to='/'>
-                        <img src='../images/logos/nates-logo.jpg' className='h-28 ml-2 '></img>
+                        <img
+                            src='../images/logos/nates-logo.jpg'
+                            className='h-28 ml-2'
+                            alt="Nate's Logo"
+                        />
                     </Link>
-                </div> : null}
-            </nav>
-        </Router>
+                </div>
+            )}
+        </nav>
     );
 };
 

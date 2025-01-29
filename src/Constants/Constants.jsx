@@ -4,7 +4,7 @@ export const fenceTypes = [
         introDescription: `We build all of our wood privacy fences with cedar wood on galvanized steel post.`,
         description: `We build all of our wood privacy fences with cedar wood on galvanized steel post.
         The best part is you don’t need to sacrifice the natural beautiful look of a wood fence for the strength of steel, as we conceal the post with a cover board.`,
-        mainImage: 'images/cedar/craftsman/craftsman-1.webp',
+        mainImage: '/images/cedar/craftsman/craftsman-1.webp', // Added '/'
         cedarTypes: [
             {
                 name: 'Cap and Trim',
@@ -13,15 +13,15 @@ export const fenceTypes = [
                 Features a deck board cap across the top and the dog ears are covered with 1x4 trim. 
                 This can be built with a side-by-side picket pattern or an overlapping picket pattern for added depth and privacy. 
                 Heights available: 4’, 5’, 6’.`,
-                mainImage: 'images/cedar/cap-and-trim/cap-and-trim-1.jpeg',
+                mainImage: '/images/cedar/cap-and-trim/cap-and-trim-1.jpeg', // Added '/'
                 images: [
-                    'images/cedar/cap-and-trim/cap-and-trim-1.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-2.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-3.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-4.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-5.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-6.jpeg',
-                    'images/cedar/cap-and-trim/cap-and-trim-7.jpeg',
+                    '/images/cedar/cap-and-trim/cap-and-trim-1.jpeg',
+                    '/images/cedar/cap-and-trim/cap-and-trim-2.jpeg',
+                    '/images/cedar/cap-and-trim/cap-and-trim-3.jpeg',
+                    '/images/cedar/cap-and-trim/cap-and-trim-4.jpeg',
+                    '/images/cedar/cap-and-trim/cap-and-trim-5.jpeg',
+                    '/images/cedar/cap-and-trim/cap-and-trim-6.jpeg',
+                    '/images/cedar/cap-and-trim/cap-and-trim-7.jpeg',
                 ],
                 route: 'cap-and-trim',
             },
@@ -32,13 +32,13 @@ export const fenceTypes = [
                 description: `Our Craftsman-style fencing is a customizable design that can feature an open picket, side-by-side, and 
                 overlapping pattern. These are great 'good neighbor' fences because they are built to look the same from either side, often adorned 
                 with three decorative trim boards and the option of adding cap boards on top as well.`,
-                mainImage: 'images/cedar/craftsman/craftsman-1.webp',
+                mainImage: '/images/cedar/craftsman/craftsman-1.webp', // Added '/'
                 images: [
-                    'images/cedar/craftsman/craftsman-1.webp',
-                    'images/cedar/craftsman/craftsman-2.webp',
-                    'images/cedar/craftsman/craftsman-3.webp',
-                    'images/cedar/craftsman/craftsman-4.webp',
-                    'images/cedar/craftsman/craftsman-5.webp',
+                    '/images/cedar/craftsman/craftsman-1.webp',
+                    '/images/cedar/craftsman/craftsman-2.webp',
+                    '/images/cedar/craftsman/craftsman-3.webp',
+                    '/images/cedar/craftsman/craftsman-4.webp',
+                    '/images/cedar/craftsman/craftsman-5.webp',
                 ],
                 route: 'craftsman',
             },
@@ -49,16 +49,16 @@ export const fenceTypes = [
                 They are easily customizable with picket pattern and height variations. 
                 They come in shorter spans than traditional vertical fencing, which helps with strength. 
                 Built level for those who like clean, straight lines.`,
-                mainImage: 'images/cedar/horizontal/horizontal-4.jpeg',
+                mainImage: '/images/cedar/horizontal/horizontal-4.jpeg', // Added '/'
                 images: [
-                    'images/cedar/horizontal/horizontal-1.jpeg',
-                    'images/cedar/horizontal/horizontal-2.jpeg',
-                    'images/cedar/horizontal/horizontal-3.jpeg',
-                    'images/cedar/horizontal/horizontal-4.jpeg',
-                    'images/cedar/horizontal/horizontal-5.jpeg',
-                    'images/cedar/horizontal/horizontal-6.jpeg',
-                    'images/cedar/horizontal/horizontal-7.jpeg',
-                    'images/cedar/horizontal/horizontal-8.jpeg',
+                    '/images/cedar/horizontal/horizontal-1.jpeg',
+                    '/images/cedar/horizontal/horizontal-2.jpeg',
+                    '/images/cedar/horizontal/horizontal-3.jpeg',
+                    '/images/cedar/horizontal/horizontal-4.jpeg',
+                    '/images/cedar/horizontal/horizontal-5.jpeg',
+                    '/images/cedar/horizontal/horizontal-6.jpeg',
+                    '/images/cedar/horizontal/horizontal-7.jpeg',
+                    '/images/cedar/horizontal/horizontal-8.jpeg',
                 ],
                 route: 'horizontal',
             },
@@ -68,15 +68,15 @@ export const fenceTypes = [
                 description: `Our standard privacy option tends to be the most cost-effective option for privacy fencing. 
                 Features the choice between side-by-side picket pattern or overlapping picket for total privacy, as well as 
                 the classic dog ear picket at the top. Heights available: 4’-6’.`,
-                mainImage: 'images/cedar/standard/standard-2.jpeg',
+                mainImage: '/images/cedar/standard/standard-2.jpeg', // Added '/'
                 images: [
-                    'images/cedar/standard/standard-1.jpeg',
-                    'images/cedar/standard/standard-2.jpeg',
-                    'images/cedar/standard/standard-3.jpeg',
-                    'images/cedar/standard/standard-4.jpeg',
-                    'images/cedar/standard/standard-5.jpeg',
-                    'images/cedar/standard/standard-6.jpeg',
-                    'images/cedar/standard/standard-7.jpeg',
+                    '/images/cedar/standard/standard-1.jpeg',
+                    '/images/cedar/standard/standard-2.jpeg',
+                    '/images/cedar/standard/standard-3.jpeg',
+                    '/images/cedar/standard/standard-4.jpeg',
+                    '/images/cedar/standard/standard-5.jpeg',
+                    '/images/cedar/standard/standard-6.jpeg',
+                    '/images/cedar/standard/standard-7.jpeg',
                 ],
                 route: 'standard',
             },
@@ -84,13 +84,13 @@ export const fenceTypes = [
                 name: 'Hogwire',
                 introDescription: `Hogwire is a great option when you are looking for an open concept while providing the beauty of a cedar fence.`,
                 description: `Hogwire is a great option when you are looking for an open concept while providing the beauty of a cedar fence. Built level and appealing to the eye.`,
-                mainImage: 'images/cedar/hogwire/hogwire-1.jpeg',
+                mainImage: '/images/cedar/hogwire/hogwire-1.jpeg', // Added '/'
                 images: [
-                    'images/cedar/hogwire/hogwire-1.jpeg',
-                    'images/cedar/hogwire/hogwire-2.jpeg',
-                    'images/cedar/hogwire/hogwire-3.jpeg',
-                    'images/cedar/hogwire/hogwire-4.jpeg',
-                    'images/cedar/hogwire/hogwire-5.jpeg',
+                    '/images/cedar/hogwire/hogwire-1.jpeg',
+                    '/images/cedar/hogwire/hogwire-2.jpeg',
+                    '/images/cedar/hogwire/hogwire-3.jpeg',
+                    '/images/cedar/hogwire/hogwire-4.jpeg',
+                    '/images/cedar/hogwire/hogwire-5.jpeg',
                 ],
                 route: 'hogwire',
             },
@@ -99,12 +99,12 @@ export const fenceTypes = [
                 introDescription: `Do you have a personal design you’d like to try? Send us some photos and we will be more than willing to brainstorm solutions for you.`,
                 description: `Do you have a personal design you’d like to try?
                 Send us some photos and we will be more than willing to brainstorm solutions for you.`,
-                mainImage: 'images/cedar/custom/custom-1.jpeg',
+                mainImage: '/images/cedar/custom/custom-1.jpeg', // Added '/'
                 images: [
-                    'images/cedar/custom/custom-1.jpeg',
-                    'images/cedar/custom/custom-2.jpeg',
-                    'images/cedar/custom/custom-3.jpeg',
-                    'images/cedar/custom/custom-4.jpeg',
+                    '/images/cedar/custom/custom-1.jpeg',
+                    '/images/cedar/custom/custom-2.jpeg',
+                    '/images/cedar/custom/custom-3.jpeg',
+                    '/images/cedar/custom/custom-4.jpeg',
                 ],
                 route: 'custom',
             },
@@ -117,13 +117,13 @@ export const fenceTypes = [
         introDescription: `Vinyl fencing is the perfect fence for those who want privacy and zero maintenance.`,
         description: `Vinyl fencing is the perfect fence for those who want complete privacy and zero maintenance.
         Available in white or tan featuring a 2x7 rail and 7/8” picket for a stronger, more appealing fence.`,
-        mainImage: 'images/vinyl/vinyl-3.jpeg',
+        mainImage: '/images/vinyl/vinyl-3.jpeg', // Added '/'
         images: [
-            'images/vinyl/vinyl-1.jpeg',
-            'images/vinyl/vinyl-2.jpeg',
-            'images/vinyl/vinyl-3.jpeg',
-            'images/vinyl/vinyl-4.jpeg',
-            'images/vinyl/vinyl-5.jpeg',
+            '/images/vinyl/vinyl-1.jpeg',
+            '/images/vinyl/vinyl-2.jpeg',
+            '/images/vinyl/vinyl-3.jpeg',
+            '/images/vinyl/vinyl-4.jpeg',
+            '/images/vinyl/vinyl-5.jpeg',
         ],
         route: 'vinyl'
     },
@@ -132,12 +132,12 @@ export const fenceTypes = [
         introDescription: `Ornamental is a wonderful option for those looking for an open concept.`,
         description: `Our steel ornamental option is a wonderful option for those looking for an open concept. 
         Ornamental is also maintenance-free with its sleek powder coated black finish it goes with any property.`,
-        mainImage: 'images/ornamental/ornamental-1.jpeg',
+        mainImage: '/images/ornamental/ornamental-1.jpeg', // Added '/'
         images: [
-            'images/ornamental/ornamental-1.jpeg',
-            'images/ornamental/ornamental-2.jpeg',
-            'images/ornamental/ornamental-3.jpeg',
-            'images/ornamental/ornamental-4.jpeg',
+            '/images/ornamental/ornamental-1.jpeg',
+            '/images/ornamental/ornamental-2.jpeg',
+            '/images/ornamental/ornamental-3.jpeg',
+            '/images/ornamental/ornamental-4.jpeg',
         ],
         route: 'ornamental',
     },
@@ -146,13 +146,13 @@ export const fenceTypes = [
         introDescription: `Chain link is perfect for creating a safe environment for children and pets.`,
         description: `Chain link is perfect for creating a contained and safe environment for children and pets.
         We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store-quality chain link.`,
-        mainImage: 'images/chain-link/chain-link-1-main.webp',
+        mainImage: '/images/chain-link/chain-link-1-main.webp', // Added '/'
         images: [
-            'images/chain-link/chain-link-1-main.webp',
-            'images/chain-link/chain-link-2.webp',
-            'images/chain-link/chain-link-3.webp',
-            'images/chain-link/chain-link-4.webp',
-            'images/chain-link/chain-link-5.webp',
+            '/images/chain-link/chain-link-1-main.webp',
+            '/images/chain-link/chain-link-2.webp',
+            '/images/chain-link/chain-link-3.webp',
+            '/images/chain-link/chain-link-4.webp',
+            '/images/chain-link/chain-link-5.webp',
         ],
         route: 'chain-link'
     },

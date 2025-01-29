@@ -1,5 +1,6 @@
+// Views/MobileFenceDetails/MobileFenceDetails.jsx
 import { useEffect } from "react";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { useParams } from "react-router-dom";
 import { fenceTypes } from "../../Constants/Constants";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -10,8 +11,8 @@ function MobileFenceDetails() {
     const { type } = useParams();
 
     const fenceType = fenceTypes.find(f => f.route === type) ? fenceTypes.find(f => f.route === type) :
-        fenceTypes[0].cedarTypes.find(f => f.route === type); // Find the fence type that matches the route    const name = fenceType.name; // Get the name of the fence type
-    const name = fenceType.name; // Get the route of the fence type
+        fenceTypes[0].cedarTypes.find(f => f.route === type); // Find the fence type that matches the route
+    const name = fenceType.name; // Get the name of the fence type
     const images = fenceType.images; // Get the images of the fence type
 
     return (
@@ -46,12 +47,10 @@ function MobileFenceDetails() {
                                 style={{
                                     maxWidth: '100%',     // Maximum width is 100% of the container
                                     maxHeight: '500px',   // Maximum height
-                                    // width: 'auto',        // Width auto for maintaining aspect ratio
                                     height: 'auto',       // Height auto for maintaining aspect ratio
                                     objectFit: 'contain', // Ensures the image is scaled properly
                                     margin: 'auto',       // Center the image in the div
                                     boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Optional box shadow
-                                    // marginLeft: '0px',
                                     width: 300,
                                     marginLeft: "auto",
                                     marginRight: "auto"

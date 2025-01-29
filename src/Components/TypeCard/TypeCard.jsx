@@ -1,7 +1,10 @@
+// Components/TypeCard/TypeCard.jsx
 import { Paper, Card, CardActionArea, CardMedia, CardContent, Typography, useTheme, useMediaQuery } from "@mui/material";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function TypeCard(props) {
+
+    const location = useLocation();
 
     const cardStyle = {
         width: '100%',
@@ -11,17 +14,17 @@ function TypeCard(props) {
         justifyContent: 'space-between', // This spreads out the content evenly
     };
 
-    const history = useHistory();
-    const isCedarPage = history.location.pathname === '/fence-details/cedar';
+    const navigate = useNavigate();
+    const isCedarPage = location.pathname === '/fence-details/cedar';
 
     // handleClick function to route to the correct page
     const handleClick = route => {
-        history.push(`/fence-details/${route}`);
+        navigate(`/fence-details/${route}`);
         window.scrollTo(0, 0);
     };
 
     const handleCedarClick = () => {
-        history.push('/fence-details/cedar');
+        navigate('/fence-details/cedar');
         window.scrollTo(0, 0);
     };
 
@@ -29,8 +32,6 @@ function TypeCard(props) {
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
-
-
 
     return (
         <div style={{ marginBottom: isXsScreen || isSmScreen ? '5%' : null }}>
@@ -72,7 +73,7 @@ function TypeCard(props) {
                         <CardMedia
                             component="img"
                             height="140"
-                            image={`${props.fenceType.mainImage}`}
+                            image={`${props.fenceType.mainImage}`} // Already using absolute path
                             alt={`${props.fenceType.name} fence`}
                         />
                         <CardContent

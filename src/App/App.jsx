@@ -1,7 +1,10 @@
+// App.jsx
+import React from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
+  Routes,
   Route,
-} from 'react-router-dom'; // import for routing
+} from 'react-router-dom';
 import './App.css'; // CSS import
 
 // View imports
@@ -11,53 +14,40 @@ import FenceDetails from '../Views/FenceDetails/FenceDetails';
 import FenceTypes from '../Views/FenceTypes/FenceTypes';
 import InstantQuote from '../Views/InstantQuote/InstantQuote';
 import LandingPage from '../Views/LandingPage/LandingPage';
-import Navbar from '../Components/Navbar/Navbar'
+import Navbar from '../Components/Navbar/Navbar';
 import CedarDetails from '../Views/CedarDetails/CedarDetails';
 import Footer from '../Components/Footer/Footer';
+// import NotFound from '../Views/NotFound/NotFound'; // Optional: Create a NotFound component
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
 
+      {/* Switched to BrowserRouter */}
       <Router>
-        <Route exact path="/">
-          <LandingPage />
-        </Route>
+        <Navbar />
+          {/* Define all routes within Routes */}
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
 
-        <Route exact path="/about">
-          <About />
-        </Route>
+            <Route path="/about" element={<About />} />
 
-        <Route exact path="/faq">
-          <Faq />
-        </Route>
+            <Route path="/faq" element={<Faq />} />
 
-        <Route exact path="/fence-types">
-          <FenceTypes />
-        </Route>
+            <Route path="/fence-types" element={<FenceTypes />} />
 
-        <Route exact path="/fence-details/:type">
-          <FenceDetails />
-        </Route>
+            <Route path="/fence-details/:type" element={<FenceDetails />} />
 
-        <Route exact path="/fence-details/cedar">
-          <CedarDetails />
-        </Route>
+            <Route path="/fence-details/cedar" element={<CedarDetails />} />
 
-        <Route exact path="/quote">
-          <InstantQuote />
-        </Route>
+            <Route path="/quote" element={<InstantQuote />} />
 
-        {/* If none of the other routes matched, we will show a 404. */}
-        {/* <Route>
-          <h1>404</h1>
-        </Route> */}
-
+            {/* 404 Route: Catch all unmatched routes */}
+            {/* <Route path="*" element={<NotFound />} /> */}
+          </Routes>
 
         <Footer />
-      </Router >
-
+      </Router>
     </div>
   );
 }
