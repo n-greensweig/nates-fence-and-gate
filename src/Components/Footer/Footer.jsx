@@ -48,7 +48,7 @@ const Footer = () => {
                         </div>
                         <nav aria-label="Main Navigation" className="main-navigation">
                             <ul className='nav-list'>
-                                <li lassName="nav-item">
+                                <li className="nav-item">
                                     <Link to='/' onClick={() => window.scrollTo(0, 0)} className='hover text-nates-accent'>Home</Link>
                                 </li>
                                 <li className="nav-item">
