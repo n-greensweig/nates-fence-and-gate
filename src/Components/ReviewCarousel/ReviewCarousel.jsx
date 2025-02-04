@@ -6,19 +6,19 @@ import { useTheme, useMediaQuery } from "@mui/material";
 function ReviewCarousel() {
 
     const images = [
-        `images/review-photos/becky-review.jpeg`,
-        `images/review-photos/erica-review.jpeg`,
-        `images/review-photos/nathan-review.jpeg`,
-        `images/review-photos/kelly-review.jpeg`,
-        `images/review-photos/karin-review.jpeg`,
+        `images/review-photos/becky-review.webp`,
+        `images/review-photos/erica-review.webp`,
+        `images/review-photos/nathan-review.webp`,
+        `images/review-photos/kelly-review.webp`,
+        `images/review-photos/karin-review.webp`,
     ];
 
     const mobileImages = [
-        `images/review-photos/becky-review-mobile.jpeg`,
-        `images/review-photos/erica-review-mobile.jpeg`,
-        `images/review-photos/nathan-review-mobile.jpeg`,
-        `images/review-photos/kelly-review-mobile.jpeg`,
-        `images/review-photos/karin-review-mobile.jpeg`,
+        `images/review-photos/becky-review-mobile.webp`,
+        `images/review-photos/erica-review-mobile.webp`,
+        `images/review-photos/nathan-review-mobile.webp`,
+        `images/review-photos/kelly-review-mobile.webp`,
+        `images/review-photos/karin-review-mobile.webp`,
     ];
 
     const reviews = [

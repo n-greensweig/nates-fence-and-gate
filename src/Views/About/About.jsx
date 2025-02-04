@@ -55,12 +55,12 @@ function About() {
                 <h1 className='text-3xl mb-10'><strong>Why we use galvanized steel posts:</strong></h1>
                 <div className='flex w-screen justify-evenly'>
                     <img 
-                        src="images/galvanized-steel/galvanized-steel-1.JPEG" 
+                        src="images/galvanized-steel/galvanized-steel-1.webp" 
                         alt="Galvanized steel fence post" 
                         className='w-1/4 mb-14 sm:w-1/3 xs:w-1/3'
                     />
                     <img 
-                        src="images/galvanized-steel/galvanized-steel-2.JPEG" 
+                        src="images/galvanized-steel/galvanized-steel-2.webp" 
                         alt="Galvanized steel fence post" 
                         className='w-1/4 mb-14 sm:w-1/3 xs:w-1/3'
                     />

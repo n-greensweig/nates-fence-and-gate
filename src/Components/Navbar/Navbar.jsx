@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div>
                     <Link to='/'>
                         <img
-                            src='../images/logos/nates-logo.jpg'
+                            src='../images/logos/nates-logo.webp'
                             className='h-28 ml-2'
                             alt="Nate's Logo"
                         />
@@ -103,7 +103,7 @@ const Navbar = () => {
                 <div>
                     <Link to='/'>
                         <img
-                            src='../images/logos/nates-logo.jpg'
+                            src='../images/logos/nates-logo.webp'
                             className='h-28 ml-2'
                             alt="Nate's Logo"
                         />

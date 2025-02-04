@@ -10,20 +10,20 @@ module.exports = {
       backgroundImage: {
         // Landing page heroes
         "3xl-hero-landing":
-          "url('../public/images/cedar/craftsman/3xl-hero1.jpeg')",
+          "url('../public/images/cedar/craftsman/3xl-hero1.webp')",
         "xl-hero-landing":
-          "url('../public/images/cedar/craftsman/xl-hero1.jpeg')",
+          "url('../public/images/cedar/craftsman/xl-hero1.webp')",
         "xs-hero-landing":
-          "url('../public/images/mobile-heros/mobile-hero-lp-sm.jpeg')",
+          "url('../public/images/mobile-heros/mobile-hero-lp-sm.webp')",
           // Fence types page heroes
-          "3xl-hero-fence-types": "url('../public/images/vinyl/3xl-hero2.jpg')",
-          "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.jpg')",
+          "3xl-hero-fence-types": "url('../public/images/vinyl/3xl-hero2.webp')",
+          "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.webp')",
           "xs-hero-fence-types":
-          "url('../public/images/mobile-heros/mobile-hero-lp.jpeg')",
-            // "url('../public/images/mobile-heros/mobile-hero-fence-types.jpeg')",
+          "url('../public/images/mobile-heros/mobile-hero-lp.webp')",
+            // "url('../public/images/mobile-heros/mobile-hero-fence-types.webp')",
         // About page heroes
-        "3xl-hero-about": "url('../public/images/ornamental/3xl-hero3.jpg')",
-        "xl-hero-about": "url('../public/images/ornamental/xl-hero3.jpg')",
+        "3xl-hero-about": "url('../public/images/ornamental/3xl-hero3.webp')",
+        "xl-hero-about": "url('../public/images/ornamental/xl-hero3.webp')",
       },
       brightness: {
         40: ".40",

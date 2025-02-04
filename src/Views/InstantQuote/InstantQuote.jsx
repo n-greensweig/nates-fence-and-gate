@@ -35,7 +35,7 @@ function InstantQuote() {
                             left: 0,
                             right: 0,
                             bottom: 0,
-                            backgroundImage: "url('images/chain-link/chain-link-1-main.jpeg')",
+                            backgroundImage: "url('images/chain-link/chain-link-1-main.webp')",
                             backgroundSize: 'cover',
                             opacity: 0.3,
                             zIndex: -1,

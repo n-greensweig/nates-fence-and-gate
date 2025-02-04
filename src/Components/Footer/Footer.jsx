@@ -98,7 +98,7 @@ const Footer = () => {
                         margin: isXsScreen || isSmScreen || isMdScreen || isLgScreen ? '10px auto 10px auto' : '30px auto 0px auto',
                     }}>
                     <Link to='/' onClick={() => window.scrollTo(0, 0)}>
-                        <img src='../images/logos/nates-logo.jpg' alt="Nate's Fence & Gate Logo" className='h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out' />
+                        <img src='../images/logos/nates-logo.webp' alt="Nate's Fence & Gate Logo" className='h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out' />
                     </Link>
                     <p className='text-sm text-nates-gray mt-2' style={{ width: '60%', textAlign: 'center', margin: '0 auto', }}>&copy; {new Date().getFullYear()} Nate's Fence & Gate. All Rights Reserved.</p>
                 </div>
