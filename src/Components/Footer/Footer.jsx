@@ -115,9 +115,9 @@ const Footer = () => {
                             <li>Brooklyn Center</li>
                             <li>Lino Lakes</li>
                             <li>Brooklyn Park</li>
-                            <li>New Brighton</li>
-                            <li>Circle Pines</li>
                             <li>Minneapolis</li>
+                            <li>Circle Pines</li>
+                            <li>New Brighton</li>
                             <li>Columbia Heights</li>
                             <li>Richfield</li>
                             <li>Coon Rapids</li>
@@ -144,11 +144,11 @@ const Footer = () => {
                             <li>Roseville</li>
                             <li>Brooklyn Park</li>
                             <li>Falcon Heights</li>
-                            <li>New Brighton</li>
+                            <li>Minneapolis</li>
                             <li>Shoreview</li>
                             <li>Circle Pines</li>
                             <li>Fridley</li>
-                            <li>Minneapolis</li>
+                            <li>New Brighton</li>
                             <li>St. Louis Park</li>
                             <li>Columbia Heights</li>
                             <li>Golden Valley</li>
