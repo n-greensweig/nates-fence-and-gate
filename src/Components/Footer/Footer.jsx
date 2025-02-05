@@ -101,7 +101,7 @@ const Footer = () => {
                 href="tel:612-702-8681"
                 aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
               >
-                <SmartphoneIcon fontSize='large' style={{ fill: '#0283AB' }} />
+                <SmartphoneIcon fontSize='large' style={{ fill: '#fff' }} />
               </a>
               <Typography className='ml-2'>
                 <a
