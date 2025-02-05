@@ -1,6 +1,6 @@
-// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import './App.css';
 
 import About from '../Views/About/About';
@@ -14,8 +14,19 @@ import CedarDetails from '../Views/CedarDetails/CedarDetails';
 import Footer from '../Components/Footer/Footer';
 
 function App() {
+  // Determine the canonical URL based on the environment.
+  const canonicalUrl =
+    process.env.NODE_ENV === 'production'
+      ? 'https://www.natesfenceandgate.com'
+      : window.location.origin;
+
   return (
     <div className="App">
+      <Helmet>
+        {/* Conditionally set the canonical link */}
+        <link rel="canonical" href={canonicalUrl} />
+        {/* You can also add other meta tags or structured data here if needed */}
+      </Helmet>
       <Router>
         <Navbar />
         <Routes>

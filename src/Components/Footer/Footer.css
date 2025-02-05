@@ -28,9 +28,9 @@ footer ul {
   text-decoration: none;
 }
 
-.call-to-action:hover {
+/* .call-to-action:hover { */
   /* background-color: #003366; Darker shade on hover */
-}
+/* } */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
