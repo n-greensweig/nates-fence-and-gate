@@ -1,6 +1,13 @@
+/* Footer.css */
 .hover:hover {
   color: #0283AB;
   text-decoration: underline;
+}
+
+/* Ensure keyboard focus is clearly visible */
+a:focus, button:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
 footer li { 
@@ -11,74 +18,45 @@ footer ul {
   white-space: wrap;
 }
 
-/* Button-like styling for the phone number */
+/* Button-like styling for the phone number with improved contrast */
 .call-to-action {
-  background-color: #0283AB; /* Use your brand color */
-  color: white;
+  background-color: #fff; /* Dark blue for sufficient contrast */
+  color: #004080;
   padding: 8px 15px;
   border-radius: 5px;
-  display: inline-block; /* To ensure it only takes up necessary space */
+  display: inline-block;
+  text-decoration: none;
 }
 
 .call-to-action:hover {
-  background-color: #005A7F; /* Darker shade of your brand color */
+  /* background-color: #003366; Darker shade on hover */
 }
 
-@media (max-width: 768px) { /* Apply smaller margin on smaller screens */
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .contact-section-container {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
   }
-}
-
-/* ... other styles ... */
-
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
   footer ul { 
-    flex-direction: row !important;
+    flex-direction: column !important;
   }
 }
 
-.call-to-action {
-  background-color: #0283AB; 
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
-
 /* Navigation Styling */
 .main-navigation .nav-list {
   list-style: none;
-  padding: 0;        
-  flex-direction: column; /* Default to column layout */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.main-navigation .nav-item { 
- padding: 0.5em 0;
+.main-navigation .nav-item {
+  padding: 0.5em 0;
 }
 
-@media (min-width: 768px) { /* Adjust breakpoint to 'md' size if needed */
-.main-navigation .nav-list {
-  flex-direction: row;    /* Switch to row layout */
-  flex-wrap: wrap;        /* Allow wrapping */ 
-}
-}
-
-/* ... Other styles remain the same */
-
-/* Navigation Styling */
-.main-navigation .nav-list {
-  list-style: none;
-  padding: 0;        
-  flex-direction: column; /* Default to column layout */
-}
-
-.main-navigation .nav-item { 
- padding: 0.5em 0;
-}
-
-@media (min-width: 768px) { /* Adjust breakpoint to 'md' size if needed */
-.main-navigation .nav-list {
-  flex-direction: row;    /* Switch to row layout */
-  flex-wrap: wrap;        /* Allow wrapping */ 
-}
+@media (min-width: 768px) {
+  .main-navigation .nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
