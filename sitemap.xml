@@ -1,59 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
-  <url>
-    <loc>https://www.natesfenceandgate.com/</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <!-- About Page -->
-  <url>
-    <loc>https://www.natesfenceandgate.com/about</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Fence Types -->
-  <url>
-    <loc>https://www.natesfenceandgate.com/fence-types</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Cedar Fence Type (if this is a static page) -->
-  <url>
-    <loc>https://www.natesfenceandgate.com/fence-types/cedar</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Fence Details - Ornamental -->
-  <url>
-    <loc>https://www.natesfenceandgate.com/fence-details/ornamental</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Fence Details - Vinyl -->
-  <url>
-    <loc>https://www.natesfenceandgate.com/fence-details/vinyl</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Fence Details - Chain Link -->
-  <url>
-    <loc>https://www.natesfenceandgate.com/fence-details/chain-link</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Instant Quote -->
-  <url>
-    <loc>https://www.natesfenceandgate.com/quote</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+ <!-- Homepage -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>1.0</priority>
+ </url>
+ <!-- About Page -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/about</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8</priority>
+ </url>
+ <!-- Fence Types -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-types</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8</priority>
+ </url>
+ <!-- Cedar Fence Type (if this is a static page) -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/cedar</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Ornamental -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/ornamental</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Vinyl -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/vinyl</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Chain Link -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/chain-link</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Cap and Trim -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/cap-and-trim</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Craftsman -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/craftsman</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Horizontal -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/horizontal</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Standard -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/standard</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Hogwire -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/hogwire</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Fence Details - Custom -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/fence-details/custom</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.7</priority>
+ </url>
+ <!-- Instant Quote -->
+ <url>
+   <loc>https://www.natesfenceandgate.com/quote</loc>
+   <lastmod>2025-02-05</lastmod>
+   <changefreq>monthly</changefreq>
+   <priority>0.8</priority>
+ </url>
 </urlset>
