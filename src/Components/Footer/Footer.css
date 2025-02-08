@@ -18,6 +18,19 @@ footer ul {
   white-space: wrap;
 }
 
+.sr-only {
+  position: absolute; /* Remove the element from the document flow */
+  width: 1px;         /* Minimal width */
+  height: 1px;        /* Minimal height */
+  padding: 0;         /* Remove any padding */
+  margin: -1px;       /* Negative margin to ensure it's off-screen */
+  overflow: hidden;   /* Hide any overflowing content */
+  clip: rect(0, 0, 0, 0); /* Clip the element to a 0x0 rectangle */
+  white-space: nowrap; /* Prevent text from wrapping */
+  border: 0;         /* Remove any border */
+}
+
+
 /* Button-like styling for the phone number with improved contrast */
 .call-to-action {
   background-color: #fff; /* Dark blue for sufficient contrast */
