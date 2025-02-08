@@ -1,6 +1,6 @@
 // Views/FenceDetails/FenceDetails.jsx
 import { useEffect } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { fenceTypes } from "../../Constants/Constants";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ButtonComponent from "../../Components/Button/Button";
@@ -12,7 +12,6 @@ import { Helmet } from "react-helmet";
 
 function FenceDetails() {
     const { type } = useParams();
-    const navigate = useNavigate();
     const location = useLocation();
     console.log(location.pathname);
 

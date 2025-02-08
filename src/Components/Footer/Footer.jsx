@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import { Typography } from '@mui/material';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import './Footer.css';
 
 // Responsive imports
