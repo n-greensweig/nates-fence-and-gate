@@ -14,6 +14,12 @@ function LandingPage() {
   const isMdScreen = useMediaQuery(theme.breakpoints.down("md"));
   const isLgScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
+    // Use the current pathname to build the canonical URL
+    const canonicalUrl =
+    process.env.NODE_ENV === "production"
+      ? `https://www.natesfenceandgate.com`
+      : window.location.href;
+
   return (
     <div className="w-full h-full">
       <Helmet>
@@ -22,7 +28,7 @@ function LandingPage() {
           name="description"
           content="Nate's Fence and Gate is a top-rated fence contractor in Minnesota offering quality fence types, instant quotes, and exceptional service."
         />
-        <link rel="canonical" href={window.location.href} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <div
         className="3xl:bg-3xl-hero-landing 2xl:bg-xl-hero-landing xl:bg-xl-hero-landing lg:bg-xl-hero-landing md:bg-xl-hero-landing sm:bg-xl-hero-landing xs:bg-xl-hero-landing bg-cover bg-no-repeat bg-center h-screen relative"

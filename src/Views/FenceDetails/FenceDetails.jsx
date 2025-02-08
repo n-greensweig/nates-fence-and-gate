@@ -33,7 +33,6 @@ function FenceDetails() {
         if (fenceType) {
             document.title = `${fenceType.name} Fence Details`;
         }
-        console.log(location.pathname);
     }, [fenceType]);
 
     // Create a dynamic canonical URL based on the current path

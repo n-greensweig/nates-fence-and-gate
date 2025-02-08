@@ -15,11 +15,6 @@ import CedarDetails from '../Views/CedarDetails/CedarDetails';
 import Footer from '../Components/Footer/Footer';
 
 function App() {
-  // Determine the canonical URL based on the environment.
-  const canonicalUrl =
-    process.env.NODE_ENV === 'production'
-      ? 'https://www.natesfenceandgate.com'
-      : window.location.origin;
 
   // Global structured data for the local business
   const structuredData = {
@@ -56,8 +51,6 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-        {/* Set the canonical URL */}
-        <link rel="canonical" href={canonicalUrl} />
         {/* Inject the structured data into the document head */}
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
