@@ -20,7 +20,6 @@ module.exports = {
           "xl-hero-fence-types": "url('../public/images/vinyl/xl-hero2.webp')",
           "xs-hero-fence-types":
           "url('../public/images/mobile-heros/mobile-hero-lp.webp')",
-            // "url('../public/images/mobile-heros/mobile-hero-fence-types.webp')",
         // About page heroes
         "3xl-hero-about": "url('../public/images/ornamental/3xl-hero3.webp')",
         "xl-hero-about": "url('../public/images/ornamental/xl-hero3.webp')",
