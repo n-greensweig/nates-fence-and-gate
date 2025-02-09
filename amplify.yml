@@ -3,7 +3,6 @@ frontend:
   phases:
     preBuild:
       commands:
-        - git pull origin main
         - npm install
     build:
       commands:
