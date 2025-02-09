@@ -15,8 +15,6 @@ function ImageCarousel(props) {
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
-    const isLgScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
     return (
         <Carousel

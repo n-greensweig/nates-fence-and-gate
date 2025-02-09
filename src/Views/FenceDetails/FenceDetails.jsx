@@ -13,7 +13,6 @@ import { Helmet } from "react-helmet";
 function FenceDetails() {
     const { type } = useParams();
     const location = useLocation();
-    console.log(location.pathname);
 
     const fenceType = fenceTypes.find(f => f.route === type)
         ? fenceTypes.find(f => f.route === type)

@@ -85,7 +85,7 @@ const Footer = () => {
                   </li>
                   <li className="nav-item">
                     <a
-                      href="https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,"
+                      href="https://www.google.com/search?q=nates+fence+and+gate&oq=nates"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover text-nates-accent"
@@ -166,7 +166,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="https://www.google.com/search?q=nates+fence+and+gate&oq=nates&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIUCAEQRRgUGDkYgwEYhwIYsQMYgAQyDwgCEAAYFBiHAhiLAxiABDINCAMQLhivARjHARiABDIJCAQQABgKGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRhB0gEHODM4ajFqN6gCALACAA&sourceid=chrome&ie=UTF-8#lrd=0x52b33be89d42efcd:0xfa2f5923965e7add,1,,,"
+                      href="https://www.google.com/search?q=nates+fence+and+gate&oq=nates"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover text-nates-accent"
@@ -212,7 +212,11 @@ const Footer = () => {
                 src="../images/logos/nates-logo.webp"
                 alt="Nate's Fence & Gate Logo"
                 loading="lazy"
+                width="200" // intrinsic width in pixels
+                height="100" // intrinsic height in pixels
                 className="h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out"
+                // Optionally, add srcSet if you have higher resolution versions:
+                // srcSet="../images/logos/nates-logo.webp 1x, ../images/logos/nates-logo@2x.webp 2x"
               />
             </Link>
             <p
