@@ -3,7 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
-        - git pull origin main   # Ensure the latest code is fetched
+        - git pull origin main
         - npm install
     build:
       commands:
