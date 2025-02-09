@@ -1,3 +1,4 @@
+// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -14,18 +15,46 @@ import CedarDetails from '../Views/CedarDetails/CedarDetails';
 import Footer from '../Components/Footer/Footer';
 
 function App() {
-  // Determine the canonical URL based on the environment.
-  const canonicalUrl =
-    process.env.NODE_ENV === 'production'
-      ? 'https://www.natesfenceandgate.com'
-      : window.location.origin;
+
+  // Global structured data for the local business
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Nate's Fence & Gate",
+    "image": "https://www.natesfenceandgate.com/images/logos/nates-logo.webp",
+    "telephone": "612-702-8681",
+    "url": "https://www.natesfenceandgate.com",
+    "areaServed": [
+      "Blaine",
+      "Lexington",
+      "Brooklyn Center",
+      "Lino Lakes",
+      "Brooklyn Park",
+      "Minneapolis",
+      "Circle Pines",
+      "New Brighton",
+      "Columbia Heights",
+      "Richfield",
+      "Coon Rapids",
+      "Robbinsdale",
+      "Crystal",
+      "Roseville",
+      "Falcon Heights",
+      "Shoreview",
+      "Fridley",
+      "St. Louis Park",
+      "Golden Valley",
+      "White Bear Lake"
+    ]
+  };
 
   return (
     <div className="App">
       <Helmet>
-        {/* Conditionally set the canonical link */}
-        <link rel="canonical" href={canonicalUrl} />
-        {/* You can also add other meta tags or structured data here if needed */}
+        {/* Inject the structured data into the document head */}
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
       </Helmet>
       <Router>
         <Navbar />

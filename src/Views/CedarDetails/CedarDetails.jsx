@@ -1,12 +1,11 @@
+// CedarDetails.jsx
 import React from "react";
 import { Helmet } from "react-helmet";
 import { fenceTypes } from "../../Constants/Constants";
 import TypeCard from "../../Components/TypeCard/TypeCard";
 import { Grid, useMediaQuery, useTheme } from "@mui/material";
-import { useLocation } from "react-router-dom";
 
 function CedarDetails() {
-  const location = useLocation();
   const cedarTypes = fenceTypes[0].cedarTypes;
 
   // Check the screen size for responsive design

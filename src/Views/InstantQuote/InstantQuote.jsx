@@ -9,6 +9,12 @@ function InstantQuote() {
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
+    // Use the current pathname to build the canonical URL
+    const canonicalUrl =
+    process.env.NODE_ENV === "production"
+      ? `https://www.natesfenceandgate.com/quote`
+      : window.location.href;
+
     return (
         <>
             <Helmet>
@@ -17,7 +23,7 @@ function InstantQuote() {
                     name="description" 
                     content="Get an instant fence quote using our virtual fence designer. Follow simple steps to design your fence and receive your estimate immediately." 
                 />
-                <link rel="canonical" href={window.location.href} />
+                <link rel="canonical" href={canonicalUrl} />
             </Helmet>
             {isXsScreen || isSmScreen ? null : (
                 <div

@@ -10,6 +10,12 @@ function FenceTypes() {
   const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
+  // Use the current pathname to build the canonical URL
+  const canonicalUrl =
+  process.env.NODE_ENV === "production"
+    ? `https://www.natesfenceandgate.com/fence-types`
+    : window.location.href;
+
   return (
     <div
       className="md:h-screen md:w-screen xl:h-screen xl:w-screen bg-slate-100"
@@ -21,7 +27,7 @@ function FenceTypes() {
           name="description"
           content="Explore our wide range of fence types tailored to your individual needs and preferences at Nate's Fence and Gate."
         />
-        <link rel="canonical" href={window.location.href} />
+        <link rel="canonical" href={canonicalUrl} />
       </Helmet>
       <div className="3xl:bg-3xl-hero-fence-types xl:bg-xl-hero-fence-types sm:md:bg-xl-hero-fence-types xs:bg-xl-hero-fence-types xs:bg-white h-1/2 flex flex-col justify-center">
         <h1 className="xs:text-5xl md:text-7xl xs:pt-10 md:pt-0 text-white mb-5">

@@ -1,5 +1,3 @@
-// Views/MobileFenceDetails/MobileFenceDetails.jsx
-import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fenceTypes } from "../../Constants/Constants";
 import { Carousel } from "react-responsive-carousel";
