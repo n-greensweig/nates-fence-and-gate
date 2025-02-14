@@ -48,7 +48,7 @@ function FenceDetails() {
                 <MobileFenceDetails />
             ) : (
                 <div>
-                    <h1 style={{ fontSize: '2rem', marginBottom: '3%' }}>{name}</h1>
+                    <h1 style={{ fontSize: '2rem', margin: '3% 0' }}>{name}</h1>
                     {/* Conditionally render based on whether name === 'Cedar' */}
                     <div
                         id="carousel-description"
@@ -85,7 +85,7 @@ function FenceDetails() {
                             </p>
                             <ButtonComponent type={'Quote'} />
                         </div>
-                        <div style={{ width: 'fit-content' }}>
+                        <div style={{ width: 'fit-content', marginRight: '5%' }}>
                             <ImageCarousel images={images} name={name} />
                         </div>
                     </div>

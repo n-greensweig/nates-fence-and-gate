@@ -14,6 +14,8 @@ import Navbar from '../Components/Navbar/Navbar';
 import CedarDetails from '../Views/CedarDetails/CedarDetails';
 import Footer from '../Components/Footer/Footer';
 
+import ScrollToTop from '../Components/ScrollToTop';
+
 function App() {
 
   // Global structured data for the local business
@@ -48,6 +50,9 @@ function App() {
     ]
   };
 
+
+
+
   return (
     <div className="App">
       <Helmet>
@@ -57,6 +62,7 @@ function App() {
         </script>
       </Helmet>
       <Router>
+        <ScrollToTop /> 
         <Navbar />
         <Routes>
           <Route path="/" element={<LandingPage />} />

@@ -103,7 +103,7 @@ function TypeCard(props) {
               }}
             >
               {isXsScreen || isSmScreen ? null : (
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" color="text.primary">
                   {props.fenceType.introDescription}
                 </Typography>
               )}
