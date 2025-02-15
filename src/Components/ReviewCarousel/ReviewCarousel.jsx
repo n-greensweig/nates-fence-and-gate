@@ -73,8 +73,10 @@ function ReviewCarousel() {
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
+    const isLgScreen = useMediaQuery(theme.breakpoints.up('lg'));
+
     return (
-        <div>
+        <div style={{ marginRight: isLgScreen ? '25%' : '0%' }}>
             <ImageCarousel images={isXsScreen || isSmScreen ? mobileImages : images} reviews={reviews} origin={'LandingPage'} />
         </div>
     )
