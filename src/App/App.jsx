@@ -13,9 +13,7 @@ import LandingPage from '../Views/LandingPage/LandingPage';
 import Navbar from '../Components/Navbar/Navbar';
 import CedarDetails from '../Views/CedarDetails/CedarDetails';
 import Footer from '../Components/Footer/Footer';
-
 import ScrollToTop from '../Components/ScrollToTop';
-
 function App() {
 
   // Global structured data for the local business
