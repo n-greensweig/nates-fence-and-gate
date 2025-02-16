@@ -95,7 +95,6 @@ const Footer = () => {
                   </li>
                   <li className="nav-item">
                     <Link
-                      data-react-snap-ignore
                       to="/quote"
                       onClick={() => window.scrollTo(0, 0)}
                       className="hover text-nates-accent"
