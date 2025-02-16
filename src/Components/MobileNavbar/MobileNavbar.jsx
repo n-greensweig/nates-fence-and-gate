@@ -283,7 +283,6 @@ function MobileNavbar() {
           </li>
           <li role="menuitem" style={{ width: '100%' }}>
             <Link
-              data-react-snap-ignore
               to="/quote"
               onClick={closeMenu}
               style={{ textDecoration: 'none', width: '100%' }}
