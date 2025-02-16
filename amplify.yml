@@ -7,10 +7,11 @@ frontend:
     build:
       commands:
         - npm run build
+        - npm run postbuild
   artifacts:
     baseDirectory: build
     files:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/*  
+      - node_modules/**/*
