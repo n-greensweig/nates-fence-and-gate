@@ -39,6 +39,7 @@
   },
   "reactSnap": {
     "inlineCss": true,
+    "crawl": false,
     "include": [
       "/",
       "/about",
@@ -53,8 +54,10 @@
       "/fence-details/standard",
       "/fence-details/chain-link",
       "/fence-details/vinyl",
-      "/fence-details/ornamental",
-      "/quote"
+      "/fence-details/ornamental"
+    ],
+    "exclude": [
+      "^/quote$"
     ]
   },
   "eslintConfig": {

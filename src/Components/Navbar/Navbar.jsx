@@ -78,7 +78,7 @@ const Navbar = () => {
             <Link to='/about'>About</Link>
           </li>
           <li style={{ height: '50%' }}>
-            <Link to='/quote'>
+            <Link data-react-snap-ignore to='/quote'>
               <Button
                 style={{
                   backgroundColor: 'white',

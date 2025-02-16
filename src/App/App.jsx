@@ -70,7 +70,7 @@ function App() {
           <Route path="/fence-types" element={<FenceTypes />} />
           <Route path="/fence-details/:type" element={<FenceDetails />} />
           <Route path="/fence-details/cedar" element={<CedarDetails />} />
-          <Route path="/quote" element={<InstantQuote />} />
+          <Route path="/quote" data-react-snap-ignore element={<InstantQuote />} />
         </Routes>
         <Footer />
       </Router>

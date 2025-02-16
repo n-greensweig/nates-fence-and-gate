@@ -28,6 +28,7 @@ function ButtonComponent(props) {
                 e.target.style.border = null;
                 e.target.style.opacity = 1; // Reset opacity to 100%
             }}
+            data-react-snap-ignore
             onClick={props.type ? () => navigate(path) : null}
         >
             {text}

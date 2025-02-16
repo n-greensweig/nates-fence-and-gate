@@ -28,9 +28,8 @@ const Footer = () => {
   return (
     <>
       <footer
-        className={`bg-gradient-to-r w-full from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${
-          noMargin ? 'mt-0' : 'mt-16'
-        } absolute`}
+        className={`bg-gradient-to-r w-full from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${noMargin ? 'mt-0' : 'mt-16'
+          } absolute`}
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact & Navigation */}
@@ -96,6 +95,7 @@ const Footer = () => {
                   </li>
                   <li className="nav-item">
                     <Link
+                      data-react-snap-ignore
                       to="/quote"
                       onClick={() => window.scrollTo(0, 0)}
                       className="hover text-nates-accent"
@@ -215,8 +215,8 @@ const Footer = () => {
                 width="200" // intrinsic width in pixels
                 height="100" // intrinsic height in pixels
                 className="h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out"
-                // Optionally, add srcSet if you have higher resolution versions:
-                // srcSet="../images/logos/nates-logo.webp 1x, ../images/logos/nates-logo@2x.webp 2x"
+              // Optionally, add srcSet if you have higher resolution versions:
+              // srcSet="../images/logos/nates-logo.webp 1x, ../images/logos/nates-logo@2x.webp 2x"
               />
             </Link>
             <p
