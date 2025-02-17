@@ -53,7 +53,7 @@ function App() {
       "addressLocality": "Coon Rapids",
       "addressRegion": "MN",
       "postalCode": "55433",
-      "addressCountry": "USA"
+      "addressCountry": "US"
     }
   };
 
