@@ -4,8 +4,6 @@ frontend:
     preBuild:
       commands:
         - npm install
-        - sudo yum update -y
-        - sudo yum install -y libnss3
     build:
       commands:
         - npm run build
