@@ -4,6 +4,8 @@ frontend:
     preBuild:
       commands:
         - npm install
+        - sudo apt-get update
+        - sudo apt-get install -y libnss3
     build:
       commands:
         - npm run build
