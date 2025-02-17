@@ -68,9 +68,25 @@
     "react-snap": "^1.23.0"
   },
   "reactSnap": {
+    "crawl": false,
     "puppeteerArgs": [
       "--no-sandbox",
       "--disable-setuid-sandbox"
-    ]
+    ],
+    "include": [
+      "/",
+      "/fence-types",
+      "/fence-details/cedar",
+      "/fence-details/cap-and-trim",
+      "/fence-details/craftsman",
+      "/fence-details/custom",
+      "/fence-details/hogwire",
+      "/fence-details/horizontal",
+      "/fence-details/standard",
+      "/fence-details/chain-link",
+      "/fence-details/ornamental",
+      "/fence-details/vinyl"
+    ],
+    "exclude": ["/quote"]
   }
 }
