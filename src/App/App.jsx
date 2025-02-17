@@ -46,7 +46,15 @@ function App() {
       "St. Louis Park",
       "Golden Valley",
       "White Bear Lake"
-    ]
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2041 108th Ave NW",
+      "addressLocality": "Coon Rapids",
+      "addressRegion": "MN",
+      "postalCode": "55433",
+      "addressCountry": "USA"
+    }
   };
 
 
