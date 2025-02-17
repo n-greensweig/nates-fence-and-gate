@@ -2,7 +2,7 @@
   "name": "nates-fence-and-gate",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://natesfenceandgate.com",
+  "homepage": "https://www.natesfenceandgate.com",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
@@ -32,7 +32,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -64,6 +64,7 @@
     "patch-package": "^8.0.0",
     "postinstall-postinstall": "^2.1.0",
     "tailwindcss": "^3.4.1",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "react-snap": "^1.23.0"
   }
 }
