@@ -156,6 +156,16 @@ export const fenceTypes = [
                     '/images/cedar/hogwire/hogwire-4.webp',
                     '/images/cedar/hogwire/hogwire-5.webp',
                 ],
+                altDescriptions: [
+                    'A cedar hogwire fence frames the front yard of a stucco house, featuring an arbor-style gate near the sidewalk.',
+                    'A close-up view of an arbor-topped cedar hogwire gate, leading up to a yellow stucco home.',
+                    'A wide perspective of a yellow stucco house and its front yard enclosed by a cedar hogwire fence.',
+                    'A simple cedar hogwire fence enclosing a spacious yard, with a white house visible in the distance.',
+                    'A cedar hogwire fence gate with an arbor, installed on a slight slope next to a beige-sided home.',
+                    'A backyard view of a cedar hogwire fence featuring a wide gate, standing between neighboring houses.',
+                    'A large open lawn bordered by a cedar hogwire fence, with a wooded area beyond.',
+                    'A cedar hogwire fence surrounding a green yard under mature trees, allowing a clear view of the property beyond.'
+                ],
                 route: 'hogwire',
             },
             {
