@@ -78,8 +78,9 @@
     },
     "gotoOptions": {
       "timeout": 60000,
-    "waitUntil": "networkidle2"
+      "waitUntil": "networkidle2"
     },
+    "concurrency": 1,
     "include": [
       "/",
       "/fence-types",
