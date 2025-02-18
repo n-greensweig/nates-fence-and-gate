@@ -26,7 +26,7 @@ function LandingPage() {
         <title>Nate's Fence and Gate</title>
         <meta
           name="description"
-          content="Nate's Fence and Gate is a top-rated fence contractor in Minnesota offering quality fence types, instant quotes, and exceptional service."
+          content="Nate's Fence and Gate is a top-rated fence contractor in the Twin Cities metro area offering quality fence types, instant quotes, and exceptional service."
         />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>

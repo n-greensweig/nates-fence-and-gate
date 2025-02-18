@@ -78,8 +78,9 @@
     },
     "gotoOptions": {
       "timeout": 60000,
-    "waitUntil": "networkidle2"
+      "waitUntil": "networkidle2"
     },
+    "concurrency": 1,
     "include": [
       "/",
       "/fence-types",
@@ -89,12 +90,12 @@
       "/fence-details/custom",
       "/fence-details/hogwire",
       "/fence-details/horizontal",
-      "/fence-details/standard",
       "/fence-details/chain-link",
       "/fence-details/ornamental",
       "/fence-details/vinyl"
     ],
     "exclude": [
+      "/fence-details/standard",
       "/quote"
     ]
   }
