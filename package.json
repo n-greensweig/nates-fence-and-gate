@@ -73,6 +73,9 @@
       "--no-sandbox",
       "--disable-setuid-sandbox"
     ],
+    "puppeteer": {
+      "timeout": 60000
+    },
     "include": [
       "/",
       "/fence-types",
@@ -87,6 +90,8 @@
       "/fence-details/ornamental",
       "/fence-details/vinyl"
     ],
-    "exclude": ["/quote"]
+    "exclude": [
+      "/quote"
+    ]
   }
 }
