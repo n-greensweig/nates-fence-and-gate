@@ -77,7 +77,8 @@
       "timeout": 60000
     },
     "gotoOptions": {
-      "timeout": 60000
+      "timeout": 60000,
+    "waitUntil": "networkidle2"
     },
     "include": [
       "/",
