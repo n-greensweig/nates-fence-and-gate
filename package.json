@@ -90,12 +90,12 @@
       "/fence-details/custom",
       "/fence-details/hogwire",
       "/fence-details/horizontal",
-      "/fence-details/standard",
       "/fence-details/chain-link",
       "/fence-details/ornamental",
       "/fence-details/vinyl"
     ],
     "exclude": [
+      "/fence-details/standard",
       "/quote"
     ]
   }
