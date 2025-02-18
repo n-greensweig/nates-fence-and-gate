@@ -76,6 +76,9 @@
     "puppeteer": {
       "timeout": 60000
     },
+    "gotoOptions": {
+      "timeout": 60000
+    },
     "include": [
       "/",
       "/fence-types",
