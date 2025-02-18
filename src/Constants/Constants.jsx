@@ -23,6 +23,15 @@ export const fenceTypes = [
                     '/images/cedar/cap-and-trim/cap-and-trim-6.webp',
                     '/images/cedar/cap-and-trim/cap-and-trim-7.webp',
                 ],
+                altDescriptions: [
+                    'A tall, newly installed wooden fence lines a residential sidewalk on a sunny day, with a blue garage and green trees in the background.',
+                    'A newly installed wooden cap and trim fence with double gates, enclosing a backyard next to a white garage and a parked car.',
+                    'A tall wooden cap and trim fence stretches along a snowy driveway, backed by evergreen hedges and a neighboring house.',
+                    'A wooden cap and trim gate in a backyard, framed by potted flowers and house windows on a sunny day.',
+                    'A residential backyard enclosed by a wooden cap and trim fence, with a small lawn area and neighboring houses in view.',
+                    'A wooden cap and trim fence with a gently arched gate, enclosing a driveway between two neighboring houses.',
+                    'A long wooden cap and trim fence running along a corner lot, with a blue garage and power lines visible in the background.'
+                ],
                 route: 'cap-and-trim',
             },
             {
