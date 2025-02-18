@@ -17,48 +17,54 @@ import ScrollToTop from '../Components/ScrollToTop';
 
 function App() {
 
-  // Global structured data for the local business
+  // Global structured data for the local business and website
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Nate's Fence & Gate",
-    "image": "https://www.natesfenceandgate.com/images/logos/nates-logo.webp",
-    "telephone": "612-702-8681",
-    "url": "https://www.natesfenceandgate.com",
-    "areaServed": [
-      "Blaine",
-      "Lexington",
-      "Brooklyn Center",
-      "Lino Lakes",
-      "Brooklyn Park",
-      "Minneapolis",
-      "Circle Pines",
-      "New Brighton",
-      "Columbia Heights",
-      "Richfield",
-      "Coon Rapids",
-      "Robbinsdale",
-      "Crystal",
-      "Roseville",
-      "Falcon Heights",
-      "Shoreview",
-      "Fridley",
-      "St. Louis Park",
-      "Golden Valley",
-      "White Bear Lake"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "2041 108th Ave NW",
-      "addressLocality": "Coon Rapids",
-      "addressRegion": "MN",
-      "postalCode": "55433",
-      "addressCountry": "US"
-    }
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Nate's Fence & Gate",
+        "image": "https://www.natesfenceandgate.com/images/logos/nates-logo.webp",
+        "telephone": "612-702-8681",
+        "url": "https://www.natesfenceandgate.com",
+        "areaServed": [
+          "Blaine",
+          "Lexington",
+          "Brooklyn Center",
+          "Lino Lakes",
+          "Brooklyn Park",
+          "Minneapolis",
+          "Circle Pines",
+          "New Brighton",
+          "Columbia Heights",
+          "Richfield",
+          "Coon Rapids",
+          "Robbinsdale",
+          "Crystal",
+          "Roseville",
+          "Falcon Heights",
+          "Shoreview",
+          "Fridley",
+          "St. Louis Park",
+          "Golden Valley",
+          "White Bear Lake"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2041 108th Ave NW",
+          "addressLocality": "Coon Rapids",
+          "addressRegion": "MN",
+          "postalCode": "55433",
+          "addressCountry": "US"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Nate's Fence and Gate",
+        "url": "https://www.natesfenceandgate.com"
+      }
+    ]
   };
-
-
-
 
   return (
     <div className="App">
