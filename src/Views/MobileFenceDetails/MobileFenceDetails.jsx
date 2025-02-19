@@ -30,7 +30,7 @@ function MobileFenceDetails() {
                 {/* Image carousel component */}
                 {/* Adjust props as needed */}
                 <Carousel showArrows={true}
-                    showThumbs={true} // responsive
+                    showThumbs={false}
                     showStatus={false}
                     infiniteLoop={true}
                     interval={5000}
@@ -77,7 +77,7 @@ function MobileFenceDetails() {
                 </div>
 
             </div>
-            <div className="sm:mb-16 xs:mb-14">
+            <div className="sm:mb-16 xs:mb-14 sm:mt-8 xs:mt-6">
                 <ButtonComponent type={'Quote'} />
             </div>
         </div>
