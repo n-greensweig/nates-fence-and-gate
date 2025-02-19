@@ -3,19 +3,15 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { useTheme, useMediaQuery } from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import LazyImage from '../LazyImage/LazyImage';
 
 function ImageCarousel({ images, name, origin, reviews }) {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
   
-  // Set fixed container height based on screen size
   const imageContainerHeight = isXsScreen ? '250px' : isSmScreen ? '350px' : '500px';
 
-  // Only show thumbnails if there are 10 or fewer images and not in origin view.
-  // const shouldShowThumbs = origin ? false : images.length <= 10;
-
-  // Shared style for navigation arrows.
   const arrowButtonStyle = {
     position: 'absolute',
     zIndex: 2,
@@ -71,10 +67,9 @@ function ImageCarousel({ images, name, origin, reviews }) {
     >
       {images.map((image, index) => (
         <div key={index} style={{ position: 'relative', overflow: 'hidden', width: '100%', height: imageContainerHeight }}>
-          <img
+          <LazyImage
             src={image}
             alt={`${name} fence`}
-            loading="lazy"
             style={{
               width: '100%',
               height: '100%',
