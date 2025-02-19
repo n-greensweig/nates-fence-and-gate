@@ -256,6 +256,18 @@ export const fenceTypes = [
             '/images/vinyl/vinyl-4.webp',
             '/images/vinyl/vinyl-5.webp',
         ],
+        altDescriptions: [
+            'White vinyl privacy fence with black hinges near a beige house, set against mature trees and autumn leaves.',
+            'Long stretch of white vinyl fence in a backyard, with a small shed in the distance and neatly trimmed grass.',
+            'Tall white vinyl privacy fence along a suburban lawn, leading to a storage shed and framed by lush greenery.',
+            'White vinyl gate connecting the backyard to a side yard, featuring black hardware and a beige house backdrop.',
+            'Gently curving white vinyl fence around a tree-lined backyard, offering a clean and durable boundary.',
+            'Tall white vinyl fence bordering a corner property, with a house and chimney visible behind the enclosure.',
+            'Expansive white vinyl fence curving along a driveway, providing a secure perimeter beneath towering trees.',
+            'White vinyl fence behind a gray garden shed, enclosing a green lawn amid mature foliage.',
+            'White vinyl privacy fence with a central gate, adding a neat and modern look to the property line.',
+            'Large white vinyl fence on a corner lot, set against a bright blue sky and bordered by a manicured lawn.'
+        ],
         route: 'vinyl'
     },
     {
