@@ -298,6 +298,19 @@ export const fenceTypes = [
             '/images/ornamental/ornamental-3.webp',
             '/images/ornamental/ornamental-4.webp',
         ],
+        altDescriptions: [
+            'Black ornamental fence with pine trees and a large gray home, bordering a sloping roadside lawn.',
+            'Black ornamental fence enclosing a backyard next to a paved road, with wooded scenery and a waterway in the background.',
+            'Black ornamental fence around a spacious suburban yard lined with evergreen trees, featuring a person near a raised deck.',
+            'Black ornamental fence on a sloped lawn beside a two-story gray home with an elevated deck, showcasing autumn foliage.',
+            'Black ornamental fence bordering a sidewalk in front of a tan duplex, accompanied by "Sidewalk Closed" construction signs.',
+            'Black ornamental fence gate between two houses, offering secure entry to a narrow gravel pathway.',
+            'Black ornamental fence with a gate, set between a beige house and lush lawn, concealing an AC unit and side yard.',
+            'Black ornamental fence gate leading to a red two-story home’s backyard, with a neatly paved walkway and green lawn.',
+            'Black ornamental fence along a wooded shoreline, providing an open view of a calm river or lake through the trees.',
+            'Black ornamental fence enclosing a backyard garden next to a white multi-level home, located in a suburban development.',
+            // ! Continue here
+        ],
         route: 'ornamental',
     },
     {
