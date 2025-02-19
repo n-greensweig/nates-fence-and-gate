@@ -85,7 +85,7 @@ function FenceDetails() {
                             </p>
                             <ButtonComponent type={'Quote'} />
                         </div>
-                        <div style={{ width: 'fit-content', marginRight: '5%' }}>
+                        <div style={{ width: 'fit-content', marginRight: '5%', maxWidth: '50%' }}>
                             <ImageCarousel images={images} name={name} />
                         </div>
                     </div>
