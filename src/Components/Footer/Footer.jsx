@@ -28,13 +28,12 @@ const Footer = () => {
   return (
     <>
       <footer
-        className={`bg-gradient-to-r w-full from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${noMargin ? 'mt-0' : 'mt-16'
-          } absolute`}
+        className={`bg-gradient-to-r w-full from-nates-dark-blue to-nates-light-blue text-white pt-8 pb-8 flex flex-col md:flex-row items-center ${noMargin ? 'mt-0' : 'mt-16'} absolute`}
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact & Navigation */}
           {(isXsScreen || isSmScreen || isMdScreen || isLgScreen) ? (
-            // Mobile view
+            // Mobile (or tablet) view
             <section className="w-full md:w-auto contact-section-container">
               <h2 className="text-2xl md:text-3xl font-bold mb-8 md:mb-4">
                 Get in Touch!
@@ -141,10 +140,7 @@ const Footer = () => {
                 </Typography>
               </div>
               <nav aria-label="Main Navigation">
-                <ul
-                  className="flex flex-col md:flex-row gap-4 text-base sm:ml-4"
-                  style={{ width: 'fit-content', marginRight: '1000px' }}
-                >
+                <ul className="flex flex-col md:flex-row gap-4 text-base sm:ml-4" style={{ width: 'fit-content' }}>
                   <li>
                     <Link
                       to="/"
@@ -211,11 +207,9 @@ const Footer = () => {
                 src="../images/logos/nates-logo.webp"
                 alt="Nate's Fence & Gate Logo"
                 loading="lazy"
-                width="200" // intrinsic width in pixels
-                height="100" // intrinsic height in pixels
+                width="200"
+                height="100"
                 className="h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out"
-              // Optionally, add srcSet if you have higher resolution versions:
-              // srcSet="../images/logos/nates-logo.webp 1x, ../images/logos/nates-logo@2x.webp 2x"
               />
             </Link>
             <p
@@ -237,10 +231,7 @@ const Footer = () => {
               Service Areas:
             </h2>
             {(isXsScreen || isSmScreen || isMdScreen || isLgScreen) ? (
-              <ul
-                className="grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm"
-                style={{ fontSize: '13px' }}
-              >
+              <ul className="grid grid-cols-2 md:grid-cols-2 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-base text-sm" style={{ fontSize: '13px' }}>
                 <li>Blaine</li>
                 <li>Lexington</li>
                 <li>Brooklyn Center</li>
@@ -263,10 +254,7 @@ const Footer = () => {
                 <li>White Bear Lake</li>
               </ul>
             ) : (
-              <ul
-                className="grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm"
-                style={{ fontSize: '13px', height: '80%', marginLeft: '-15%' }}
-              >
+              <ul className="grid grid-cols-2 md:grid-cols-4 gap-x-4 md:gap-x-4 gap-y-1 md:gap-y-1 text-left text-sm" style={{ fontSize: '13px', height: '80%', marginLeft: '-15%' }}>
                 <li>Blaine</li>
                 <li>Coon Rapids</li>
                 <li>Lexington</li>

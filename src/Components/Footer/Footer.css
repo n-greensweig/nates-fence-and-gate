@@ -19,31 +19,26 @@ footer ul {
 }
 
 .sr-only {
-  position: absolute; /* Remove the element from the document flow */
-  width: 1px;         /* Minimal width */
-  height: 1px;        /* Minimal height */
-  padding: 0;         /* Remove any padding */
-  margin: -1px;       /* Negative margin to ensure it's off-screen */
-  overflow: hidden;   /* Hide any overflowing content */
-  clip: rect(0, 0, 0, 0); /* Clip the element to a 0x0 rectangle */
-  white-space: nowrap; /* Prevent text from wrapping */
-  border: 0;         /* Remove any border */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-
-/* Button-like styling for the phone number with improved contrast */
+/* Button-like styling for the phone number */
 .call-to-action {
-  background-color: #fff; /* Dark blue for sufficient contrast */
+  background-color: #fff;
   color: #004080;
   padding: 8px 15px;
   border-radius: 5px;
   display: inline-block;
   text-decoration: none;
 }
-
-/* .call-to-action:hover { */
-  /* background-color: #003366; Darker shade on hover */
-/* } */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -71,5 +66,16 @@ footer ul {
   .main-navigation .nav-list {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+
+/* Tablet adjustments for iPad screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main-navigation .nav-list {
+    margin-right: 0 !important;
+    justify-content: center;
+  }
+  .main-navigation .nav-item {
+    padding: 0.5em 1em;
   }
 }

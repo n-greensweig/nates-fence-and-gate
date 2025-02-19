@@ -13,7 +13,7 @@ function ImageCarousel({ images, name, origin, reviews }) {
   const imageContainerHeight = isXsScreen ? '250px' : isSmScreen ? '350px' : '500px';
 
   // Only show thumbnails if there are 10 or fewer images and not in origin view.
-  const shouldShowThumbs = origin ? false : images.length <= 10;
+  // const shouldShowThumbs = origin ? false : images.length <= 10;
 
   // Shared style for navigation arrows.
   const arrowButtonStyle = {
@@ -34,7 +34,7 @@ function ImageCarousel({ images, name, origin, reviews }) {
       infiniteLoop
       interval={origin ? 10000 : 5000}
       showStatus={false}
-      showThumbs={shouldShowThumbs}
+      showThumbs={false}
       showIndicators
       emulateTouch
       swipeable
