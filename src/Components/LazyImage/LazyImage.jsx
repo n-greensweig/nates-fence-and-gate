@@ -1,73 +1,42 @@
-// Components/LazyImage/LazyImage.jsx
-import React, { useState, useEffect, useRef } from 'react';
-import { Skeleton } from '@mui/material';
+// Components/LazyImage.jsx
+import React, { useState, useRef, useEffect } from 'react';
 
-function LazyImage({ src, alt, height = 140, width = '100%', srcSet, sizes, style, ...rest }) {
-  const [loaded, setLoaded] = useState(false);
-  const [inView, setInView] = useState(false);
-  const containerRef = useRef(null);
+const LazyImage = ({ src, alt, style }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const imgRef = useRef(null);
 
-  // Use IntersectionObserver to defer offscreen images
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
         if (entry.isIntersecting) {
-          setInView(true);
-          observer.disconnect();
+          setIsVisible(true);
+          observer.unobserve(entry.target);
         }
-      });
-    });
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+      },
+      { threshold: 0.1 } // Adjust as needed
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
     }
+
     return () => {
-      observer.disconnect();
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current);
+      }
     };
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      style={{
-        position: 'relative',
-        width: typeof width === 'number' ? `${width}px` : width,
-        height: typeof height === 'number' ? `${height}px` : height,
-      }}
-    >
-      {/* Skeleton loader positioned over the image container */}
-      {!loaded && (
-        <Skeleton
-          variant="rectangular"
-          width={typeof width === 'number' ? `${width}px` : width}
-          height={typeof height === 'number' ? `${height}px` : height}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-          }}
-        />
-      )}
-      {inView && (
-        <img
-          src={src}
-          alt={alt}
-          loading="lazy"
-          onLoad={() => setLoaded(true)}
-          width={width}
-          height={height}
-          srcSet={srcSet}
-          sizes={sizes}
-          style={{
-            display: loaded ? 'block' : 'none',
-            width: typeof width === 'number' ? `${width}px` : width,
-            height: typeof height === 'number' ? `${height}px` : height,
-            ...style,
-          }}
-          {...rest}
-        />
-      )}
-    </div>
+    <img
+      ref={imgRef}
+      src={isVisible ? src : ''}
+      alt={alt}
+      style={style}
+      // Optionally keep native lazy attribute as a fallback
+      loading="lazy"
+    />
   );
-}
+};
 
 export default LazyImage;
