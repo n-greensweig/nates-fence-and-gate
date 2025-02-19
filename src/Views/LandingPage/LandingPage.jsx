@@ -1,11 +1,18 @@
 // Views/LandingPage/LandingPage.jsx
+import React, { Suspense, lazy } from 'react';
+import { Helmet } from 'react-helmet';
+import { useTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 import ButtonComponent from "../../Components/Button/Button";
-import ReviewCarousel from "../../Components/ReviewCarousel/ReviewCarousel";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { Helmet } from "react-helmet";
-import { useMediaQuery } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+
+// Lazy-load the ReviewCarousel. It will only be bundled (and images only loaded)
+// once the component is actually rendered on this page.
+const ReviewCarousel = lazy(() =>
+  import("../../Components/ReviewCarousel/ReviewCarousel")
+);
 
 function LandingPage() {
   const theme = useTheme();
@@ -14,10 +21,10 @@ function LandingPage() {
   const isMdScreen = useMediaQuery(theme.breakpoints.down("md"));
   const isLgScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
-    // Use the current pathname to build the canonical URL
-    const canonicalUrl =
+  // Use the current pathname to build the canonical URL
+  const canonicalUrl =
     process.env.NODE_ENV === "production"
-      ? `https://www.natesfenceandgate.com`
+      ? "https://www.natesfenceandgate.com"
       : window.location.href;
 
   return (
@@ -30,6 +37,7 @@ function LandingPage() {
         />
         <link rel="canonical" href={canonicalUrl} />
       </Helmet>
+
       <div
         className="3xl:bg-3xl-hero-landing 2xl:bg-xl-hero-landing xl:bg-xl-hero-landing lg:bg-xl-hero-landing md:bg-xl-hero-landing sm:bg-xl-hero-landing xs:bg-xl-hero-landing bg-cover bg-no-repeat bg-center h-screen relative"
         style={{
@@ -53,12 +61,12 @@ function LandingPage() {
         <p
           className="text-white text-3xl font-thin start-1/4 bottom-1/2"
           style={{
-            marginBottom: "0px",
+            marginBottom: 0,
             paddingBottom: isXsScreen || isSmScreen ? "20%" : "1%",
             fontSize: isXsScreen || isSmScreen ? "1.3rem" : null,
             textAlign: isXsScreen || isSmScreen ? "center" : "left",
             margin: isXsScreen || isSmScreen ? "0 auto" : null,
-            marginTop: "0px",
+            marginTop: 0,
           }}
         >
           Top-rated fence contractor in Minnesota
@@ -97,7 +105,9 @@ function LandingPage() {
         className="flex bg-slate-100 h-50vh py-14 w-screen"
         style={{
           flexDirection:
-            isXsScreen || isSmScreen || isMdScreen || isLgScreen ? "column" : "row",
+            isXsScreen || isSmScreen || isMdScreen || isLgScreen
+              ? "column"
+              : "row",
         }}
       >
         <div
@@ -112,7 +122,9 @@ function LandingPage() {
           <div
             style={{
               width:
-                isXsScreen || isSmScreen || isMdScreen || isLgScreen ? "90%" : "50%",
+                isXsScreen || isSmScreen || isMdScreen || isLgScreen
+                  ? "90%"
+                  : "50%",
               marginBottom:
                 isXsScreen || isSmScreen || isMdScreen || isLgScreen ? "5%" : null,
             }}
@@ -126,6 +138,8 @@ function LandingPage() {
             </h2>
           </div>
         </div>
+
+        {/* Suspense boundary for lazy-loaded ReviewCarousel */}
         <div
           className="m-auto sm:w-1/2"
           style={{
@@ -133,7 +147,9 @@ function LandingPage() {
               isXsScreen || isSmScreen || isMdScreen || isLgScreen ? "90%" : null,
           }}
         >
-          <ReviewCarousel />
+          <Suspense fallback={<div>Loading reviews...</div>}>
+            <ReviewCarousel />
+          </Suspense>
         </div>
       </div>
 
