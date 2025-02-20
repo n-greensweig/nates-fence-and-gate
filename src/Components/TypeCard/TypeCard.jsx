@@ -11,7 +11,7 @@ import {
 import { useNavigate, useLocation } from "react-router-dom";
 import ProgressiveImage from "../../Components/ProgressiveImage/ProgressiveImage";
 
-import AdaptiveImage from "../adaptiveImage/AdaptiveImage";
+import AdaptiveImage from "../adaptiveImage/AdaptiveImage"
 
 
 function TypeCard({ fenceData }) {
@@ -21,8 +21,6 @@ function TypeCard({ fenceData }) {
   const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isCedarPage = location.pathname === "/fence-details/cedar";
-
-  // console.log('combinedProps', fenceData)
 
   const cardStyle = {
     width: "100%",
@@ -76,18 +74,7 @@ function TypeCard({ fenceData }) {
               </Typography>
             </CardContent>
 
-
             <AdaptiveImage images={fenceData.images} />
-
-            {/* <ProgressiveImage
-              lowSrc={props.fenceType.lowQualityImage}         // Low-quality image URL
-              mediumSrc={props.fenceType.mediumQualityImage}   // Medium-quality image URL
-              highSrc={props.fenceType.mainImage}              // High-quality image URL
-              alt={`${props.fenceType.name} fence`}
-              height={140}
-              width="100%"
-            /> */}
-
 
             <CardContent
               style={{

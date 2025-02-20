@@ -32,7 +32,7 @@ export const fenceTypes = [
                     'A wooden cap and trim fence with a gently arched gate, enclosing a driveway between two neighboring houses.',
                     'A long wooden cap and trim fence running along a corner lot, with a blue garage and power lines visible in the background.'
                 ],
-                route: 'cap-and-trim',
+                route: 'capAndTrim',
             },
             {
                 name: 'Craftsman',

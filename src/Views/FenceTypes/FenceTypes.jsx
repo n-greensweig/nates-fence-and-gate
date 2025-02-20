@@ -17,9 +17,7 @@ function FenceTypes() {
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
 
-  // ! turn this back on when you want to import ALL fences from your fencedata
-  // const fenceKeys = Object.keys(fenceData)
-  const fenceKeys = ['vinyl', 'ornamental', 'chainLink']
+  const fenceKeys = Object.keys(fenceData)
 
 
   // Use the current pathname to build the canonical URL
