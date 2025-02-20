@@ -11,6 +11,9 @@ import {
 import { useNavigate, useLocation } from "react-router-dom";
 import ProgressiveImage from "../../Components/ProgressiveImage/ProgressiveImage";
 
+import AdaptiveImage from "../adaptiveImage/AdaptiveImage";
+
+
 function TypeCard(props) {
   const location = useLocation();
   const navigate = useNavigate();
@@ -18,6 +21,9 @@ function TypeCard(props) {
   const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isCedarPage = location.pathname === "/fence-details/cedar";
+
+  console.log('props', props)
+
 
   const handleClick = (route) => {
     navigate(`/fence-details/${route}`);
@@ -43,7 +49,7 @@ function TypeCard(props) {
         elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3}
         style={cardStyle}
         onClick={() => {
-          props.fenceType.route === "cedar"
+          props.fenceData.route === "cedar"
             ? handleCedarClick()
             : handleClick(props.fenceType.route);
         }}
@@ -69,7 +75,7 @@ function TypeCard(props) {
               }}
             >
               <Typography gutterBottom variant="h5" component="div">
-                <h1>{props.fenceType.name}</h1>
+                <h1>{props.fenceData.name}</h1>
                 {isXsScreen || isSmScreen ? (
                   <p
                     style={{
@@ -79,19 +85,25 @@ function TypeCard(props) {
                       color: "#2F4F4F",
                     }}
                   >
-                    {props.fenceType.introDescription}
+                    {props.fenceData.introDescription}
                   </p>
                 ) : null}
               </Typography>
             </CardContent>
-            <ProgressiveImage
+
+
+            <AdaptiveImage />
+
+            {/* <ProgressiveImage
               lowSrc={props.fenceType.lowQualityImage}         // Low-quality image URL
               mediumSrc={props.fenceType.mediumQualityImage}   // Medium-quality image URL
               highSrc={props.fenceType.mainImage}              // High-quality image URL
               alt={`${props.fenceType.name} fence`}
               height={140}
               width="100%"
-            />
+            /> */}
+
+
             <CardContent
               style={{
                 display: "flex",
@@ -104,7 +116,7 @@ function TypeCard(props) {
             >
               {isXsScreen || isSmScreen ? null : (
                 <Typography variant="body2" color="text.primary">
-                  {props.fenceType.introDescription}
+                  {props.fenceData.introDescription}
                 </Typography>
               )}
             </CardContent>
