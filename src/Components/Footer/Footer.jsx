@@ -23,26 +23,31 @@ const Footer = () => {
         {/* Desktop Layout: three columns */}
         <div className="hidden md:grid md:grid-cols-3 md:items-center md:justify-between">
           {/* Left: Contact */}
-          <div className="contact-left text-left">
-            <h2 className="text-2xl md:text-3xl font-bold pl-8">Get in touch!</h2>
-            <div className="flex items-center gap-4 pt-4">
-              <a
-                href="tel:612-702-8681"
-                aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
-              >
-                <SmartphoneIcon fontSize="large" style={{ fill: '#fff' }} />
-              </a>
-              <Typography>
-                <a
-                  href="tel:612-702-8681"
-                  className="call-to-action"
-                  aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
-                >
-                  Call or Text: 612-702-8681
-                </a>
-              </Typography>
-            </div>
-          </div>
+          {/* Left: Contact */}
+<div className="contact-left text-left ipad-pro">
+  {/* Add a custom class to the heading so we can override pl-8 on iPad */}
+  <h2 className="text-2xl md:text-3xl font-bold pl-8 heading-contact">Get in touch!</h2>
+  <div className="flex items-center gap-4 pt-4">
+    {/* Add a custom class to the link that wraps the SmartphoneIcon so we can hide it on iPad */}
+    <a
+      className="phone-icon-link"
+      href="tel:612-702-8681"
+      aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
+    >
+      <SmartphoneIcon fontSize="large" style={{ fill: '#fff' }} />
+    </a>
+    <Typography>
+      <a
+        href="tel:612-702-8681"
+        className="call-to-action"
+        aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
+      >
+        Call or Text: 612-702-8681
+      </a>
+    </Typography>
+  </div>
+</div>
+
 
           {/* Center: Logo */}
           <div className="logo text-center">

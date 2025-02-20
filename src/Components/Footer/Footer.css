@@ -84,3 +84,40 @@ footer ul {
     margin-bottom: 20px;
   }
 }
+
+/* iPad-specific styling: force nav links into two rows (3 on top, 2 on bottom)
+   while keeping them aligned to the right of the logo */
+   @media (min-width: 768px) and (max-width: 1024px) {
+    .nav-right ul {
+      /* Switch to grid so the first row gets 3 items, second row gets 2 items */
+      display: grid;
+      grid-template-columns: repeat(2);
+      /* Push the grid to the right so it stays to the right of the logo */
+      justify-content: center;
+      text-align: center;
+      /* Add spacing between items so there's “plenty of space” */
+      /* gap: 1rem; */
+      /* Optionally, add a left margin if you want even more space from the logo */
+      margin-left: 2rem;
+    }
+  }
+  
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Reduce the heading from pl-8 down to pl-3 */
+    .heading-contact {
+      padding-left: .75rem !important; /* 0.75rem = Tailwind's "pl-3" */
+    }
+  
+    /* Hide the smartphone icon link on iPad */
+    .phone-icon-link {
+      display: none !important;
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1024px) {
+    .ipad-pro {
+      padding-left: 15%;
+    }
+    
+  }
