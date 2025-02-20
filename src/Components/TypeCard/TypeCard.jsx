@@ -14,7 +14,7 @@ import ProgressiveImage from "../../Components/ProgressiveImage/ProgressiveImage
 import AdaptiveImage from "../adaptiveImage/AdaptiveImage";
 
 
-function TypeCard(props) {
+function TypeCard({ fenceData }) {
   const location = useLocation();
   const navigate = useNavigate();
   const theme = useTheme();
@@ -22,18 +22,8 @@ function TypeCard(props) {
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const isCedarPage = location.pathname === "/fence-details/cedar";
 
-  console.log('props', props)
+  // console.log('combinedProps', fenceData)
 
-
-  const handleClick = (route) => {
-    navigate(`/fence-details/${route}`);
-    window.scrollTo(0, 0);
-  };
-
-  const handleCedarClick = () => {
-    navigate("/fence-details/cedar");
-    window.scrollTo(0, 0);
-  };
 
   const cardStyle = {
     width: "100%",
@@ -48,12 +38,8 @@ function TypeCard(props) {
       <Paper
         elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3}
         style={cardStyle}
-        onClick={() => {
-          props.fenceData.route === "cedar"
-            ? handleCedarClick()
-            : handleClick(props.fenceType.route);
-        }}
-      >
+        onClick={() => navigate(`/fence-details/${fenceData.route}`)}
+        >
         <Card
           style={{
             // Changed this line so CedarDetails page cards always have a fixed height:
@@ -75,7 +61,7 @@ function TypeCard(props) {
               }}
             >
               <Typography gutterBottom variant="h5" component="div">
-                <h1>{props.fenceData.name}</h1>
+                <h1>{fenceData.name}</h1>
                 {isXsScreen || isSmScreen ? (
                   <p
                     style={{
@@ -85,14 +71,14 @@ function TypeCard(props) {
                       color: "#2F4F4F",
                     }}
                   >
-                    {props.fenceData.introDescription}
+                    {fenceData.introDescription}
                   </p>
                 ) : null}
               </Typography>
             </CardContent>
 
 
-            <AdaptiveImage />
+            <AdaptiveImage images={fenceData.images} />
 
             {/* <ProgressiveImage
               lowSrc={props.fenceType.lowQualityImage}         // Low-quality image URL
@@ -116,7 +102,7 @@ function TypeCard(props) {
             >
               {isXsScreen || isSmScreen ? null : (
                 <Typography variant="body2" color="text.primary">
-                  {props.fenceData.introDescription}
+                  {fenceData.introDescription}
                 </Typography>
               )}
             </CardContent>

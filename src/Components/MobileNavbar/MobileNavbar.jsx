@@ -246,7 +246,7 @@ function MobileNavbar() {
               </li>
               <li role="menuitem" style={{ padding: '8px 0' }}>
                 <Link
-                  to="/fence-details/chain-link"
+                  to="/fence-details/chainLink"
                   onClick={closeMenu}
                   style={{
                     color: '#000000',

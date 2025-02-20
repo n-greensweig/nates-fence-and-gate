@@ -371,7 +371,7 @@ export const fenceTypes = [
             'Chain link fence marked by orange flags on a gently sloped backyard, surrounded by multiple suburban homes.',
             'Black chain link fence enclosing a backyard with a pine tree and children’s play structures, offering a secure play area.',
         ],
-        route: 'chain-link'
+        route: 'chainLink'
     },
 ];
 

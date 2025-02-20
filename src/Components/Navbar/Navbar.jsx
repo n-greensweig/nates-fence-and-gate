@@ -69,7 +69,7 @@ const Navbar = () => {
                   <Link to="/fence-details/ornamental">Ornamental</Link>
                 </li>
                 <li className='dropdown-item no-bottom'>
-                  <Link to="/fence-details/chain-link">Chain Link</Link>
+                  <Link to="/fence-details/chainLink">Chain Link</Link>
                 </li>
               </ul>
             )}

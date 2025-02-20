@@ -2,11 +2,13 @@
 import { Grid } from "@mui/material";
 import { useMediaQuery, useTheme } from "@mui/material";
 import TypeCard from "../../Components/TypeCard/TypeCard";
-import { fenceTypes } from "../../Constants/Constants";
 import { Helmet } from "react-helmet";
 
-// import your fence type photos
+
+// import your fence data and photos
 import { mainFenceImages } from '../../fenceImages'
+import fenceData from "../../Constants/fenceData";
+
 
 
 function FenceTypes() {
@@ -14,11 +16,18 @@ function FenceTypes() {
   const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
+
+  // ! turn this back on when you want to import ALL fences from your fencedata
+  // const fenceKeys = Object.keys(fenceData)
+  const fenceKeys = ['vinyl', 'chainLink', 'ornamental']
+
+
   // Use the current pathname to build the canonical URL
   const canonicalUrl =
     process.env.NODE_ENV === "production"
       ? `https://www.natesfenceandgate.com/fence-types`
       : window.location.href;
+
 
   return (
     <div
@@ -61,9 +70,10 @@ function FenceTypes() {
           }}
         >
 
-          {fenceTypes.map((fenceType, index) => {
-            const images = mainFenceImages.vinyl
-            const combinedProps = { ...fenceType, images }
+          {fenceKeys.map((fenceType, index) => {
+            const fenceList = fenceData[fenceType]
+            const images = mainFenceImages[fenceType]
+            const combinedProps = { ...fenceList, images }
             return (
               <Grid
                 item
@@ -77,7 +87,6 @@ function FenceTypes() {
                   padding: "2% 2%",
                 }}
               >
-                {/* <TypeCard fenceType={fenceType} images={images} /> */}
                 <TypeCard fenceData={combinedProps} />
               </Grid>
             )

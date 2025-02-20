@@ -1,3 +1,8 @@
+// This file is importing photos from src/fenceImages by file structure
+// it is creating the necessary objects to import into your components
+
+
+
 // function to import images from a given folder (and sort)
 const importAll = (r) => 
     r.keys()
@@ -27,7 +32,7 @@ Object.entries(imageContexts).forEach(([type, context]) => {
         // Set main images
         mainFenceImages[type] = { highRes: images[0], lowRes: images[1] }
 
-        // Format the remaining images into gallery pairs
+        // Format remaining images into gallery pairs
         fenceGalleries[type] = images.slice(2).reduce((gallery, img, index, arr) => {
             if (index % 2 === 0 && arr[index + 1]) {
                 gallery.push({ highRes: img, lowRes: arr[index + 1] })
