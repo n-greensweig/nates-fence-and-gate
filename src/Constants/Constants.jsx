@@ -426,7 +426,7 @@ export const faq = [
       minimal soil disruptions — critical factors in ensuring a solid fencing solution.`,
     },
     {
-        question: "What areas do you service?",
+        question: "What areas or cities do you service?",
         answer: `
         We service the following cities:
           <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; padding: 8px 0;">
