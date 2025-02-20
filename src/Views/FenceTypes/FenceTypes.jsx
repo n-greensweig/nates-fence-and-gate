@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 // import your fence data and photos
 import { mainFenceImages } from '../../fenceImages'
-import fenceData from "../../Constants/fenceData";
+import fenceData from "../../Constants/fenceData"
 
 
 
@@ -19,7 +19,7 @@ function FenceTypes() {
 
   // ! turn this back on when you want to import ALL fences from your fencedata
   // const fenceKeys = Object.keys(fenceData)
-  const fenceKeys = ['vinyl', 'chainLink', 'ornamental']
+  const fenceKeys = ['vinyl', 'ornamental', 'chainLink']
 
 
   // Use the current pathname to build the canonical URL

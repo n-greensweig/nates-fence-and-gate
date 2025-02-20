@@ -1,5 +1,6 @@
 // This file is importing photos from src/fenceImages by file structure
 // it is creating the necessary objects to import into your components
+// alternating high/low res photos for accurate display
 
 
 
@@ -40,4 +41,4 @@ Object.entries(imageContexts).forEach(([type, context]) => {
             return gallery
         }, [])
     }
-});
+})

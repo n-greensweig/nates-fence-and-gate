@@ -24,7 +24,6 @@ function TypeCard({ fenceData }) {
 
   // console.log('combinedProps', fenceData)
 
-
   const cardStyle = {
     width: "100%",
     height: "100%",
