@@ -34,7 +34,7 @@ export const fenceTypes = [
                     'A wooden cap and trim fence with a gently arched gate, enclosing a driveway between two neighboring houses.',
                     'A long wooden cap and trim fence running along a corner lot, with a blue garage and power lines visible in the background.'
                 ],
-                route: 'cap-and-trim',
+                route: 'capAndTrim',
             },
             {
                 name: 'Craftsman',
@@ -390,7 +390,7 @@ export const fenceTypes = [
             'Chain link fence marked by orange flags on a gently sloped backyard, surrounded by multiple suburban homes.',
             'Black chain link fence enclosing a backyard with a pine tree and children’s play structures, offering a secure play area.',
         ],
-        route: 'chain-link'
+        route: 'chainLink'
     },
 ];
 

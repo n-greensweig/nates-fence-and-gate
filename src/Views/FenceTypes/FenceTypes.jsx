@@ -2,19 +2,30 @@
 import { Grid } from "@mui/material";
 import { useMediaQuery, useTheme } from "@mui/material";
 import TypeCard from "../../Components/TypeCard/TypeCard";
-import { fenceTypes } from "../../Constants/Constants";
 import { Helmet } from "react-helmet";
+
+
+// import your fence data and photos
+import { mainFenceImages } from '../../fenceImages'
+import fenceData from "../../Constants/fenceData"
+
+
 
 function FenceTypes() {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
+
+  const fenceKeys = Object.keys(fenceData)
+
+
   // Use the current pathname to build the canonical URL
   const canonicalUrl =
-  process.env.NODE_ENV === "production"
-    ? `https://www.natesfenceandgate.com/fence-types`
-    : window.location.href;
+    process.env.NODE_ENV === "production"
+      ? `https://www.natesfenceandgate.com/fence-types`
+      : window.location.href;
+
 
   return (
     <div
@@ -56,22 +67,30 @@ function FenceTypes() {
             margin: 0,
           }}
         >
-          {fenceTypes.map((fenceType, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              lg={3}
-              key={index}
-              style={{
-                margin: 0,
-                padding: "2% 2%",
-              }}
-            >
-              <TypeCard fenceType={fenceType} />
-            </Grid>
-          ))}
+
+          {fenceKeys.map((fenceType, index) => {
+            const fenceList = fenceData[fenceType]
+            const images = mainFenceImages[fenceType]
+            const combinedProps = { ...fenceList, images }
+            return (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+                key={index}
+                style={{
+                  margin: 0,
+                  padding: "2% 2%",
+                }}
+              >
+                <TypeCard fenceData={combinedProps} />
+              </Grid>
+            )
+          })}
+
+
         </Grid>
       </div>
     </div>

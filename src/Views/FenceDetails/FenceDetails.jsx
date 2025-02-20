@@ -9,9 +9,17 @@ import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Helmet } from "react-helmet";
 
+
+import { fenceGalleries } from '../../fenceImages'
+
+
 function FenceDetails() {
     const { type } = useParams();
     const location = useLocation();
+
+    // ! will need to update in a bit
+    // console.log('TYPE', type)
+    // console.log('fenceGallery Type', fenceGalleries[type])
 
     const fenceType = fenceTypes.find(f => f.route === type)
         ? fenceTypes.find(f => f.route === type)
