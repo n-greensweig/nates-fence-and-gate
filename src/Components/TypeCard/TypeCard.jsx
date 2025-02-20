@@ -85,13 +85,14 @@ function TypeCard(props) {
               </Typography>
             </CardContent>
             <ProgressiveImage
-              lowSrc={props.fenceType.lowQualityImage}         // Low-quality image URL
-              mediumSrc={props.fenceType.mediumQualityImage}   // Medium-quality image URL
-              highSrc={props.fenceType.mainImage}              // High-quality image URL
-              alt={`${props.fenceType.name} fence`}
+              lowSrc={props.fenceType.lowQualityImage}
+              mediumSrc={props.fenceType.mediumQualityImage}
+              highSrc={props.fenceType.mainImage}
+              alt={props.fenceType.mainAltDescription ? props.fenceType.mainAltDescription : `${props.fenceType.name} fence`}
               height={140}
               width="100%"
             />
+
             <CardContent
               style={{
                 display: "flex",

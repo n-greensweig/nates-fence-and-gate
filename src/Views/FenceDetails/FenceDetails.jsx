@@ -1,4 +1,3 @@
-// Views/FenceDetails/FenceDetails.jsx
 import { useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
 import { fenceTypes } from "../../Constants/Constants";
@@ -16,13 +15,13 @@ function FenceDetails() {
 
     const fenceType = fenceTypes.find(f => f.route === type)
         ? fenceTypes.find(f => f.route === type)
-        : fenceTypes[0].cedarTypes.find(f => f.route === type); // Find the fence type that matches the route
+        : fenceTypes[0].cedarTypes.find(f => f.route === type);
 
-    const name = fenceType.name; // Get the name of the fence type
-    const images = fenceType.images; // Get the images of the fence type
-    const isCedarPage = location.pathname === '/fence-details/cedar'; // Check if the current page is the Cedar Fence Details page
+    const name = fenceType.name;
+    const images = fenceType.images;
+    const altDescriptions = fenceType.altDescriptions;
+    const isCedarPage = location.pathname === '/fence-details/cedar';
 
-    // Check the screen size for responsive design
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -33,7 +32,6 @@ function FenceDetails() {
         }
     }, [fenceType]);
 
-    // Create a dynamic canonical URL based on the current path
     const canonicalUrl =
         process.env.NODE_ENV === "production"
             ? `https://www.natesfenceandgate.com${location.pathname}`
@@ -49,7 +47,6 @@ function FenceDetails() {
             ) : (
                 <div>
                     <h1 style={{ fontSize: '2rem', margin: '3% 0' }}>{name}</h1>
-                    {/* Conditionally render based on whether name === 'Cedar' */}
                     <div
                         id="carousel-description"
                         style={{
@@ -69,7 +66,6 @@ function FenceDetails() {
                                 alignItems: 'center',
                             }}
                         >
-                            {/* Fence type description */}
                             <p
                                 style={{
                                     display: 'flex',
@@ -86,7 +82,7 @@ function FenceDetails() {
                             <ButtonComponent type={'Quote'} />
                         </div>
                         <div style={{ width: 'fit-content', marginRight: '5%', maxWidth: '50%' }}>
-                            <ImageCarousel images={images} name={name} />
+                            <ImageCarousel images={images} altDescriptions={altDescriptions} name={name} />
                         </div>
                     </div>
                 </div>

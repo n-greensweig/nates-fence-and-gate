@@ -9,18 +9,18 @@ function MobileFenceDetails() {
 
   const fenceType = fenceTypes.find(f => f.route === type) ? 
     fenceTypes.find(f => f.route === type) : 
-    fenceTypes[0].cedarTypes.find(f => f.route === type); // Find the fence type that matches the route
-  const name = fenceType.name; // Get the name of the fence type
-  const images = fenceType.images; // Get the images of the fence type
+    fenceTypes[0].cedarTypes.find(f => f.route === type);
+  const name = fenceType.name;
+  const images = fenceType.images;
+  const altDescriptions = fenceType.altDescriptions;
 
-  // Updated arrow style: white background with dark icon color.
   const arrowButtonStyle = {
     position: 'absolute',
     zIndex: 2,
     top: '50%',
     transform: 'translateY(-50%)',
-    background: 'white',       // White background for the arrows
-    color: 'black',            // Dark icon for contrast
+    background: 'white',
+    color: 'black',
     border: 'none',
     borderRadius: '50%',
     padding: '10px',
@@ -29,10 +29,8 @@ function MobileFenceDetails() {
 
   return (
     <div>
-      {/* Inline style override for the dots */}
       <style>
         {`
-          /* Remove extra space between image and dots */
           .carousel .control-dots {
             margin-top: 0;
           }
@@ -90,17 +88,17 @@ function MobileFenceDetails() {
               <img
                 src={image}
                 style={{
-                  maxWidth: '100%',     // Maximum width is 100% of the container
-                  maxHeight: '500px',   // Maximum height
-                  height: 'auto',       // Height auto for maintaining aspect ratio
-                  objectFit: 'contain', // Ensures the image is scaled properly
-                  margin: 'auto',       // Center the image in the div
-                  boxShadow: '0 4px 8px rgba(0,0,0,0.1)', // Optional box shadow
+                  maxWidth: '100%',
+                  maxHeight: '500px',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  margin: 'auto',
+                  boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
                   width: 300,
                   marginLeft: "auto",
                   marginRight: "auto"
                 }}
-                alt={`${name} fence`}
+                alt={altDescriptions && altDescriptions[index] ? altDescriptions[index] : `${name} fence`}
               />
             </div>
           ))}

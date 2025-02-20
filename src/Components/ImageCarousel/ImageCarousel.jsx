@@ -1,11 +1,10 @@
-// Components/ImageCarousel/ImageCarousel.jsx
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { useTheme, useMediaQuery } from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import LazyImage from '../LazyImage/LazyImage';
 
-function ImageCarousel({ images, name, origin, reviews }) {
+function ImageCarousel({ images, altDescriptions, name, origin, reviews }) {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -69,7 +68,7 @@ function ImageCarousel({ images, name, origin, reviews }) {
         <div key={index} style={{ position: 'relative', overflow: 'hidden', width: '100%', height: imageContainerHeight }}>
           <LazyImage
             src={image}
-            alt={`${name} fence`}
+            alt={altDescriptions && altDescriptions[index] ? altDescriptions[index] : `${name} fence`}
             style={{
               width: '100%',
               height: '100%',

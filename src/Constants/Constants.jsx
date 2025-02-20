@@ -4,7 +4,8 @@ export const fenceTypes = [
         introDescription: `We build all of our wood privacy fences with cedar wood on galvanized steel post.`,
         description: `We build all of our wood privacy fences with cedar wood on galvanized steel post.
         The best part is you don’t need to sacrifice the natural beautiful look of a wood fence for the strength of steel, as we conceal the post with a cover board.`,
-        mainImage: '/images/cedar/craftsman/craftsman-1.webp', // Added '/'
+        mainImage: '/images/cedar/craftsman/craftsman-1.webp',
+        mainAltDescription: 'A freshly installed craftsman cedar fence runs along the side of a property, with tall trees nearby.',
         cedarTypes: [
             {
                 name: 'Cap and Trim',
@@ -13,7 +14,8 @@ export const fenceTypes = [
                 Features a deck board cap across the top and the dog ears are covered with 1x4 trim. 
                 This can be built with a side-by-side picket pattern or an overlapping picket pattern for added depth and privacy. 
                 Heights available: 4’, 5’, 6’.`,
-                mainImage: '/images/cedar/cap-and-trim/cap-and-trim-1.webp', // Added '/'
+                mainImage: '/images/cedar/cap-and-trim/cap-and-trim-1.webp',
+                mainAltDescription: 'A tall, newly installed wooden fence lines a residential sidewalk on a sunny day, with a blue garage and green trees in the background.',
                 images: [
                     '/images/cedar/cap-and-trim/cap-and-trim-1.webp',
                     '/images/cedar/cap-and-trim/cap-and-trim-2.webp',
@@ -41,7 +43,8 @@ export const fenceTypes = [
                 description: `Our Craftsman-style fencing is a customizable design that can feature an open picket, side-by-side, and 
                 overlapping pattern. These are great 'good neighbor' fences because they are built to look the same from either side, often adorned 
                 with three decorative trim boards and the option of adding cap boards on top as well.`,
-                mainImage: '/images/cedar/craftsman/craftsman-1.webp', // Added '/'
+                mainImage: '/images/cedar/craftsman/craftsman-1.webp',
+                mainAltDescription: 'A freshly installed craftsman cedar fence runs along the side of a property, with tall trees nearby.',
                 images: [
                     '/images/cedar/craftsman/craftsman_1.webp',
                     '/images/cedar/craftsman/craftsman_2.webp',
@@ -98,7 +101,8 @@ export const fenceTypes = [
                 They are easily customizable with picket pattern and height variations. 
                 They come in shorter spans than traditional vertical fencing, which helps with strength. 
                 Built level for those who like clean, straight lines.`,
-                mainImage: '/images/cedar/horizontal/horizontal-4.webp', // Added '/'
+                mainImage: '/images/cedar/horizontal/horizontal-4.webp',
+                mainAltDescription: 'A side yard enclosed by a horizontal cedar fence, separating a light-colored home from a dark-sided house under leafy trees.',
                 images: [
                     '/images/cedar/horizontal/horizontal-4.webp',
                     '/images/cedar/horizontal/horizontal_2.webp',
@@ -144,7 +148,8 @@ export const fenceTypes = [
                 description: `Our standard privacy option tends to be the most cost-effective option for privacy fencing. 
                 Features the choice between side-by-side picket pattern or overlapping picket for total privacy, as well as 
                 the classic dog ear picket at the top. Heights available: 4’-6’.`,
-                mainImage: '/images/cedar/standard/standard-2.webp', // Added '/'
+                mainImage: '/images/cedar/standard/standard-2.webp',
+                mainAltDescription: 'Standard cedar fence enclosing a pool area, blending seamlessly with a retaining wall and patio.',
                 images: [
                     '/images/cedar/standard/battenboard_1.webp',
                     '/images/cedar/standard/battenboard_2.webp',
@@ -177,7 +182,8 @@ export const fenceTypes = [
                 name: 'Hogwire',
                 introDescription: `Hogwire is a great option when you are looking for an open concept while providing the beauty of a cedar fence.`,
                 description: `Hogwire is a great option when you are looking for an open concept while providing the beauty of a cedar fence. Built level and appealing to the eye.`,
-                mainImage: '/images/cedar/hogwire/hogwire-1.webp', // Added '/'
+                mainImage: '/images/cedar/hogwire/hogwire-1.webp',
+                mainAltDescription: 'A simple cedar hogwire fence enclosing a spacious yard, with a white house visible in the distance.',
                 images: [
                     '/images/cedar/hogwire/hogwire_1.webp',
                     '/images/cedar/hogwire/hogwire_2.webp',
@@ -205,7 +211,8 @@ export const fenceTypes = [
                 introDescription: `Do you have a personal design you’d like to try? Send us some photos and we will be more than willing to brainstorm solutions for you.`,
                 description: `Do you have a personal design you’d like to try?
                 Send us some photos and we will be more than willing to brainstorm solutions for you.`,
-                mainImage: '/images/cedar/custom/custom-1.webp', // Added '/'
+                mainImage: '/images/cedar/custom/custom-1.webp',
+                mainAltDescription: 'A modern custom cedar fence with black metal posts and a decorative top rail, running along a sidewalk.',
                 images: [
                     '/images/cedar/custom/custom_1.webp',
                     '/images/cedar/custom/custom_2.webp',
@@ -243,7 +250,8 @@ export const fenceTypes = [
         introDescription: `Vinyl fencing is the perfect fence for those who want privacy and zero maintenance.`,
         description: `Vinyl fencing is the perfect fence for those who want complete privacy and zero maintenance.
         Available in white or tan featuring a 2x7 rail and 7/8” picket for a stronger, more appealing fence.`,
-        mainImage: '/images/vinyl/vinyl-3.webp', // Added '/'
+        mainImage: '/images/vinyl/vinyl-3.webp',
+        mainAltDescription: 'White vinyl fence behind a gray garden shed, enclosing a green lawn amid mature foliage.',
         images: [
             '/images/vinyl/vinyl_1.webp',
             '/images/vinyl/vinyl_2.webp',
@@ -275,7 +283,8 @@ export const fenceTypes = [
         introDescription: `Ornamental is a wonderful option for those looking for an open concept.`,
         description: `Our steel ornamental option is a wonderful option for those looking for an open concept. 
         Ornamental is also maintenance-free with its sleek powder coated black finish it goes with any property.`,
-        mainImage: '/images/ornamental/ornamental-1.webp', // Added '/'
+        mainImage: '/images/ornamental/ornamental-1.webp',
+        mainAltDescription: 'Enclosed backyard featuring a black ornamental fence and gate, set against farmland and clear skies.',
         images: [
             '/images/ornamental/ornamental_1.webp',
             '/images/ornamental/ornamental_2.webp',
@@ -309,7 +318,16 @@ export const fenceTypes = [
             'Black ornamental fence gate leading to a red two-story home’s backyard, with a neatly paved walkway and green lawn.',
             'Black ornamental fence along a wooded shoreline, providing an open view of a calm river or lake through the trees.',
             'Black ornamental fence enclosing a backyard garden next to a white multi-level home, located in a suburban development.',
-            // ! Continue here
+            'Black ornamental fence with a gated entry along a narrow side yard, adjacent to a house and retaining wall, with lush green lawn and wetlands in the background.',
+            'Close-up of a black ornamental fence and gate near a retaining wall, showcasing a landscaped backyard and wetland backdrop.',
+            'Long run of black ornamental fencing enclosing a gently sloping yard, overlooking expansive rural fields under a cloudy sky.',
+            'View from a covered patio of a spacious backyard, bordered by a black ornamental fence and open countryside beyond.',
+            'Black ornamental fence on a hillside, separating a backyard from wide-open fields in the distance.',
+            'Black ornamental fence running along a sloped property behind a gray multi-story home, with wetlands and open land in the background.',
+            'Enclosed backyard featuring a black ornamental fence and gate, set against farmland and clear skies.',
+            'Black ornamental fence surrounding a suburban backyard alongside a concrete walkway, with a two-story home and evergreen trees in view.',
+            'Neatly maintained backyard enclosed by a black ornamental fence, bordered by young evergreens and a wooded area beyond.',
+            'Black ornamental fence installed along a gently sloping lawn, partially covered in melting snow, with a raised deck and neighboring fences in the background.'
         ],
         route: 'ornamental',
     },
@@ -318,7 +336,8 @@ export const fenceTypes = [
         introDescription: `Chain link is perfect for creating a safe environment for children and pets.`,
         description: `Chain link is perfect for creating a contained and safe environment for children and pets.
         We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store-quality chain link.`,
-        mainImage: '/images/chain-link/chain-link-1-main.webp', // Added '/'
+        mainImage: '/images/chain-link/chain-link-1-main.webp',
+        mainAltDescription: 'Black chain link fence around a backyard recreation area near a dark gray house, featuring a basketball pad and a children’s playset.',
         images: [
             '/images/chain-link/chain_link_1.webp',
             '/images/chain-link/chain_link_2.webp',
@@ -378,48 +397,48 @@ export const fenceTypes = [
 
 export const faq = [
     {
-      question: "How high can I build a fence?",
-      answer: `The allowable height of a fence is largely influenced by its
+        question: "How high can I build a fence?",
+        answer: `The allowable height of a fence is largely influenced by its
           location in the yard and the local regulations. Front yard fences often have a maximum height of 4 feet,
           while side and rear yard fences may typically reach 6 or 7 feet in certain cities.
           Corner lots might have additional restrictions due to safety concerns related to vehicles and pedestrians,
           impacting fence opacity and height based on city regulations.`,
     },
     {
-      question: "How much does a fence cost?",
-      answer: `The cost of a fence can vary based on factors such as material,
+        question: "How much does a fence cost?",
+        answer: `The cost of a fence can vary based on factors such as material,
       length, height, and any additional features. We encourage you to try our
       free instant quote tool or reach out for an estimate.`,
     },
     {
-      question: "Why steel post?",
-      answer: `We are believers in higher quality products.
+        question: "Why steel post?",
+        answer: `We are believers in higher quality products.
       Galvanized steel will outlast a wood post everyday of the week.
       Driving capabilities are added benefits allowing us to have a stronger, cleaner installation
       without the use of heavy machinery or lugging around hazardous concrete.`,
     },
     {
-      question: "What are differences between cedar vs. pressure treated?",
-      answer: `Cedar offers several advantages over pressure-treated fences.
+        question: "What are differences between cedar vs. pressure treated?",
+        answer: `Cedar offers several advantages over pressure-treated fences.
       It is naturally resistant to decay and insects, reducing the need for chemical treatments.
       Cedar is known for its distinct, attractive appearance and aromatic scent. It’s also lighter in weight,
       making it easier to handle during installation. Additionally, cedar has a lower environmental
       impact compared to pressure-treated wood, aligning with sustainable and eco-friendly practices.`,
     },
     {
-      question: "Do I need to be home for install?",
-      answer: `While your presence during the installation is not mandatory,
+        question: "Do I need to be home for install?",
+        answer: `While your presence during the installation is not mandatory,
       we highly encourage it. We value clear communication and prefer conducting walkthroughs
       before and after the project to ensure everyone is aligned with the expectations.`,
     },
     {
-      question: "Survey?",
-      answer: `While not mandatory in every city, having a survey is highly recommended to minimize
+        question: "Survey?",
+        answer: `While not mandatory in every city, having a survey is highly recommended to minimize
       future complications associated with the fence installation.`,
     },
     {
-      question: "What are differences between pounding vs concrete?",
-      answer: `Concrete has its applications in fencing, but we find superior advantages
+        question: "What are differences between pounding vs concrete?",
+        answer: `Concrete has its applications in fencing, but we find superior advantages
       with driven posts. Our method involves driving thick steel posts deeper than typical concrete installations,
       reaching below the frost line in Minnesota to prevent heaving. Unlike concrete, which can crack over time, our
       driven posts can avoid messy, labor-intensive processes, often eliminating the need for heavy machinery and causing
@@ -475,7 +494,6 @@ export const faq = [
             <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">White Bear Lake</div>
           </div>
         `,
-      },
-      
-  ];
-  
+    },
+
+];
