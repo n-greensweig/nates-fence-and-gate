@@ -378,57 +378,104 @@ export const fenceTypes = [
 
 export const faq = [
     {
-        question: "How high can I build a fence?",
-        answer: `The allowable height of a fence is largely influenced by its
-        location in the yard and the local regulations. Front yard fences often have a maximum height of 4 feet,
-        while side and rear yard fences may typically reach 6 or 7 feet in certain cities.
-        Corner lots might have additional restrictions due to safety concerns related to vehicles and pedestrians,
-        impacting fence opacity and height based on city regulations.`,
+      question: "How high can I build a fence?",
+      answer: `The allowable height of a fence is largely influenced by its
+          location in the yard and the local regulations. Front yard fences often have a maximum height of 4 feet,
+          while side and rear yard fences may typically reach 6 or 7 feet in certain cities.
+          Corner lots might have additional restrictions due to safety concerns related to vehicles and pedestrians,
+          impacting fence opacity and height based on city regulations.`,
     },
     {
-        question: "How much does a fence cost?",
-        answer: `The cost of a fence can vary based on factors such as material,
-    length, height, and any additional features. We encourage you to try our
-    free instant quote tool or reach out for an estimate.
-    `,
+      question: "How much does a fence cost?",
+      answer: `The cost of a fence can vary based on factors such as material,
+      length, height, and any additional features. We encourage you to try our
+      free instant quote tool or reach out for an estimate.`,
     },
     {
-        question: "Why steel post?",
-        answer: `We are believers in higher quality products.
-    Galvanized steel will outlast a wood post everyday of the week.
-    Driving capabilities are added benefits allowing us to have a stronger, cleaner installation
-    without the use of heavy machinery or lugging around hazardous concrete.
-    `,
+      question: "Why steel post?",
+      answer: `We are believers in higher quality products.
+      Galvanized steel will outlast a wood post everyday of the week.
+      Driving capabilities are added benefits allowing us to have a stronger, cleaner installation
+      without the use of heavy machinery or lugging around hazardous concrete.`,
     },
     {
-        question: "What are differences between cedar vs. pressure treated?",
-        answer: `Cedar offers several advantages over pressure-treated fences.
-    It is naturally resistant to decay and insects, reducing the need for chemical treatments.
-    Cedar is known for its distinct, attractive appearance and aromatic scent. It’s also lighter in weight,
-    making it easier to handle during installation. Additionally, cedar has a lower environmental
-    impact compared to pressure-treated wood, aligning with sustainable and eco-friendly practices.
-    `,
+      question: "What are differences between cedar vs. pressure treated?",
+      answer: `Cedar offers several advantages over pressure-treated fences.
+      It is naturally resistant to decay and insects, reducing the need for chemical treatments.
+      Cedar is known for its distinct, attractive appearance and aromatic scent. It’s also lighter in weight,
+      making it easier to handle during installation. Additionally, cedar has a lower environmental
+      impact compared to pressure-treated wood, aligning with sustainable and eco-friendly practices.`,
     },
     {
-        question: "Do I need to be home for install?",
-        answer: `While your presence during the installation is not mandatory,
-    we highly encourage it. We value clear communication and prefer conducting walkthroughs
-    before and after the project to ensure everyone is aligned with the expectations.
-    `,
+      question: "Do I need to be home for install?",
+      answer: `While your presence during the installation is not mandatory,
+      we highly encourage it. We value clear communication and prefer conducting walkthroughs
+      before and after the project to ensure everyone is aligned with the expectations.`,
     },
     {
-        question: "Survey?",
-        answer: `While not mandatory in every city, having a survey is highly recommended to minimize
-    future complications associated with the fence installation.
-    `,
+      question: "Survey?",
+      answer: `While not mandatory in every city, having a survey is highly recommended to minimize
+      future complications associated with the fence installation.`,
     },
     {
-        question: "What are differences between pounding vs concrete?",
-        answer: `Concrete has its applications in fencing, but we find superior advantages
-    with driven posts. Our method involves driving thick steel posts deeper than typical concrete installations,
-    reaching below the frost line in Minnesota to prevent heaving. Unlike concrete, which can crack over time, our
-    driven posts can avoid messy, labor-intensive processes, often eliminating the need for heavy machinery and causing
-    minimal soil disruptions — critical factors in ensuring a solid fencing solution.
-    `,
+      question: "What are differences between pounding vs concrete?",
+      answer: `Concrete has its applications in fencing, but we find superior advantages
+      with driven posts. Our method involves driving thick steel posts deeper than typical concrete installations,
+      reaching below the frost line in Minnesota to prevent heaving. Unlike concrete, which can crack over time, our
+      driven posts can avoid messy, labor-intensive processes, often eliminating the need for heavy machinery and causing
+      minimal soil disruptions — critical factors in ensuring a solid fencing solution.`,
     },
-];
+    {
+        question: "What areas or cities do you service?",
+        answer: `
+        We service the following cities:
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; padding: 8px 0;">
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Andover</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Anoka</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Arden Hills</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Blaine</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Bloomington</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Brooklyn Center</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Brooklyn Park</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Champlin</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Circle Pines</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Coon Rapids</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Columbia Heights</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Crystal</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Dayton</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Edina</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Elk River</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Falcon Heights</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Fridley</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Forest Lake</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Golden Valley</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Ham Lake</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Hopkins</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Inver Grove Heights</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Lexington</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Lino Lakes</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Maple Grove</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Maplewood</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Minneapolis</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Minnetonka</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Mounds View</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">New Brighton</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Oakdale</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Otsego</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Ramsey</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Richfield</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Robbinsdale</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Roseville</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Shoreview</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Spring Lake Park</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">St Michael</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">St Paul</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">St. Louis Park</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">Twin Cities</div>
+            <div style="background-color: #fff; color: #102942; border:1px solid #102942; padding: 4px 8px; border-radius: 4px; text-align: center;">White Bear Lake</div>
+          </div>
+        `,
+      },
+      
+  ];
+  
