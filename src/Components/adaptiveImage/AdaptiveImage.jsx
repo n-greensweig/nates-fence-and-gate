@@ -4,7 +4,8 @@ import './adaptiveImage.css'
 
 const AdaptiveImage = ({ images }) => {
 
-    const { highRes, lowRes } = images
+    const { highRes, lowRes, altTxt } = images
+    console.log('alt', altTxt)
     const [imgSrc, setImgSrc] = useState(lowRes || highRes)
     const imgRef = useRef(null)
 
@@ -30,8 +31,8 @@ const AdaptiveImage = ({ images }) => {
 
     return (
         <div className="adaptive-img-wrapper" ref={imgRef}>
-            <img src={lowRes} className={`adaptive-img low-res ${imgSrc === highRes ? 'fade-out' : ''}`} alt="" />
-            <img src={imgSrc} className={`adaptive-img high-res ${imgSrc === highRes ? 'fade-in' : ''}`} alt="" />
+            <img src={lowRes} alt={altTxt} className={`adaptive-img low-res ${imgSrc === highRes ? 'fade-out' : ''}`} />
+            <img src={imgSrc} alt={altTxt} className={`adaptive-img high-res ${imgSrc === highRes ? 'fade-in' : ''}`} />
         </div>
     )
 }

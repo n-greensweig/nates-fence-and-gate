@@ -62,31 +62,31 @@ export const fenceTypes = [
                     '/images/cedar/craftsman/craftsman_14.webp',
                     '/images/cedar/craftsman/craftsman_15.webp',
                     '/images/cedar/craftsman/craftsman_16.webp',
-                    '/images/cedar/craftsman/craftsman-1.webp',
-                    '/images/cedar/craftsman/craftsman-2.webp',
-                    '/images/cedar/craftsman/craftsman-3.webp',
-                    '/images/cedar/craftsman/craftsman-4.webp',
-                    '/images/cedar/craftsman/craftsman-5.webp',
+                    '/images/cedar/craftsman/craftsman-1.webp', // ben - transferred
+                    '/images/cedar/craftsman/craftsman-2.webp', // ben - transferred
+                    '/images/cedar/craftsman/craftsman-3.webp', // ben - transferred
+                    '/images/cedar/craftsman/craftsman-4.webp', // ben - transferred
+                    '/images/cedar/craftsman/craftsman-5.webp', // ben - transferred
 
                 ],
                 altDescriptions: [
-                    'A freshly installed craftsman cedar fence runs along the side of a property, with tall trees nearby.',
+                    'A freshly installed craftsman cedar fence runs along the side of a property, with tall trees nearby.', // 6
                     'A backyard view featuring a craftsman cedar fence with decorative top rails and a central wooden gate.',
                     'A spacious yard with raised metal garden beds, tree stumps, and a new craftsman cedar fence in the background.',
                     'A suburban yard with a tall, natural-toned craftsman cedar fence providing privacy under leafy trees.',
-                    'A wide wooden gate with a curved top, framed by an arbor, forming part of the craftsman cedar fence.',
+                    'A wide wooden gate with a curved top, framed by an arbor, forming part of the craftsman cedar fence.', // 10
                     'A long craftsman cedar fence with vertical planks, leading to a matching arched gate next to a blue house.',
                     'A curved, double-door wooden gate set in a tall craftsman cedar fence, topped by a pergola-like arbor.',
                     'A craftsman cedar fence with an arched gate positioned on a slight slope, connecting the yard to the driveway.',
-                    'A narrow walkway between a brick house and a tall craftsman cedar fence, ending at a wooden gate with an arbor.',
+                    'A narrow walkway between a brick house and a tall craftsman cedar fence, ending at a wooden gate with an arbor.', // 14
                     'A corner property enclosed by a craftsman cedar fence with a smooth top rail, seen from an alley perspective.',
                     'A craftsman-style cedar fence gate with a small arbor on top, surrounded by leafy trees near a red house.',
                     'A manicured backyard bordered by a craftsman cedar fence, showcasing a variety of flowering plants.',
-                    'A tall craftsman cedar fence with horizontal accents, enclosing the yard of a light-colored home.',
+                    'A tall craftsman cedar fence with horizontal accents, enclosing the yard of a light-colored home.', // 18
                     'A long stretch of craftsman cedar fencing along a residential street, providing privacy for the front yard.',
                     'A neatly landscaped front yard with a craftsman cedar fence gate and an evergreen tree near the sidewalk.',
                     'A wide, arched craftsman cedar fence gate topped by a pergola-like arbor, positioned beside a dark blue house.',
-                    'A double-door craftsman cedar fence gate with an extended arbor, set against a backdrop of mature trees.',
+                    'A double-door craftsman cedar fence gate with an extended arbor, set against a backdrop of mature trees.', // ALREADY DONE
                     'A high craftsman cedar fence running alongside a driveway, adjacent to a gray garage and neighboring homes.',
                     'A tall craftsman cedar fence lining a sidewalk, shaded by large trees in a suburban neighborhood.',
                     'A partial lattice-top craftsman cedar fence gate enclosing a driveway, next to a stucco house with a Tudor-style roof.',
