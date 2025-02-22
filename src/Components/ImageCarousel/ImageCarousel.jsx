@@ -2,13 +2,17 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { useTheme, useMediaQuery } from '@mui/material';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import LazyImage from '../LazyImage/LazyImage';
 
-function ImageCarousel({ images, altDescriptions, name, origin, reviews }) {
+import AdaptiveImage from '../adaptiveImage/AdaptiveImage';
+
+
+
+
+function ImageCarousel({ images, reviews }) {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  
+
   const imageContainerHeight = isXsScreen ? '250px' : isSmScreen ? '350px' : '500px';
 
   const arrowButtonStyle = {
@@ -32,7 +36,7 @@ function ImageCarousel({ images, altDescriptions, name, origin, reviews }) {
       showThumbs={false}
       showIndicators
       emulateTouch
-      swipeable
+      swipeable  
       dynamicHeight={false}
       width="100%"
       renderArrowPrev={(onClickHandler, hasPrev, label) =>
@@ -66,17 +70,9 @@ function ImageCarousel({ images, altDescriptions, name, origin, reviews }) {
     >
       {images.map((image, index) => (
         <div key={index} style={{ position: 'relative', overflow: 'hidden', width: '100%', height: imageContainerHeight }}>
-          <LazyImage
-            src={image}
-            alt={altDescriptions && altDescriptions[index] ? altDescriptions[index] : `${name} fence`}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              display: 'block',
-              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)'
-            }}
-          />
+
+          <AdaptiveImage images={image} style={{ height: '100%', }} />
+          
           {reviews && reviews[index] && (
             <div
               style={{

@@ -2,10 +2,9 @@ import React, { useState, useEffect, useRef } from 'react'
 import './adaptiveImage.css'
 
 
-const AdaptiveImage = ({ images }) => {
+const AdaptiveImage = ({ images, style }) => {
 
     const { highRes, lowRes, altTxt } = images
-    console.log('alt', altTxt)
     const [imgSrc, setImgSrc] = useState(lowRes || highRes)
     const imgRef = useRef(null)
 
@@ -30,7 +29,7 @@ const AdaptiveImage = ({ images }) => {
     }, [highRes])
 
     return (
-        <div className="adaptive-img-wrapper" ref={imgRef}>
+        <div style={{ ...style }} className="adaptive-img-wrapper" ref={imgRef}>
             <img src={lowRes} alt={altTxt} className={`adaptive-img low-res ${imgSrc === highRes ? 'fade-out' : ''}`} />
             <img src={imgSrc} alt={altTxt} className={`adaptive-img high-res ${imgSrc === highRes ? 'fade-in' : ''}`} />
         </div>

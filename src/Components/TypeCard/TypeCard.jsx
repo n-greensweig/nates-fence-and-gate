@@ -74,7 +74,7 @@ function TypeCard({ fenceData }) {
               </Typography>
             </CardContent>
 
-            <AdaptiveImage images={fenceData.images} />
+            <AdaptiveImage images={fenceData.images} style={{ height: '140px' }} />
 
             <CardContent
               style={{

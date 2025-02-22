@@ -46,7 +46,7 @@ export const fenceTypes = [
                 mainImage: '/images/cedar/craftsman/craftsman-1.webp',
                 mainAltDescription: 'A freshly installed craftsman cedar fence runs along the side of a property, with tall trees nearby.',
                 images: [
-                    '/images/cedar/craftsman/craftsman_1.webp',
+                    '/images/cedar/craftsman/craftsman_1.webp', // 6
                     '/images/cedar/craftsman/craftsman_2.webp',
                     '/images/cedar/craftsman/craftsman_3.webp',
                     '/images/cedar/craftsman/craftsman_4.webp',
@@ -302,7 +302,7 @@ export const fenceTypes = [
             '/images/ornamental/ornamental_14.webp',
             '/images/ornamental/ornamental_15.webp',
             '/images/ornamental/ornamental_16.webp',
-            '/images/ornamental/ornamental-1.webp',
+            '/images/ornamental/ornamental-1.webp', 
             '/images/ornamental/ornamental-2.webp',
             '/images/ornamental/ornamental-3.webp',
             '/images/ornamental/ornamental-4.webp',
