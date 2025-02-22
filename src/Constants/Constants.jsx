@@ -105,8 +105,8 @@ export const fenceTypes = [
                 mainAltDescription: 'A side yard enclosed by a horizontal cedar fence, separating a light-colored home from a dark-sided house under leafy trees.',
                 images: [
                     '/images/cedar/horizontal/horizontal-4.webp',
-                    '/images/cedar/horizontal/horizontal_2.webp',
-                    '/images/cedar/horizontal/horizontal_3.webp',
+                    '/images/cedar/horizontal/horizontal_2.webp', 
+                    '/images/cedar/horizontal/horizontal_3.webp', 
                     '/images/cedar/horizontal/horizontal_4.webp',
                     '/images/cedar/horizontal/horizontal_5.webp',
                     '/images/cedar/horizontal/horizontal_6.webp',

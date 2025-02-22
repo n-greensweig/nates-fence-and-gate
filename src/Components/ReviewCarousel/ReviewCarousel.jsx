@@ -7,9 +7,8 @@ import { useTheme, useMediaQuery } from "@mui/material";
 function ReviewCarousel() {
 
     const images = fenceGalleries.reviewPhotos
-    console.log('images', images)
 
-    // reviews correlate with the file structure
+    // * reviews correlate with the /reviewPhotos file structure
     const reviews = [
         {
             text: `
@@ -60,8 +59,6 @@ function ReviewCarousel() {
 
     // Check the screen size for responsive design
     const theme = useTheme();
-    const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
-    const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const isLgScreen = useMediaQuery(theme.breakpoints.up('lg'));
 
     return (

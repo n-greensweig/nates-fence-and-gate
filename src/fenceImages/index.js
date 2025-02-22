@@ -64,6 +64,7 @@ Object.entries(imageContexts).forEach(([type, context]) => {
         return
     }
 
+    
     if (images.length >= 2) {
 
         // set alt text
