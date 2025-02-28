@@ -84,7 +84,6 @@
     "include": [
       "/",
       "/fence-types",
-      "/fence-details/cedar",
       "/fence-details/cap-and-trim",
       "/fence-details/craftsman",
       "/fence-details/custom",

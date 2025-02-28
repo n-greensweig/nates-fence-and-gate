@@ -57,7 +57,7 @@ const Navbar = () => {
             onMouseLeave={toggleDropdown}
           >
             <Link to='/fence-types'>Fence Types</Link>
-            {showDropdown && (
+            {/* {showDropdown && (
               <ul className="absolute bg-white mt-1 p-2 rounded-lg shadow-lg blue-border forefront">
                 <li className='dropdown-item'>
                   <Link to="/fence-details/cedar">Cedar</Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
                   <Link to="/fence-details/chainLink">Chain Link</Link>
                 </li>
               </ul>
-            )}
+            )} */}
           </li>
           <li className='nav-link text-xl'>
             <Link to='/about'>About</Link>

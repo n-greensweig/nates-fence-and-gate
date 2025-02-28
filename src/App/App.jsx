@@ -11,7 +11,6 @@ import FenceTypes from '../Views/FenceTypes/FenceTypes';
 import InstantQuote from '../Views/InstantQuote/InstantQuote';
 import LandingPage from '../Views/LandingPage/LandingPage';
 import Navbar from '../Components/Navbar/Navbar';
-import CedarDetails from '../Views/CedarDetails/CedarDetails';
 import Footer from '../Components/Footer/Footer';
 import ScrollToTop from '../Components/ScrollToTop';
 
@@ -83,7 +82,6 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/fence-types" element={<FenceTypes />} />
           <Route path="/fence-details/:type" element={<FenceDetails />} />
-          <Route path="/fence-details/cedar" element={<CedarDetails />} />
           <Route path="/quote" element={<InstantQuote />} />
         </Routes>
         <Footer />
