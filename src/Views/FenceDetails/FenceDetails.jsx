@@ -24,7 +24,7 @@ function FenceDetails() {
             ? `https://www.natesfenceandgate.com${location.pathname}`
             : window.location.href;
 
-            
+
 
     return (
         <div>
@@ -35,7 +35,8 @@ function FenceDetails() {
                 <MobileFenceDetails />
             ) : (
                 <div>
-                    <h1 style={{ fontSize: '2rem', margin: '3% 0' }}>{type ? type.charAt(0).toUpperCase() + type.slice(1) : ""}</h1>
+                    <h1 style={{ fontSize: '2rem', margin: '3% 0' }}>{type === 'chainLink' ? 'Chain Link' :
+                        type === 'capAndTrim' ? 'Cap and Trim' : type ? type.charAt(0).toUpperCase() + type.slice(1) : ""}</h1>
                     <div
                         id="carousel-description"
                         style={{
