@@ -1,6 +1,4 @@
-import { useEffect } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import { fenceTypes } from "../../Constants/Constants";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ButtonComponent from "../../Components/Button/Button";
 import ImageCarousel from "../../Components/ImageCarousel/ImageCarousel";
@@ -8,42 +6,25 @@ import MobileFenceDetails from "../MobileFenceDetails/MobileFenceDetails";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Helmet } from "react-helmet";
-
-
 import { fenceGalleries } from '../../fenceImages'
+import fenceData from '../../Constants/fenceData'
 
 
 function FenceDetails() {
     const { type } = useParams();
     const location = useLocation();
-
-    // ! will need to update in a bit
-    // console.log('TYPE', type)
-    // console.log('fenceGallery Type', fenceGalleries[type])
-
-    const fenceType = fenceTypes.find(f => f.route === type)
-        ? fenceTypes.find(f => f.route === type)
-        : fenceTypes[0].cedarTypes.find(f => f.route === type);
-
-    const name = fenceType.name;
-    const images = fenceType.images;
-    const altDescriptions = fenceType.altDescriptions;
-    const isCedarPage = location.pathname === '/fence-details/cedar';
+    const description = fenceData[type].description
 
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
     const isSmScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
-    useEffect(() => {
-        if (fenceType) {
-            document.title = `${fenceType.name} Fence Details`;
-        }
-    }, [fenceType]);
-
     const canonicalUrl =
         process.env.NODE_ENV === "production"
             ? `https://www.natesfenceandgate.com${location.pathname}`
             : window.location.href;
+
+            
 
     return (
         <div>
@@ -54,7 +35,7 @@ function FenceDetails() {
                 <MobileFenceDetails />
             ) : (
                 <div>
-                    <h1 style={{ fontSize: '2rem', margin: '3% 0' }}>{name}</h1>
+                    <h1 style={{ fontSize: '2rem', margin: '3% 0' }}>{type ? type.charAt(0).toUpperCase() + type.slice(1) : ""}</h1>
                     <div
                         id="carousel-description"
                         style={{
@@ -81,16 +62,16 @@ function FenceDetails() {
                                     justifyContent: 'center',
                                     fontSize: '1.2em',
                                     textAlign: 'left',
-                                    padding: isCedarPage ? '0% 20% 3% 20%' : '0% 10% 3% 10%',
+                                    padding: '0% 10% 3% 10%',
                                     margin: '0 auto',
                                 }}
                             >
-                                {fenceType ? fenceType.description : null}
+                                {description ? description : null}
                             </p>
                             <ButtonComponent type={'Quote'} />
                         </div>
-                        <div style={{ width: 'fit-content', marginRight: '5%', maxWidth: '50%' }}>
-                            <ImageCarousel images={images} altDescriptions={altDescriptions} name={name} />
+                        <div style={{ width: '1000px', marginRight: '5%', maxWidth: '50%', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)' }}>
+                            <ImageCarousel images={fenceGalleries[type]} />
                         </div>
                     </div>
                 </div>

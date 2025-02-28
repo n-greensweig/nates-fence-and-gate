@@ -4,7 +4,6 @@ import { useMediaQuery, useTheme } from "@mui/material";
 import TypeCard from "../../Components/TypeCard/TypeCard";
 import { Helmet } from "react-helmet";
 
-
 // import your fence data and photos
 import { mainFenceImages } from '../../fenceImages'
 import fenceData from "../../Constants/fenceData"
@@ -15,10 +14,7 @@ function FenceTypes() {
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
-
-
   const fenceKeys = Object.keys(fenceData)
-
 
   // Use the current pathname to build the canonical URL
   const canonicalUrl =
@@ -27,6 +23,7 @@ function FenceTypes() {
       : window.location.href;
 
 
+      
   return (
     <div
       className="md:h-screen md:w-screen xl:h-screen xl:w-screen bg-slate-100"

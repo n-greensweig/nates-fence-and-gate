@@ -74,16 +74,7 @@ function TypeCard({ fenceData }) {
               </Typography>
             </CardContent>
 
-            <ProgressiveImage
-              lowSrc={props.fenceType.lowQualityImage}
-              mediumSrc={props.fenceType.mediumQualityImage}
-              highSrc={props.fenceType.mainImage}
-              alt={props.fenceType.mainAltDescription ? props.fenceType.mainAltDescription : `${props.fenceType.name} fence`}
-              height={140}
-              width="100%"
-            />
-
-            // <AdaptiveImage images={fenceData.images} />
+            <AdaptiveImage images={fenceData.images} style={{ height: '140px' }} />
 
             <CardContent
               style={{
