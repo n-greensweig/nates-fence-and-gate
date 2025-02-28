@@ -9,11 +9,19 @@ import { Helmet } from "react-helmet";
 import { fenceGalleries } from '../../fenceImages'
 import fenceData from '../../Constants/fenceData'
 
-
 function FenceDetails() {
+
+    const routeToKeyMapping = {
+        "cap-and-trim": "capAndTrim",
+        "chain-link": "chainLink",
+      };
+      
     const { type } = useParams();
     const location = useLocation();
-    const description = fenceData[type].description
+
+    const key = routeToKeyMapping[type] || type;
+    const description = fenceData[key].description;
+    const images = fenceGalleries[key];
 
     const theme = useTheme();
     const isXsScreen = useMediaQuery(theme.breakpoints.down('xs'));
@@ -35,8 +43,8 @@ function FenceDetails() {
                 <MobileFenceDetails />
             ) : (
                 <div>
-                    <h1 style={{ fontSize: '2rem', margin: '3% 0' }}>{type === 'chainLink' ? 'Chain Link' :
-                        type === 'capAndTrim' ? 'Cap and Trim' : type ? type.charAt(0).toUpperCase() + type.slice(1) : ""}</h1>
+                    <h1 style={{ fontSize: '2rem', margin: '3% 0' }}>{type === 'chain-link' ? 'Chain Link' :
+                        type === 'cap-and-trim' ? 'Cap and Trim' : type ? type.charAt(0).toUpperCase() + type.slice(1) : ""}</h1>
                     <div
                         id="carousel-description"
                         style={{
@@ -72,7 +80,7 @@ function FenceDetails() {
                             <ButtonComponent type={'Quote'} />
                         </div>
                         <div style={{ width: '1000px', marginRight: '5%', maxWidth: '50%', boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.3)' }}>
-                            <ImageCarousel images={fenceGalleries[type]} />
+                            <ImageCarousel images={images} />
                         </div>
                     </div>
                 </div>
