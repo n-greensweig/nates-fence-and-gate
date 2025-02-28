@@ -8,19 +8,14 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
-import { useNavigate, useLocation } from "react-router-dom";
-import ProgressiveImage from "../../Components/ProgressiveImage/ProgressiveImage";
-
-import AdaptiveImage from "../adaptiveImage/AdaptiveImage"
-
+import { useNavigate } from "react-router-dom";
+import AdaptiveImage from "../adaptiveImage/AdaptiveImage";
 
 function TypeCard({ fenceData }) {
-  const location = useLocation();
   const navigate = useNavigate();
   const theme = useTheme();
   const isXsScreen = useMediaQuery(theme.breakpoints.down("xs"));
   const isSmScreen = useMediaQuery(theme.breakpoints.down("sm"));
-  const isCedarPage = location.pathname === "/fence-details/cedar";
 
   const cardStyle = {
     width: "100%",
@@ -33,14 +28,14 @@ function TypeCard({ fenceData }) {
   return (
     <div style={{ marginBottom: isXsScreen || isSmScreen ? "5%" : null }}>
       <Paper
-        elevation={isCedarPage || isXsScreen || isSmScreen ? 1 : 3}
+        elevation={isXsScreen || isSmScreen ? 1 : 3}
         style={cardStyle}
         onClick={() => navigate(`/fence-details/${fenceData.route}`)}
         >
         <Card
           style={{
             // Changed this line so CedarDetails page cards always have a fixed height:
-            height: isCedarPage ? "275px" : "auto",
+            height: "300px",
             margin: "0px",
             paddingTop: "10px",
             borderBottom: isXsScreen || isSmScreen ? "10px solid #0283AB" : null,

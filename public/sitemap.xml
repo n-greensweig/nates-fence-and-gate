@@ -28,13 +28,6 @@
    <changefreq>monthly</changefreq>
    <priority>0.8</priority>
  </url>
- <!-- Cedar Fence Type (if this is a static page) -->
- <url>
-   <loc>https://www.natesfenceandgate.com/fence-details/cedar</loc>
-   <lastmod>2025-02-05</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.7</priority>
- </url>
  <!-- Fence Details - Ornamental -->
  <url>
    <loc>https://www.natesfenceandgate.com/fence-details/ornamental</loc>

@@ -162,7 +162,7 @@ function MobileNavbar() {
             >
               Fence Types
             </Link>
-            <button
+            {/* <button
               onClick={toggleDropdown}
               type="button"
               style={{
@@ -181,9 +181,9 @@ function MobileNavbar() {
               ) : (
                 <KeyboardArrowRightIcon style={{ fontSize: '1.5rem', color: '#ffffff' }} />
               )}
-            </button>
+            </button> */}
           </li>
-          {showDropdown && (
+          {/* {showDropdown && (
             <ul
               style={{
                 background: '#ffffff',
@@ -258,7 +258,7 @@ function MobileNavbar() {
                 </Link>
               </li>
             </ul>
-          )}
+          )} */}
           <li
             style={{
               borderBottom: '1px solid white',
