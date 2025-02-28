@@ -31,8 +31,8 @@ const imageContexts = {
     capAndTrim: require.context("./capAndTrim", false, /\.(jpg|jpeg|png|webp)$/),
     horizontal: require.context("./horizontal", false, /\.(jpg|jpeg|png|webp)$/),
     standard: require.context("./standard", false, /\.(jpg|jpeg|png|webp)$/),
-    craftsman: require.context("./craftsman", false, /\.(jpg|jpeg|png|webp)$/),
-    reviewPhotos: require.context("./reviewPhotos", false, /\.(jpg|jpeg|png|webp)$/),
+    craftsman: require.context("./craftsman_final", false, /\.(jpg|jpeg|png|webp)$/),
+    reviewPhotos: require.context("./reviewPhotos_final", false, /\.(jpg|jpeg|png|webp)$/),
 };
 
 
