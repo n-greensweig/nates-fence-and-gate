@@ -37,7 +37,7 @@ const fenceData = {
         introDescription: `Chain link is perfect for creating a safe environment for children and pets.`,
         description: `Chain link is perfect for creating a contained and safe environment for children and pets.
         We build our chain link with 8 gauge black vinyl wire for greater strength compared to box store-quality chain link.`,
-        route: 'chainLink'
+        route: 'chain-link'
     },
     hogwire: {
         name: 'Hogwire',
@@ -59,7 +59,7 @@ const fenceData = {
         Features a deck board cap across the top and the dog ears are covered with 1x4 trim. 
         This can be built with a side-by-side picket pattern or an overlapping picket pattern for added depth and privacy. 
         Heights available: 4’, 5’, 6’.`,
-        route: 'capAndTrim',
+        route: 'cap-and-trim',
     },
     horizontal: {
         name: 'Horizontal',
