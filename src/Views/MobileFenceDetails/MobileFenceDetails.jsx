@@ -41,7 +41,7 @@ function MobileFenceDetails() {
           }
         `}
       </style>
-      <h1 style={{ fontSize: "2rem" }}>
+      <h1 style={{ fontSize: "2rem", marginTop: '5%' }}>
         {type === "chain-link"
           ? "Chain Link"
           : type === "cap-and-trim"
