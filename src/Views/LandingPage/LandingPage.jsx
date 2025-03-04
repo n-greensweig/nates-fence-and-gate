@@ -1,5 +1,4 @@
-// Views/LandingPage/LandingPage.jsx
-import React from 'react';
+import React, { useRef } from 'react';
 import { Helmet } from 'react-helmet';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
@@ -16,8 +15,16 @@ function LandingPage() {
   const isMdScreen = useMediaQuery(theme.breakpoints.down("md"));
   const isLgScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
-    // Use the current pathname to build the canonical URL
-    const canonicalUrl =
+  // Use a ref to target the next section of the page
+  const nextSectionRef = useRef(null);
+
+  // Scroll to the next section when "Learn More" or the down arrow is clicked
+  const handleLearnMoreClick = () => {
+    nextSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Use the current pathname to build the canonical URL
+  const canonicalUrl =
     process.env.NODE_ENV === "production"
       ? 'https://www.natesfenceandgate.com'
       : window.location.href;
@@ -80,11 +87,13 @@ function LandingPage() {
           <div>
             <ButtonComponent type="Quote" />
           </div>
+          {/* Add onClick to scroll when clicking "Learn More" or the arrow */}
           <div
-            className="absolute bottom-0 start-1/2 -translate-x-1/2 mb-32"
+            className="absolute bottom-0 start-1/2 -translate-x-1/2 mb-32 cursor-pointer"
             style={{
               marginTop: isXsScreen || isSmScreen ? "60%" : "1%",
             }}
+            onClick={handleLearnMoreClick}
           >
             <p className="text-white text-2xl font-normal">Learn More</p>
             <FontAwesomeIcon
@@ -95,7 +104,9 @@ function LandingPage() {
         </div>
       </div>
 
+      {/* This section is now referenced for scrolling */}
       <div
+        ref={nextSectionRef}
         className="flex bg-slate-100 h-50vh py-14 w-screen"
         style={{
           flexDirection:

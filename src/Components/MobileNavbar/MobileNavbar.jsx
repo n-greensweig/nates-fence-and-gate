@@ -5,21 +5,15 @@ import { slide as Menu } from 'react-burger-menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import CloseIcon from '@mui/icons-material/Close';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 function MobileNavbar() {
-  const [showDropdown, setShowDropdown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const closeButtonRef = useRef(null);
-
-  const toggleDropdown = () => setShowDropdown(!showDropdown);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const handleStateChange = (state) => setMenuOpen(state.isOpen);
   const closeMenu = () => {
     setMenuOpen(false);
-    setShowDropdown(false);
   };
 
   useEffect(() => {
@@ -162,103 +156,7 @@ function MobileNavbar() {
             >
               Fence Types
             </Link>
-            {/* <button
-              onClick={toggleDropdown}
-              type="button"
-              style={{
-                background: 'none',
-                border: 'none',
-                padding: 0,
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-              }}
-              aria-label={showDropdown ? 'Collapse fence types' : 'Expand fence types'}
-              aria-expanded={showDropdown}
-            >
-              {showDropdown ? (
-                <KeyboardArrowDownIcon style={{ fontSize: '1.5rem', color: '#ffffff' }} />
-              ) : (
-                <KeyboardArrowRightIcon style={{ fontSize: '1.5rem', color: '#ffffff' }} />
-              )}
-            </button> */}
           </li>
-          {/* {showDropdown && (
-            <ul
-              style={{
-                background: '#ffffff',
-                color: '#000000',
-                marginTop: '1rem',
-                padding: '0.5rem',
-                borderRadius: '5px',
-                boxShadow: '0 2px 5px rgba(0,0,0,0.3)',
-                width: '100%',
-              }}
-              role="menu"
-            >
-              <li
-                role="menuitem"
-                style={{ padding: '8px 0', borderBottom: '1px solid #ccc' }}
-              >
-                <Link
-                  to="/fence-details/cedar"
-                  onClick={closeMenu}
-                  style={{
-                    color: '#000000',
-                    textDecoration: 'none',
-                    display: 'block',
-                  }}
-                >
-                  Cedar
-                </Link>
-              </li>
-              <li
-                role="menuitem"
-                style={{ padding: '8px 0', borderBottom: '1px solid #ccc' }}
-              >
-                <Link
-                  to="/fence-details/vinyl"
-                  onClick={closeMenu}
-                  style={{
-                    color: '#000000',
-                    textDecoration: 'none',
-                    display: 'block',
-                  }}
-                >
-                  Vinyl
-                </Link>
-              </li>
-              <li
-                role="menuitem"
-                style={{ padding: '8px 0', borderBottom: '1px solid #ccc' }}
-              >
-                <Link
-                  to="/fence-details/ornamental"
-                  onClick={closeMenu}
-                  style={{
-                    color: '#000000',
-                    textDecoration: 'none',
-                    display: 'block',
-                  }}
-                >
-                  Ornamental
-                </Link>
-              </li>
-              <li role="menuitem" style={{ padding: '8px 0' }}>
-                <Link
-                  to="/fence-details/chainLink"
-                  onClick={closeMenu}
-                  style={{
-                    color: '#000000',
-                    textDecoration: 'none',
-                    display: 'block',
-                  }}
-                >
-                  Chain Link
-                </Link>
-              </li>
-            </ul>
-          )} */}
           <li
             style={{
               borderBottom: '1px solid white',

@@ -24,29 +24,29 @@ const Footer = () => {
         <div className="hidden md:grid md:grid-cols-3 md:items-center md:justify-between">
           {/* Left: Contact */}
           {/* Left: Contact */}
-<div className="contact-left text-left ipad-pro">
-  {/* Add a custom class to the heading so we can override pl-8 on iPad */}
-  <h2 className="text-2xl md:text-3xl font-bold pl-8 heading-contact">Get in touch!</h2>
-  <div className="flex items-center gap-4 pt-4">
-    {/* Add a custom class to the link that wraps the SmartphoneIcon so we can hide it on iPad */}
-    <a
-      className="phone-icon-link"
-      href="tel:612-702-8681"
-      aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
-    >
-      <SmartphoneIcon fontSize="large" style={{ fill: '#fff' }} />
-    </a>
-    <Typography>
-      <a
-        href="tel:612-702-8681"
-        className="call-to-action"
-        aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
-      >
-        Call or Text: 612-702-8681
-      </a>
-    </Typography>
-  </div>
-</div>
+          <div className="contact-left text-left ipad-pro">
+            {/* Add a custom class to the heading so we can override pl-8 on iPad */}
+            <h2 className="text-2xl md:text-3xl font-bold pl-8 heading-contact">Get in touch!</h2>
+            <div className="flex items-center gap-4 pt-4">
+              {/* Add a custom class to the link that wraps the SmartphoneIcon so we can hide it on iPad */}
+              <a
+                className="phone-icon-link"
+                href="tel:612-702-8681"
+                aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
+              >
+                <SmartphoneIcon fontSize="large" style={{ fill: '#fff' }} />
+              </a>
+              <Typography>
+                <a
+                  href="tel:612-702-8681"
+                  className="call-to-action"
+                  aria-label="Call or Text Nate's Fence & Gate at 612-702-8681"
+                >
+                  Call or Text: 612-702-8681
+                </a>
+              </Typography>
+            </div>
+          </div>
 
 
           {/* Center: Logo */}
@@ -61,9 +61,10 @@ const Footer = () => {
                 className="h-24 md:h-32 inline-block opacity-100 hover:opacity-80 transition duration-300 ease-in-out"
               />
             </Link>
-            <p className="text-sm text-nates-gray mt-2">
+            <p className="text-xs text-nates-gray mt-2">
               &copy; {currentYear} Nate's Fence & Gate. All Rights Reserved.
             </p>
+
           </div>
 
           {/* Right: Navigation */}
