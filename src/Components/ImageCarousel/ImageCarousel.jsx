@@ -12,8 +12,10 @@ function ImageCarousel({ images, reviews }) {
 
   const imageContainerHeight = isXsScreen ? '250px' : isSmScreen ? '350px' : '500px';
 
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [fade, setFade] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState(false);
+  const intervalDuration = reviews && reviews.length > 0 ? 8000 : 5000;
+
 
   const arrowButtonStyle = {
     position: 'absolute',
@@ -40,7 +42,7 @@ function ImageCarousel({ images, reviews }) {
       <Carousel
         autoPlay
         infiniteLoop
-        interval={5000}
+        interval={intervalDuration} // now dynamic based on reviews prop
         showStatus={false}
         showThumbs={false}
         showIndicators
@@ -48,7 +50,7 @@ function ImageCarousel({ images, reviews }) {
         swipeable
         dynamicHeight={false}
         width="100%"
-        onChange={handleCarouselChange} // Handle slide change
+        onChange={handleCarouselChange}
         renderArrowPrev={(onClickHandler, hasPrev, label) =>
           hasPrev && (
             <button
@@ -97,7 +99,7 @@ function ImageCarousel({ images, reviews }) {
             textAlign: 'center',
             width: '70%',
             opacity: fade ? 0 : 1,
-            transition: 'opacity 0.3s ease-in-out', 
+            transition: 'opacity 0.3s ease-in-out',
             zIndex: 10
           }}
         >
